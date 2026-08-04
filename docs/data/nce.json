@@ -1,0 +1,214 @@
+{
+ "updated": "2026-08-03",
+ "lastAdded": "2026-08-03",
+ "lessons": [
+  {
+   "id": "nce-001",
+   "title": "A New Day (新的一天)",
+   "en": [
+    "Every morning, Xu opens the window and takes a deep breath.",
+    "The air is fresh and the sun is warm. Today is a brand new day.",
+    "Xu has a simple plan: finish three important tasks, exercise for one hour, and read for thirty minutes.",
+    "Small steps every day can create big changes over time.",
+    "At night, Xu looks back and smiles. Every day counts."
+   ],
+   "cn": [
+    "每天早上，Xu打开窗户，深深吸一口气。",
+    "空气清新，阳光温暖。今天是崭新的一天。",
+    "Xu有一个简单的计划：完成三件重要的事，锻炼一小时，阅读三十分钟。",
+    "每天迈出的一小步，日积月累就能带来巨大的改变。",
+    "晚上，Xu回顾这一天，微笑着想：每一天都算数。"
+   ],
+   "words": [
+    {
+     "w": "fresh",
+     "m": "adj. 新鲜的"
+    },
+    {
+     "w": "brand new",
+     "m": "adj. 崭新的"
+    },
+    {
+     "w": "simple",
+     "m": "adj. 简单的"
+    },
+    {
+     "w": "important",
+     "m": "adj. 重要的"
+    },
+    {
+     "w": "exercise",
+     "m": "v. 锻炼"
+    },
+    {
+     "w": "create",
+     "m": "v. 创造"
+    },
+    {
+     "w": "change",
+     "m": "n. 改变"
+    },
+    {
+     "w": "count",
+     "m": "v. 算数，重要"
+    }
+   ]
+  },
+  {
+   "id": "nce-002",
+   "title": "The Little Café (小咖啡馆)",
+   "en": [
+    "There is a little café near the park. It is quiet and warm.",
+    "The owner, Aunt Lin, knows every customer by name.",
+    "One day, a young man came in and ordered a coffee. He looked tired.",
+    "Aunt Lin smiled and said, \"Take your time. The coffee is on me.\"",
+    "The man was surprised and grateful. From that day on, he became a regular customer.",
+    "Sometimes, a small kindness can change a person's day."
+   ],
+   "cn": [
+    "公园附近有一家小咖啡馆，安静又温馨。",
+    "店主林阿姨认识每一位客人的名字。",
+    "有一天，一个年轻人走进来点了杯咖啡，看起来疲惫不堪。",
+    "林阿姨微笑着说：“慢慢来，这杯咖啡我请你。”",
+    "年轻人又惊讶又感激。从那天起，他成了常客。",
+    "有时候，一个小小的善意就能改变一个人的一天。"
+   ],
+   "words": [
+    {
+     "w": "café",
+     "m": "n. 咖啡馆"
+    },
+    {
+     "w": "quiet",
+     "m": "adj. 安静的"
+    },
+    {
+     "w": "customer",
+     "m": "n. 顾客"
+    },
+    {
+     "w": "order",
+     "m": "v. 点单"
+    },
+    {
+     "w": "tired",
+     "m": "adj. 疲惫的"
+    },
+    {
+     "w": "surprised",
+     "m": "adj. 惊讶的"
+    },
+    {
+     "w": "grateful",
+     "m": "adj. 感激的"
+    },
+    {
+     "w": "kindness",
+     "m": "n. 善意"
+    }
+   ]
+  },
+  {
+   "id": "nce-003",
+   "title": "City and Country (城市与乡村)",
+   "en": [
+    "Xu grew up in a small village, but now works in a big city.",
+    "The city is exciting. There are tall buildings, bright lights, and endless things to do.",
+    "However, the village is peaceful. The air is clean and the nights are quiet.",
+    "Xu often thinks about this question: which life is better?",
+    "In the end, Xu finds the answer: the best life is the one you choose with your heart."
+   ],
+   "cn": [
+    "Xu在一个小村庄长大，但现在在大城市工作。",
+    "城市令人兴奋：高楼林立、灯火通明、事情永远做不完。",
+    "然而乡村很宁静：空气干净，夜晚安静。",
+    "Xu常常思考一个问题：哪种生活更好？",
+    "最后，Xu找到了答案：最好的生活，是你用心选择的那一种。"
+   ],
+   "words": [
+    {
+     "w": "village",
+     "m": "n. 村庄"
+    },
+    {
+     "w": "exciting",
+     "m": "adj. 令人兴奋的"
+    },
+    {
+     "w": "building",
+     "m": "n. 建筑"
+    },
+    {
+     "w": "peaceful",
+     "m": "adj. 宁静的"
+    },
+    {
+     "w": "question",
+     "m": "n. 问题"
+    },
+    {
+     "w": "answer",
+     "m": "n. 答案"
+    },
+    {
+     "w": "choose",
+     "m": "v. 选择"
+    },
+    {
+     "w": "heart",
+     "m": "n. 内心"
+    }
+   ]
+  },
+  {
+   "title": "Lesson: Read Day by Day",
+   "en": [
+    "They talked about the future dreams, and the friend shared a valuable piece of advice.",
+    "From that day on, Mike started to take a ten-minute walk every morning.",
+    "Slowly, small changes began to appear in Mike's life.",
+    "At the end of the month, Mike looked back with a quiet sense of pride.",
+    "This is the power of small steps. Day by day, we become better versions of ourselves."
+   ],
+   "cn": [
+    "他们聊起了工作与生活的平衡，朋友分享了一条宝贵的建议。",
+    "从那天起，Mike每天早上开始练习英语二十分钟。",
+    "慢慢地，小小的改变开始出现在Mike的生活里。",
+    "月末，Mike带着一份平静的自豪回顾这个月。",
+    "这就是小步前进的力量。日复一日，我们成为更好的自己。"
+   ],
+   "words": [
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "patience",
+     "p": "/ˈpeɪʃns/",
+     "m": "n. 耐心"
+    },
+    {
+     "w": "valuable",
+     "p": "/ˈvæljuəbl/",
+     "m": "adj. 宝贵的"
+    },
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    },
+    {
+     "w": "decision",
+     "p": "/dɪˈsɪʒn/",
+     "m": "n. 决定"
+    }
+   ],
+   "id": "nce-20260803"
+  }
+ ]
+}
