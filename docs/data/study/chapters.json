@@ -52,13 +52,6 @@
     "duration": "",
     "url": "https://www.douyin.com/search/Excel%E5%9B%BE%E8%A1%A8?type=video",
     "cover": ""
-   },
-   {
-    "title": "VLOOKUP",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/VLOOKUP?type=video",
-    "cover": ""
    }
   ]
  },
@@ -86,20 +79,6 @@
     "author": "抖音热门",
     "duration": "",
     "url": "https://www.douyin.com/search/SQL%E6%95%99%E7%A8%8B?type=video",
-    "cover": ""
-   },
-   {
-    "title": "窗口函数",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0?type=video",
-    "cover": ""
-   },
-   {
-    "title": "SQL面试",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/SQL%E9%9D%A2%E8%AF%95?type=video",
     "cover": ""
    }
   ]
@@ -129,13 +108,6 @@
     "duration": "",
     "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97?type=video",
     "cover": ""
-   },
-   {
-    "title": "Pandas教程",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/Pandas%E6%95%99%E7%A8%8B?type=video",
-    "cover": ""
    }
   ]
  },
@@ -164,20 +136,6 @@
     "duration": "",
     "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96?type=video",
     "cover": ""
-   },
-   {
-    "title": "仪表盘",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E4%BB%AA%E8%A1%A8%E7%9B%98?type=video",
-    "cover": ""
-   },
-   {
-    "title": "Matplotlib",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/Matplotlib?type=video",
-    "cover": ""
    }
   ]
  },
@@ -205,13 +163,6 @@
     "author": "抖音热门",
     "duration": "",
     "url": "https://www.douyin.com/search/AI%E6%95%99%E7%A8%8B?type=video",
-    "cover": ""
-   },
-   {
-    "title": "机器学习入门",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8?type=video",
     "cover": ""
    }
   ]
