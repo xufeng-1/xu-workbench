@@ -55,7 +55,7 @@
         (words.length ? '' : '<div class="empty">词库更新中…</div>') +
       '</div>';
 
-    if (!words.length) return box.innerHTML;
+    if (!words.length) return box;
 
     const card = document.createElement('div');
     card.className = 'card';
@@ -110,7 +110,7 @@
     };
     renderSeg(); renderWord();
     box.appendChild(card);
-    return box.innerHTML;
+    return box;
   }
 
   /* ---------- 场景口语 ---------- */
@@ -124,7 +124,7 @@
       list = [];
       for (let i = 0; i < 8; i++) list.push(all[(weekIdx * 8 + i) % all.length]);
     }
-    if (!list.length) return '<div class="card"><div class="empty">口语场景更新中…</div></div>';
+    if (!list.length) { const eb = document.createElement('div'); eb.innerHTML = '<div class="card"><div class="empty">口语场景更新中…</div></div>'; return eb; }
 
     let html = '<div class="card"><h2>🗣️ 场景口语</h2><p class="sub">8 个真实场景 · 每周更新 · 可逐句跟读</p><div class="list">';
     list.forEach((s, i) => {
@@ -142,7 +142,7 @@
       const s = list[parseInt(item.getAttribute('data-oral'), 10)];
       openOral(s);
     });
-    return box.innerHTML;
+    return box;
   }
 
   function openOral(s) {
@@ -176,7 +176,7 @@
   async function nceTab() {
     const data = await XU.feed('nce').catch(() => ({}));
     const lessons = data.lessons || [];
-    if (!lessons.length) return '<div class="card"><div class="empty">新概念课文更新中…</div></div>';
+    if (!lessons.length) { const nb = document.createElement('div'); nb.innerHTML = '<div class="card"><div class="empty">新概念课文更新中…</div></div>'; return nb; }
     // 每周更新：按周轮换，展示本周课文
     const weekIdx = Math.floor(dayIdx() / 7);
     const picked = [lessons[weekIdx % lessons.length]];
@@ -194,7 +194,7 @@
       const item = e.target.closest('[data-nce]');
       if (item) openNce(show[parseInt(item.getAttribute('data-nce'), 10)]);
     });
-    return box.innerHTML;
+    return box;
   }
 
   function openNce(l) {
@@ -257,13 +257,13 @@
           bankId = b.getAttribute('data-bank');
           await XU.Store.kvSet('englishBank', bankId);
           XU.$$('.tab', XU.$('#bankTabs', body)).forEach((t) => t.classList.toggle('active', t.getAttribute('data-bank') === bankId));
-          XU.$('#bankBody', body).innerHTML = await wordTab(bankId);
+          const bbEl = XU.$('#bankBody', body); bbEl.innerHTML = ''; bbEl.appendChild(await wordTab(bankId));
         });
-        XU.$('#bankBody', body).innerHTML = await wordTab(bankId);
+        const bbEl = XU.$('#bankBody', body); bbEl.innerHTML = ''; bbEl.appendChild(await wordTab(bankId));
       } else if (current === 'oral') {
-        body.innerHTML = await oralTab();
+        body.innerHTML = ''; body.appendChild(await oralTab());
       } else {
-        body.innerHTML = await nceTab();
+        body.innerHTML = ''; body.appendChild(await nceTab());
       }
     }
 
