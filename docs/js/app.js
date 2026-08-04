@@ -205,7 +205,7 @@
     if (!PANELS.some((p) => p.id === id)) { location.hash = '#/home'; return; }
     current = id;
     XU.$$('.nav-item', rail).forEach((b) => b.classList.toggle('active', b.getAttribute('data-panel') === id));
-    content.innerHTML = '<div id="boot">加载中…</div>';
+    content.innerHTML = '';
     try {
       const renderer = XU.panels[id];
       if (!renderer) throw new Error('no panel');
