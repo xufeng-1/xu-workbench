@@ -44,7 +44,7 @@
       }
       if (r.tips) html += '<p style="background:var(--card-tint);border-radius:12px;padding:10px;margin-top:10px">💡 <b>小贴士</b>：' + XU.esc(r.tips) + '</p>';
       if (r.video) {
-        html += '<p class="sub" style="margin-top:12px"><b>制作视频</b></p><a class="video-card" href="' + XU.esc(r.video.url || '') + '" target="' + (XU.isMobile ? '_self' : '_blank') + '" rel="noopener noreferrer" data-url="' + XU.esc(r.video.url || '') + '">' +
+        html += '<p class="sub" style="margin-top:12px"><b>制作视频</b></p><a class="video-card" href="' + XU.esc(r.video.url || '') + '" target="' + XU.videoTarget + '" rel="noopener noreferrer" data-url="' + XU.esc(r.video.url || '') + '">' +
           (r.video.cover ? '<img src="' + XU.esc(r.video.cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' : '<div style="width:86px;height:58px;border-radius:10px;flex:0 0 auto;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;color:var(--primary)">' + XU.icon('play') + '</div>') +
           '<div class="grow"><div class="vt">' + XU.esc(r.video.title || '做法视频') + '</div><div class="vd">点击跳转抖音观看</div></div>' +
           '<span class="play-badge">' + XU.icon('play') + '</span></a>';
