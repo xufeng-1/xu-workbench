@@ -9,71 +9,118 @@
     const progMap = {};
     progress.forEach((p) => { progMap[p.bookId] = p; });
 
-    if (!index.length) return '<div class="card"><div class="empty">书库更新中…</div></div>';
+    if (!index.length) { const eb = document.createElement('div'); eb.innerHTML = '<div class="card"><div class="empty">书库更新中…</div></div>'; return eb; }
 
-    let html = '<div class="card"><h2>📚 书籍</h2><p class="sub">提升阅历 · 公版经典全文 · 可朗读，自动保存阅读进度</p><div class="list">';
-    index.forEach((b, i) => {
-      const p = progMap[b.id];
-      const last = p ? '读到：' + (p.chapterTitle || '') : '未开始';
-      html += '<div class="row-item" style="cursor:pointer" data-book="' + i + '">' +
-        '<div style="width:40px;height:52px;border-radius:8px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;flex:0 0 auto">' + (b.title || '书').slice(0, 1) + '</div>' +
-        '<div class="grow"><div class="title">' + XU.esc(b.title) + '</div>' +
-        '<div class="desc">' + XU.esc(b.author || '') + ' · ' + last + '</div></div>' +
-        '<span class="chip">' + XU.icon('bookopen') + '</span></div>';
-    });
-    html += '</div></div>';
-    return html;
-  }
+    const box = document.createElement('div');
+    box.innerHTML =
+      '<div class="card"><h2>📚 书籍</h2><p class="sub">公版经典全文 · 下载后保存在本机可离线阅读 · 自动保存进度</p>' +
+      '<input id="bookSearch" class="input" placeholder="🔍 搜索免费书籍（书名 / 作者）" style="width:100%;margin-bottom:10px">' +
+      '<div class="list" id="bookList"></div>' +
+      '<p class="sub" style="margin-top:8px">💡 想看的书没找到？告诉我书名，我会加进每日更新的书库</p></div>';
 
-  async function openBook(b) {
-    let book = null;
-    try {
-      const res = await fetch('data/books/' + b.id + '.json', { cache: 'no-store' });
-      if (res.ok) book = await res.json();
-    } catch (e) { /* 离线时由 SW 兜底 */ }
-    if (!book) { XU.toast('书籍全文下载中，请稍后再试'); return; }
+    const list = XU.$('#bookList', box);
+    let query = '';
 
-    const chapters = book.chapters || [];
-    let chapterIdx = 0;
-    let close = null;
-
-    function renderChapter() {
-      const ch = chapters[chapterIdx] || { title: '', paras: [] };
-      let html = '<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">' +
-        '<button class="btn ghost mini" data-cnav="-1">← 上一章</button>' +
-        '<div class="grow" style="text-align:center;font-weight:700">' + XU.esc(ch.title || '') + '</div>' +
-        '<button class="btn ghost mini" data-cnav="1">下一章 →</button></div>' +
-        '<div style="display:flex;gap:8px;margin-bottom:12px">' +
-        '<button class="btn" id="rdAll" style="flex:1">' + XU.icon('sound') + ' 朗读本章</button>' +
-        '<button class="btn ghost" id="rdStop" style="flex:1">停止</button></div>' +
-        '<div class="reader">' + (ch.paras || []).map((p, i) =>
-          '<p data-para="' + i + '">' + XU.esc(p) + '</p>').join('') + '</div>';
-      XU.$('#readerBody', close).innerHTML = html;
-
-      XU.$('#rdAll', close).onclick = () => XU.TTS.speak((ch.paras || []).join(' '), 'zh', 1);
-      XU.$('#rdStop', close).onclick = () => XU.TTS.stop();
-      XU.$('#readerBody', close).addEventListener('click', (e) => {
-        const p = e.target.closest('[data-para]');
-        const nav = e.target.closest('[data-cnav]');
-        if (p) {
-          const i = parseInt(p.getAttribute('data-para'), 10);
-          XU.TTS.speak(ch.paras[i] || '', 'zh', 1);
-        }
-        if (nav) {
-          const d = parseInt(nav.getAttribute('data-cnav'), 10);
-          const nx = chapterIdx + d;
-          if (nx < 0 || nx >= chapters.length) { XU.toast(d < 0 ? '已是第一章' : '已是最后一章'); return; }
-          chapterIdx = nx;
-          XU.Store.set('reading', { id: b.id, bookId: b.id, chapter: nx, chapterTitle: chapters[nx].title, date: XU.today() });
-          renderChapter();
-        }
-      });
+    async function cachedMap() {
+      const m = {};
+      try {
+        const cache = await caches.open('xu-books');
+        const keys = await cache.keys();
+        keys.forEach((k) => { const mm = /data\/books\/([^\/]+)\.json/.exec(k.url); if (mm) m[mm[1]] = true; });
+      } catch (e) {}
+      return m;
     }
 
+    async function render() {
+      const cached = await cachedMap();
+      const q = query.trim().toLowerCase();
+      const items = index.filter((b) => !q || (b.title + ' ' + (b.author || '') + ' ' + (b.intro || '')).toLowerCase().indexOf(q) >= 0);
+      list.innerHTML = items.length ? items.map((b) => {
+        const p = progMap[b.id];
+        const last = p ? '读到：' + (p.chapterTitle || '') : '未开始';
+        return '<div class="row-item" style="cursor:pointer" data-book="' + XU.esc(b.id) + '">' +
+          '<div style="width:40px;height:52px;border-radius:8px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;flex:0 0 auto">' + XU.esc((b.title || '书').slice(0, 1)) + '</div>' +
+          '<div class="grow"><div class="title">' + XU.esc(b.title) + '</div>' +
+          '<div class="desc">' + XU.esc(b.author || '') + ' · ' + last + (cached[b.id] ? ' · 已保存本机' : '') + '</div></div>' +
+          '<span class="chip">' + XU.icon('bookopen') + '</span></div>';
+      }).join('') : '<div class="empty">没找到相关书籍，换个关键词试试</div>';
+    }
+
+    XU.$('#bookSearch', box).addEventListener('input', (e) => { query = e.target.value; render(); });
+    box.addEventListener('click', (e) => {
+      const item = e.target.closest('[data-book]');
+      if (item) {
+        const b = index.find((x) => x.id === item.getAttribute('data-book'));
+        if (b) openBook(b);
+      }
+    });
+    await render();
+    return box;
+  }
+
+  async function loadBook(id) {
+    const path = 'data/books/' + id + '.json';
+    try {
+      const cache = await caches.open('xu-books');
+      const hit = await cache.match(path);
+      if (hit) return { book: await hit.json(), cached: true };
+    } catch (e) {}
+    const res = await fetch(path, { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    try {
+      const cache = await caches.open('xu-books');
+      await cache.put(path, res.clone());
+    } catch (e) {}
+    return { book: await res.json(), cached: false };
+  }
+
+  function openBook(b) {
+    let close = null;
     close = XU.modal(
-      '<h3>📖 ' + XU.esc(book.title) + '</h3><p class="sub">' + XU.esc(book.author || '') + '</p><div id="readerBody"></div>',
-      { sticky: true, onMount: () => {
-        XU.Store.set('reading', { id: b.id, bookId: b.id, chapter: 0, chapterTitle: chapters[0] && chapters[0].title, date: XU.today() });
+      '<h3>📖 ' + XU.esc(b.title) + '</h3><p class="sub">' + XU.esc(b.author || '') + '</p><div id="readerBody"></div>',
+      { sticky: true, onMount: async () => {
+        const rb = XU.$('#readerBody', close);
+        rb.innerHTML = '<div class="empty">📥 正在下载《' + XU.esc(b.title) + '》全文，请稍候…</div>';
+        let book = null;
+        try { book = await loadBook(b.id); } catch (e) { book = null; }
+        if (!book) {
+          rb.innerHTML = '<div class="empty">下载失败，请检查网络后重试<br><button class="btn" id="rdRetry" style="margin-top:12px">重试</button></div>';
+          XU.$('#rdRetry', close).onclick = () => { close(); openBook(b); };
+          return;
+        }
+        const chapters = book.book.chapters || [];
+        const cached = book.cached;
+        if (!chapters.length) { rb.innerHTML = '<div class="empty">本书暂无可读内容</div>'; return; }
+        let chapterIdx = 0;
+        XU.Store.set('reading', { id: b.id, bookId: b.id, chapter: 0, chapterTitle: chapters[0].title, date: XU.today() });
+        rb.addEventListener('click', (e) => {
+          const p = e.target.closest('[data-para]');
+          const nav = e.target.closest('[data-cnav]');
+          if (p) { const i = parseInt(p.getAttribute('data-para'), 10); XU.TTS.speak(chapters[chapterIdx].paras[i] || '', 'zh', 1); }
+          if (nav) {
+            const d = parseInt(nav.getAttribute('data-cnav'), 10);
+            const nx = chapterIdx + d;
+            if (nx < 0 || nx >= chapters.length) { XU.toast(d < 0 ? '已是第一章' : '已是最后一章'); return; }
+            chapterIdx = nx;
+            XU.Store.set('reading', { id: b.id, bookId: b.id, chapter: nx, chapterTitle: chapters[nx].title, date: XU.today() });
+            renderChapter();
+          }
+        });
+        function renderChapter() {
+          const ch = chapters[chapterIdx] || { title: '', paras: [] };
+          let html = '<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">' +
+            '<button class="btn ghost mini" data-cnav="-1">← 上一章</button>' +
+            '<div class="grow" style="text-align:center;font-weight:700">' + XU.esc(ch.title || '') + '</div>' +
+            '<button class="btn ghost mini" data-cnav="1">下一章 →</button></div>' +
+            '<div style="display:flex;gap:8px;margin-bottom:12px">' +
+            '<button class="btn" id="rdAll" style="flex:1">' + XU.icon('sound') + ' 朗读本章</button>' +
+            '<button class="btn ghost" id="rdStop" style="flex:1">停止</button></div>' +
+            '<div class="reader">' + (ch.paras || []).map((p, i) => '<p data-para="' + i + '">' + XU.esc(p) + '</p>').join('') + '</div>' +
+            (cached ? '<p class="sub" style="text-align:center;margin-top:12px">📦 已保存到本机，可离线阅读</p>' : '');
+          rb.innerHTML = html;
+          XU.$('#rdAll', rb).onclick = () => XU.TTS.speak((ch.paras || []).join(' '), 'zh', 1);
+          XU.$('#rdStop', rb).onclick = () => XU.TTS.stop();
+        }
         renderChapter();
       } }
     );
@@ -185,12 +232,8 @@
     async function render() {
       body.innerHTML = '<div class="empty">加载中…</div>';
       if (current === 'books') {
-        bookIndex = await XU.feed('booksIndex').catch(() => []);
-        body.innerHTML = await booksTab();
-        body.addEventListener('click', (e) => {
-          const item = e.target.closest('[data-book]');
-          if (item && bookIndex[parseInt(item.getAttribute('data-book'), 10)]) openBook(bookIndex[parseInt(item.getAttribute('data-book'), 10)]);
-        });
+        body.innerHTML = '';
+        body.appendChild(await booksTab());
       } else if (current === 'podcasts') {
         body.innerHTML = ''; body.appendChild(await podcastsTab());
       } else {
