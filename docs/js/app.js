@@ -110,6 +110,8 @@
   XU.$$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
   XU.esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   XU.isMobile = ('ontouchstart' in window) || navigator.maxTouchPoints > 0 || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  XU.isStandalone = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+  XU.videoTarget = XU.isStandalone ? '_blank' : (XU.isMobile ? '_self' : '_blank');
   XU.today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
   XU.now = () => { const d = new Date(); return XU.today() + ' ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0'); };
   XU.money = (n) => '¥' + (Math.round(n * 100) / 100).toFixed(2);
@@ -168,7 +170,7 @@
     opts = opts || {};
     const cover = v.cover || '';
     const url = XU.esc(v.url || '');
-    return '<a class="video-card" href="' + url + '" target="' + (XU.isMobile ? '_self' : '_blank') + '" rel="noopener noreferrer" data-url="' + url + '">' +
+    return '<a class="video-card" href="' + url + '" target="' + XU.videoTarget + '" rel="noopener noreferrer" data-url="' + url + '">' +
       (cover ? '<img src="' + XU.esc(cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' : '<div style="width:86px;height:58px;border-radius:10px;flex:0 0 auto;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;color:var(--primary)">' + XU.icon('play') + '</div>') +
       '<div class="grow"><div class="vt">' + XU.esc(v.title || '') + '</div>' +
       '<div class="vd">' + XU.esc(v.author || '') + (v.duration ? ' · ' + XU.esc(v.duration) : '') + '</div></div>' +
@@ -181,6 +183,8 @@
     if (card && card.tagName !== 'A') {
       const url = card.getAttribute('data-url');
       if (url) XU.openUrl(url);
+    } else if (card && XU.isStandalone && card.getAttribute('target') === '_blank') {
+      XU.toast('已在浏览器打开抖音，看完后点手机「最近任务」键即可切回工作台', 2600);
     }
   });
 
