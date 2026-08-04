@@ -1,0 +1,8 @@
+﻿[
+  {"id":"lunyu","title":"论语","author":"孔子及弟子","intro":"记录孔子及其弟子言行，儒家核心经典，讲仁、义、礼、智、信的处世智慧。","chapters":20},
+  {"id":"daodejing","title":"道德经","author":"老子","intro":"道家哲学经典，81章五千言，讲道法自然、无为而治。","chapters":81},
+  {"id":"sunzi","title":"孙子兵法","author":"孙武","intro":"兵学圣典，讲谋略与博弈，其思想被广泛用于商业与人生决策。","chapters":13},
+  {"id":"caigentan","title":"菜根谭","author":"洪应明","intro":"处世哲学小品集，融合儒释道，教你淡泊从容、进退有度。","chapters":30},
+  {"id":"xiaochuang","title":"小窗幽记","author":"陈继儒","intro":"明代清言小品，讲安顿身心、审美生活，文字清雅通透。","chapters":12},
+  {"id":"weilu","title":"围炉夜话","author":"王永彬","intro":"寒夜围炉谈修身齐家，字字平实，句句入心。","chapters":20}
+]
