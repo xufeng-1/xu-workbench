@@ -84,7 +84,7 @@
     const data = await XU.feed('podcasts').catch(() => ({}));
     const eps = (data.episodes || []).filter((e) => e && e.title);
     const CATS = ['提升', '经济', '减压'];
-    if (!eps.length) return '<div class="card"><div class="empty">播客更新中…</div></div>';
+    if (!eps.length) { const eb = document.createElement('div'); eb.innerHTML = '<div class="card"><div class="empty">播客更新中…</div></div>'; return eb; }
 
     const box = document.createElement('div');
     box.innerHTML = '<div class="card"><h2>🎧 播客</h2><p class="sub">点击即可播放，无需跳转 · 按类别浏览</p>' +
@@ -116,7 +116,7 @@
       if (item) playPodcast(item);
     });
     renderList('提升');
-    return box.innerHTML;
+    return box;
   }
 
   function playPodcast(item) {
@@ -139,7 +139,7 @@
   /* ---------- 金句 ---------- */
   async function quotesTab() {
     const quotes = await XU.feed('quotes').catch(() => []);
-    if (!quotes.length) return '<div class="card"><div class="empty">金句更新中…</div></div>';
+    if (!quotes.length) { const qb = document.createElement('div'); qb.innerHTML = '<div class="card"><div class="empty">金句更新中…</div></div>'; return qb; }
     const box = document.createElement('div');
     box.innerHTML = '<div class="card"><h2>✨ 金句</h2><p class="sub">每日更新 · 点击可复制、可朗读</p><div class="list">' +
       quotes.map((q, i) =>
@@ -159,7 +159,7 @@
         XU.copy(item.text + (item.author ? ' ——' + item.author : ''), '金句已复制 ✨');
       }
     });
-    return box.innerHTML;
+    return box;
   }
 
   /* ---------- 面板 ---------- */
@@ -192,9 +192,9 @@
           if (item && bookIndex[parseInt(item.getAttribute('data-book'), 10)]) openBook(bookIndex[parseInt(item.getAttribute('data-book'), 10)]);
         });
       } else if (current === 'podcasts') {
-        body.innerHTML = await podcastsTab();
+        body.innerHTML = ''; body.appendChild(await podcastsTab());
       } else {
-        body.innerHTML = await quotesTab();
+        body.innerHTML = ''; body.appendChild(await quotesTab());
       }
     }
 
