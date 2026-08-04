@@ -1,0 +1,683 @@
+{
+ "updated": "2026-08-03",
+ "scenarios": [
+  {
+   "id": "cafe",
+   "title": "在咖啡馆点单",
+   "scene": "你走进一家咖啡馆，点一杯拿铁。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Good morning! What can I get for you?",
+     "cn": "早上好！请问您要喝点什么？"
+    },
+    {
+     "spk": "B",
+     "en": "Hi, I'd like a large latte, please.",
+     "cn": "你好，请给我一杯大杯拿铁。"
+    },
+    {
+     "spk": "A",
+     "en": "Sure. Hot or iced?",
+     "cn": "好的，要热的还是冰的？"
+    },
+    {
+     "spk": "B",
+     "en": "Hot, please. And could I have some oat milk?",
+     "cn": "热的，谢谢。可以换燕麦奶吗？"
+    },
+    {
+     "spk": "A",
+     "en": "Of course, that will be thirty-two yuan.",
+     "cn": "当然可以，一共32元。"
+    },
+    {
+     "spk": "B",
+     "en": "Here you go. Can I get it to go?",
+     "cn": "给您。可以打包带走吗？"
+    },
+    {
+     "spk": "A",
+     "en": "No problem. Your latte will be ready in a minute.",
+     "cn": "没问题，您的拿铁马上就好。"
+    },
+    {
+     "spk": "B",
+     "en": "Thanks a lot!",
+     "cn": "非常感谢！"
+    }
+   ],
+   "tips": "点单常用句：I'd like...（我想要）、Can I get...?（能给我...吗）、to go（带走）。"
+  },
+  {
+   "id": "restaurant",
+   "title": "餐厅点餐",
+   "scene": "和朋友去川菜馆吃饭。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Are you ready to order?",
+     "cn": "您准备点菜了吗？"
+    },
+    {
+     "spk": "B",
+     "en": "Yes. We'd like the Mapo Tofu and Kung Pao Chicken.",
+     "cn": "是的，我们想要一份麻婆豆腐和宫保鸡丁。"
+    },
+    {
+     "spk": "A",
+     "en": "Would you like some rice with that?",
+     "cn": "需要米饭吗？"
+    },
+    {
+     "spk": "B",
+     "en": "Two bowls of rice, please. And a bottle of water.",
+     "cn": "两碗米饭，再来一瓶水。"
+    },
+    {
+     "spk": "A",
+     "en": "Anything else?",
+     "cn": "还需要别的吗？"
+    },
+    {
+     "spk": "B",
+     "en": "That's all for now, thanks.",
+     "cn": "先这些，谢谢。"
+    },
+    {
+     "spk": "A",
+     "en": "Okay, the dishes will be served soon.",
+     "cn": "好的，菜很快就上。"
+    }
+   ],
+   "tips": "点菜可说 We'd like...；结账时说 Could I have the bill, please?"
+  },
+  {
+   "id": "direction",
+   "title": "问路",
+   "scene": "在街上向路人询问地铁站的位置。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Excuse me, how can I get to the nearest subway station?",
+     "cn": "打扰一下，请问最近的地铁站怎么走？"
+    },
+    {
+     "spk": "B",
+     "en": "Go straight ahead and turn left at the second crossing.",
+     "cn": "一直往前走，在第二个路口左转。"
+    },
+    {
+     "spk": "A",
+     "en": "Is it far from here?",
+     "cn": "离这儿远吗？"
+    },
+    {
+     "spk": "B",
+     "en": "About ten minutes on foot. You won't miss it.",
+     "cn": "步行大约十分钟，你不会错过的。"
+    },
+    {
+     "spk": "A",
+     "en": "Great, thank you so much!",
+     "cn": "太好了，非常感谢！"
+    },
+    {
+     "spk": "B",
+     "en": "You're welcome. Have a nice day!",
+     "cn": "不客气，祝你愉快！"
+    }
+   ],
+   "tips": "问路万能句：Excuse me, how can I get to...?（请问怎么去...?）"
+  },
+  {
+   "id": "shopping",
+   "title": "购物退换",
+   "scene": "在商场想退掉一件不合身的衣服。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Hi, I'd like to return this shirt, please.",
+     "cn": "你好，我想退掉这件衬衫。"
+    },
+    {
+     "spk": "B",
+     "en": "Do you have the receipt?",
+     "cn": "您有小票吗？"
+    },
+    {
+     "spk": "A",
+     "en": "Yes, here it is. It's a bit too small for me.",
+     "cn": "有的，给您。这件对我来说有点小了。"
+    },
+    {
+     "spk": "B",
+     "en": "No problem. Would you like a refund or an exchange?",
+     "cn": "没问题。您要退款还是换一件？"
+    },
+    {
+     "spk": "A",
+     "en": "I'd like to exchange it for a larger size.",
+     "cn": "我想换一件大一号的。"
+    },
+    {
+     "spk": "B",
+     "en": "Let me check our stock... We have it in size L.",
+     "cn": "我查一下库存……我们有大号的。"
+    },
+    {
+     "spk": "A",
+     "en": "Perfect, thank you!",
+     "cn": "太好了，谢谢！"
+    }
+   ],
+   "tips": "退换货关键词：return（退货）、refund（退款）、exchange（换货）、receipt（小票）。"
+  },
+  {
+   "id": "airport",
+   "title": "机场值机",
+   "scene": "在机场办理登机手续。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Good morning. May I see your passport, please?",
+     "cn": "早上好，请出示您的护照。"
+    },
+    {
+     "spk": "B",
+     "en": "Here you are. I'd like a window seat if possible.",
+     "cn": "给您。如果可以的话我想要靠窗的座位。"
+    },
+    {
+     "spk": "A",
+     "en": "Sure. Are you checking in any luggage?",
+     "cn": "好的。有需要托运的行李吗？"
+    },
+    {
+     "spk": "B",
+     "en": "Yes, one suitcase.",
+     "cn": "有，一个行李箱。"
+    },
+    {
+     "spk": "A",
+     "en": "Please put it on the scale. Your boarding pass and gate number are here.",
+     "cn": "请把行李放到秤上。这是您的登机牌和登机口号码。"
+    },
+    {
+     "spk": "B",
+     "en": "Thank you. What time does boarding start?",
+     "cn": "谢谢。什么时候开始登机？"
+    },
+    {
+     "spk": "A",
+     "en": "Boarding starts at 10:20 at Gate 12.",
+     "cn": "10点20分在12号登机口开始登机。"
+    }
+   ],
+   "tips": "机场常用：boarding pass（登机牌）、gate（登机口）、window seat（靠窗座位）。"
+  },
+  {
+   "id": "interview",
+   "title": "面试自我介绍",
+   "scene": "面试第一轮，向面试官介绍自己。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Nice to meet you. Could you introduce yourself briefly?",
+     "cn": "很高兴见到你。请简单介绍一下自己。"
+    },
+    {
+     "spk": "B",
+     "en": "Nice to meet you too. I'm Xu, and I have three years of experience in data analysis.",
+     "cn": "我也很高兴见到您。我是Xu，有三年数据分析经验。"
+    },
+    {
+     "spk": "A",
+     "en": "What attracted you to this position?",
+     "cn": "是什么吸引你应聘这个职位？"
+    },
+    {
+     "spk": "B",
+     "en": "I'm passionate about turning data into decisions, and this role matches my skills.",
+     "cn": "我热衷于把数据变成决策，这个职位和我的能力很匹配。"
+    },
+    {
+     "spk": "A",
+     "en": "What's your greatest strength?",
+     "cn": "你最大的优势是什么？"
+    },
+    {
+     "spk": "B",
+     "en": "I'm good at solving problems under pressure and I never stop learning.",
+     "cn": "我擅长在压力下解决问题，而且从不停止学习。"
+    },
+    {
+     "spk": "A",
+     "en": "Great. Do you have any questions for us?",
+     "cn": "很好。你有什么想问我们的吗？"
+    },
+    {
+     "spk": "B",
+     "en": "Yes, could you tell me about the team I'd be working with?",
+     "cn": "有的，能介绍一下我将合作的团队吗？"
+    }
+   ],
+   "tips": "面试黄金句式：I have experience in...（我有...经验）、I'm passionate about...（我热爱...）。"
+  },
+  {
+   "id": "hotel",
+   "title": "酒店入住",
+   "scene": "办理酒店入住，并询问早餐时间。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Welcome to our hotel. Do you have a reservation?",
+     "cn": "欢迎光临。请问您有预订吗？"
+    },
+    {
+     "spk": "B",
+     "en": "Yes, under the name Xu.",
+     "cn": "有的，用Xu这个名字预订的。"
+    },
+    {
+     "spk": "A",
+     "en": "Let me check... Yes, a standard room for two nights.",
+     "cn": "我查一下……是的，标准间两晚。"
+    },
+    {
+     "spk": "B",
+     "en": "That's right. What time is breakfast?",
+     "cn": "对。早餐几点供应？"
+    },
+    {
+     "spk": "A",
+     "en": "Breakfast is served from 7 to 10 a.m. on the second floor.",
+     "cn": "早餐7点到10点，在二楼。"
+    },
+    {
+     "spk": "B",
+     "en": "And what time is check-out?",
+     "cn": "那退房时间是几点？"
+    },
+    {
+     "spk": "A",
+     "en": "Check-out is before 12 noon. Here is your room key.",
+     "cn": "中午12点前退房。这是您的房卡。"
+    }
+   ],
+   "tips": "酒店常用：reservation（预订）、check-in（入住）、check-out（退房）、room key（房卡）。"
+  },
+  {
+   "id": "clinic",
+   "title": "看医生",
+   "scene": "感冒了，去诊所看医生。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Good morning. What seems to be the problem?",
+     "cn": "早上好。您哪里不舒服？"
+    },
+    {
+     "spk": "B",
+     "en": "I have a sore throat and a runny nose.",
+     "cn": "我嗓子疼，还流鼻涕。"
+    },
+    {
+     "spk": "A",
+     "en": "How long have you felt like this?",
+     "cn": "这样多久了？"
+    },
+    {
+     "spk": "B",
+     "en": "Since yesterday. I also have a slight fever.",
+     "cn": "从昨天开始的，还有点发烧。"
+    },
+    {
+     "spk": "A",
+     "en": "Let me take your temperature... It's 37.8. It's a mild cold.",
+     "cn": "量一下体温……37.8度，是轻度感冒。"
+    },
+    {
+     "spk": "B",
+     "en": "Do I need any medicine?",
+     "cn": "需要吃药吗？"
+    },
+    {
+     "spk": "A",
+     "en": "Yes. Take these pills twice a day and drink plenty of water.",
+     "cn": "需要。这些药一天两次，多喝水。"
+    }
+   ],
+   "tips": "看病常用：sore throat（嗓子疼）、runny nose（流鼻涕）、take medicine（吃药）。"
+  },
+  {
+   "id": "bank",
+   "title": "银行开户",
+   "scene": "去银行办理一张储蓄卡。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Good afternoon. How can I help you?",
+     "cn": "下午好，请问需要办理什么业务？"
+    },
+    {
+     "spk": "B",
+     "en": "I'd like to open a savings account.",
+     "cn": "我想开一个储蓄账户。"
+    },
+    {
+     "spk": "A",
+     "en": "May I see your ID card, please?",
+     "cn": "请出示您的身份证。"
+    },
+    {
+     "spk": "B",
+     "en": "Here it is. What documents do I need?",
+     "cn": "给您。还需要什么材料吗？"
+    },
+    {
+     "spk": "A",
+     "en": "Just your phone number. Please set a six-digit password.",
+     "cn": "再留个手机号，并设置六位密码。"
+    },
+    {
+     "spk": "B",
+     "en": "Done. How long will it take?",
+     "cn": "好了。大概要多久？"
+    },
+    {
+     "spk": "A",
+     "en": "About ten minutes. Here's your card.",
+     "cn": "大约十分钟。这是您的卡。"
+    }
+   ],
+   "tips": "银行常用：open an account（开户）、savings account（储蓄账户）、password（密码）。"
+  },
+  {
+   "id": "taxi",
+   "title": "打车去机场",
+   "scene": "在路边打了一辆出租车去机场。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Where are you heading?",
+     "cn": "您要去哪儿？"
+    },
+    {
+     "spk": "B",
+     "en": "The airport, please. I'm in a hurry.",
+     "cn": "去机场，我赶时间。"
+    },
+    {
+     "spk": "A",
+     "en": "No problem. The traffic is fine at this hour.",
+     "cn": "没问题，这个点路况不错。"
+    },
+    {
+     "spk": "B",
+     "en": "How long will it take?",
+     "cn": "大概要多久？"
+    },
+    {
+     "spk": "A",
+     "en": "About twenty-five minutes.",
+     "cn": "大约25分钟。"
+    },
+    {
+     "spk": "B",
+     "en": "Could you please turn up the air conditioner?",
+     "cn": "能麻烦把空调开大一点吗？"
+    },
+    {
+     "spk": "A",
+     "en": "Sure. We're almost there.",
+     "cn": "好的。我们快到了。"
+    }
+   ],
+   "tips": "打车常用：I'm in a hurry（我赶时间）、turn up（调大）。"
+  },
+  {
+   "id": "gym",
+   "title": "健身房办卡",
+   "scene": "在健身房咨询会员卡。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Welcome! Are you interested in a membership?",
+     "cn": "欢迎光临！想了解会员卡吗？"
+    },
+    {
+     "spk": "B",
+     "en": "Yes. How much is a monthly pass?",
+     "cn": "是的，月卡多少钱？"
+    },
+    {
+     "spk": "A",
+     "en": "Two hundred yuan per month, or eighteen hundred a year.",
+     "cn": "月卡200元，年卡1800元。"
+    },
+    {
+     "spk": "B",
+     "en": "What facilities do you have?",
+     "cn": "你们都有什么设施？"
+    },
+    {
+     "spk": "A",
+     "en": "We have a full gym, a swimming pool, and yoga classes.",
+     "cn": "全套器械、游泳池和瑜伽课。"
+    },
+    {
+     "spk": "B",
+     "en": "Sounds good. I'll take the yearly plan.",
+     "cn": "听起来不错，我办年卡。"
+    }
+   ],
+   "tips": "健身常用：membership（会员）、facilities（设施）、yoga（瑜伽）。"
+  },
+  {
+   "id": "reserve",
+   "title": "打电话订座",
+   "scene": "给餐厅打电话预订周末的位子。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Hello, this is Green Garden Restaurant.",
+     "cn": "您好，这里是绿园餐厅。"
+    },
+    {
+     "spk": "B",
+     "en": "Hi, I'd like to book a table for Saturday night.",
+     "cn": "你好，我想订周六晚上的位子。"
+    },
+    {
+     "spk": "A",
+     "en": "For how many people?",
+     "cn": "几位用餐？"
+    },
+    {
+     "spk": "B",
+     "en": "Four people, at seven o'clock.",
+     "cn": "四位，晚上7点。"
+    },
+    {
+     "spk": "A",
+     "en": "May I have your name and phone number?",
+     "cn": "请留一下您的姓名和电话。"
+    },
+    {
+     "spk": "B",
+     "en": "Sure, it's Xu, 138-0000-0000.",
+     "cn": "好的，我叫Xu，电话138-0000-0000。"
+    },
+    {
+     "spk": "A",
+     "en": "All set. We'll keep the table for fifteen minutes.",
+     "cn": "订好了，我们会保留位子15分钟。"
+    }
+   ],
+   "tips": "订座常用：book a table（订位）、keep the table（留位）。"
+  },
+  {
+   "id": "supermarket",
+   "title": "超市结账",
+   "scene": "在超市排队结账。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Good evening. Did you find everything?",
+     "cn": "晚上好，都找到了吗？"
+    },
+    {
+     "spk": "B",
+     "en": "Yes, thanks. I also have a coupon.",
+     "cn": "是的，谢谢。我有一张优惠券。"
+    },
+    {
+     "spk": "A",
+     "en": "Sure, let me scan it. That will be eighty-six fifty.",
+     "cn": "好的，我扫一下。一共86块5。"
+    },
+    {
+     "spk": "B",
+     "en": "Can I pay by mobile?",
+     "cn": "可以手机支付吗？"
+    },
+    {
+     "spk": "A",
+     "en": "Of course. Please scan this QR code.",
+     "cn": "当然可以，请扫这个二维码。"
+    },
+    {
+     "spk": "B",
+     "en": "Done. Have a nice evening!",
+     "cn": "付好了，祝你晚上愉快！"
+    }
+   ],
+   "tips": "超市常用：coupon（优惠券）、pay by mobile（手机支付）、QR code（二维码）。"
+  },
+  {
+   "id": "barber",
+   "title": "理发",
+   "scene": "去理发店剪头发。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "How would you like your hair cut?",
+     "cn": "您想怎么剪？"
+    },
+    {
+     "spk": "B",
+     "en": "Just a trim, and shorter on the sides.",
+     "cn": "稍微修一下，两边剪短一点。"
+    },
+    {
+     "spk": "A",
+     "en": "How about the top?",
+     "cn": "头顶呢？"
+    },
+    {
+     "spk": "B",
+     "en": "Keep the top a bit longer, please.",
+     "cn": "头顶留长一点。"
+    },
+    {
+     "spk": "A",
+     "en": "Do you want a wash first?",
+     "cn": "要先洗个头吗？"
+    },
+    {
+     "spk": "B",
+     "en": "Yes, please.",
+     "cn": "好的。"
+    },
+    {
+     "spk": "A",
+     "en": "All done. How does it look?",
+     "cn": "剪好了，您看怎么样？"
+    }
+   ],
+   "tips": "理发常用：a trim（修剪）、shorter on the sides（两边剪短）。"
+  },
+  {
+   "id": "library",
+   "title": "图书馆借书",
+   "scene": "在图书馆借阅一本书。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Excuse me, how do I borrow a book?",
+     "cn": "打扰一下，请问怎么借书？"
+    },
+    {
+     "spk": "B",
+     "en": "You need a library card. Do you have one?",
+     "cn": "需要借书卡，您有吗？"
+    },
+    {
+     "spk": "A",
+     "en": "Yes, here it is. I'd like to borrow this novel.",
+     "cn": "有，给您。我想借这本小说。"
+    },
+    {
+     "spk": "B",
+     "en": "It's due in two weeks. You can renew it online.",
+     "cn": "两周后到期，可以在网上续借。"
+    },
+    {
+     "spk": "A",
+     "en": "What if I return it late?",
+     "cn": "如果逾期还书会怎样？"
+    },
+    {
+     "spk": "B",
+     "en": "There's a small fine of fifty cents a day.",
+     "cn": "每天五毛钱的小额罚款。"
+    },
+    {
+     "spk": "A",
+     "en": "Got it, thanks!",
+     "cn": "明白了，谢谢！"
+    }
+   ],
+   "tips": "图书馆常用：borrow（借）、due（到期）、renew（续借）、fine（罚款）。"
+  },
+  {
+   "id": "neighbor",
+   "title": "和新邻居打招呼",
+   "scene": "搬家后第一次见到邻居。",
+   "lines": [
+    {
+     "spk": "A",
+     "en": "Hi, you must be the new neighbor!",
+     "cn": "你好，你就是新邻居吧！"
+    },
+    {
+     "spk": "B",
+     "en": "Hi! I just moved in yesterday.",
+     "cn": "你好！我昨天刚搬来。"
+    },
+    {
+     "spk": "A",
+     "en": "Welcome! I'm Li, from next door.",
+     "cn": "欢迎！我是隔壁的小李。"
+    },
+    {
+     "spk": "B",
+     "en": "Nice to meet you. I'm Xu.",
+     "cn": "很高兴认识你，我叫Xu。"
+    },
+    {
+     "spk": "A",
+     "en": "If you need anything, just knock on my door.",
+     "cn": "有什么需要帮忙的，随时敲门。"
+    },
+    {
+     "spk": "B",
+     "en": "That's so kind. Thanks a lot!",
+     "cn": "你太好了，非常感谢！"
+    }
+   ],
+   "tips": "邻居寒暄常用：just moved in（刚搬来）、knock on my door（来敲门找我）。"
+  }
+ ]
+}
