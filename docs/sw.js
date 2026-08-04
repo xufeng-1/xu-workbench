@@ -1,5 +1,5 @@
 ﻿/* xu的工作台 Service Worker：离线可用 + 数据缓存 */
-const VERSION = 'xu-v1';
+const VERSION = 'xu-v2';
 const SHELL = [
   './',
   './index.html',
@@ -26,6 +26,8 @@ self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== VERSION).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
+      .then(() => self.clients.matchAll({ type: 'window' }))
+      .then((clients) => clients.forEach((cl) => cl.postMessage({ type: 'XU_UPDATE' })))
   );
 });
 self.addEventListener('fetch', (e) => {
@@ -45,12 +47,14 @@ self.addEventListener('fetch', (e) => {
     );
     return;
   }
-  // 应用外壳：缓存优先
+  // 应用外壳：网络优先（线上更新自动生效），离线时回退缓存
   e.respondWith(
-    caches.match(req).then((r) => r || fetch(req).then((res) => {
-      const clone = res.clone();
-      caches.open(VERSION).then((c) => c.put(req, clone));
+    fetch(req).then((res) => {
+      if (res && res.ok) {
+        const clone = res.clone();
+        caches.open(VERSION).then((c) => c.put(req, clone));
+      }
       return res;
-    }).catch(() => caches.match('./index.html')))
+    }).catch(() => caches.match(req).then((r) => r || caches.match('./index.html')))
   );
 });
