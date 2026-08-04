@@ -166,17 +166,18 @@
   XU.videoCard = function (v, opts) {
     opts = opts || {};
     const cover = v.cover || '';
-    return '<div class="video-card" data-url="' + XU.esc(v.url || '') + '">' +
+    const url = XU.esc(v.url || '');
+    return '<a class="video-card" href="' + url + '" target="_blank" rel="noopener noreferrer" data-url="' + url + '">' +
       (cover ? '<img src="' + XU.esc(cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' : '<div style="width:86px;height:58px;border-radius:10px;flex:0 0 auto;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;color:var(--primary)">' + XU.icon('play') + '</div>') +
       '<div class="grow"><div class="vt">' + XU.esc(v.title || '') + '</div>' +
       '<div class="vd">' + XU.esc(v.author || '') + (v.duration ? ' · ' + XU.esc(v.duration) : '') + '</div></div>' +
-      '<span class="play-badge">' + XU.icon('play', 's16') + '</span></div>';
+      '<span class="play-badge">' + XU.icon('play', 's16') + '</span></a>';
   };
 
   /* 视频卡事件委托 */
   document.addEventListener('click', (e) => {
     const card = e.target.closest('.video-card');
-    if (card) {
+    if (card && card.tagName !== 'A') {
       const url = card.getAttribute('data-url');
       if (url) XU.openUrl(url);
     }
