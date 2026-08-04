@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """content.py —— 内容生成：单词词库 / 新概念课文 / 公版书全文 / 脚本生成"""
 import csv
 import io
@@ -132,6 +132,16 @@ BOOK_WIKI = {
     "caigentan": "菜根譚",
     "xiaochuang": "小窗幽記",
     "weilu": "圍爐夜話",
+    "daxue": "大學",
+    "zhongyong": "中庸",
+    "mengzi": "孟子",
+    "sanzijing": "三字經",
+    "qianziwen": "千字文",
+    "dizigui": "弟子規",
+    "zengguang": "增廣賢文",
+    "baijiaxing": "百家姓",
+    "tangshi": "唐詩三百首",
+    "songci": "宋詞三百首",
 }
 BOOK_FALLBACK = {
     "lunyu": ["https://raw.githubusercontent.com/zhengxiaoyang/ConfuciusAnalects/master/lunyu.txt"],
