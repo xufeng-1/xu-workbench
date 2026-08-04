@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -62,44 +62,53 @@ def main():
     summary.append("热榜关键词: %d" % len(hot))
 
     # 1) 健身训练视频（6 部位 × 3 条）
-    parts = {}
-    for pid, topics in FITNESS_TOPICS.items():
-        parts[pid] = douyin.get_videos(topics, 3, day_index + hash(pid) % 5, cookie, hot)
-    save("fitness/videos.json", {"updated": today, "parts": parts})
-    summary.append("健身视频已更新")
+    try:
+        parts = {}
+        for pid, topics in FITNESS_TOPICS.items():
+            parts[pid] = douyin.get_videos(topics, 3, day_index + hash(pid) % 5, cookie, hot)
+        save("fitness/videos.json", {"updated": today, "parts": parts})
+        summary.append("健身视频已更新")
+    except Exception as e:
+        summary.append("健身视频更新失败（下次自动重试）：%s" % e)
 
     # 2) 创作：AI 漫剧 6 条 + 爆款脚本 10 套
-    drama = douyin.get_videos(CREATION_DRAMA_TOPICS, 6, day_index, cookie, hot)
-    scripts_raw = douyin.get_videos(CREATION_SCRIPT_TOPICS, 10, day_index + 3, cookie, hot, blend_hot=True)
-    scripts = []
-    for i, v in enumerate(scripts_raw):
-        scripts.append(dict(v, topic=v.get("title", ""), script=content.make_script(v, i, day_index)))
-    save("creation.json", {"updated": today, "drama": drama[:6], "scripts": scripts[:10]})
-    summary.append("创作板块已更新（漫剧%d条 脚本%d套）" % (len(drama[:6]), len(scripts[:10])))
+    try:
+        drama = douyin.get_videos(CREATION_DRAMA_TOPICS, 6, day_index, cookie, hot)
+        scripts_raw = douyin.get_videos(CREATION_SCRIPT_TOPICS, 10, day_index + 3, cookie, hot, blend_hot=True)
+        scripts = []
+        for i, v in enumerate(scripts_raw):
+            scripts.append(dict(v, topic=v.get("title", ""), script=content.make_script(v, i, day_index)))
+        save("creation.json", {"updated": today, "drama": drama[:6], "scripts": scripts[:10]})
+        summary.append("创作板块已更新（漫剧%d条 脚本%d套）" % (len(drama[:6]), len(scripts[:10])))
+    except Exception as e:
+        summary.append("创作板块更新失败（下次自动重试）：%s" % e)
 
     # 3) 数据分析：每日每章 2 条，历史全部保留
-    chapters = load("study/chapters.json", [])
-    feed = load("study/feed.json", {"updates": []})
-    today_feed = []
-    for ch in chapters:
-        cid = ch.get("id", "")
-        topics = STUDY_TOPICS.get(cid, ["数据分析"])
-        vs = douyin.get_videos(topics, 2, day_index + hash(cid) % 5, cookie, hot)
-        if not vs:
-            continue
-        old = ch.get("videos", [])
-        ch["videos"] = dedupe(old + vs, lambda v: (v.get("title"), v.get("url")))[-60:]
-        for v in vs:
-            today_feed.append(dict(v, chapterId=cid))
-    save("study/chapters.json", chapters)
-    if today_feed:
-        feed["updates"] = [u for u in feed["updates"] if u.get("date", "") != today]
-        feed["updates"].append({"date": today, "videos": today_feed})
-    cutoff = (now.date() - timedelta(days=90)).strftime("%Y-%m-%d")
-    feed["updates"] = [u for u in feed["updates"] if u.get("date", "") >= cutoff]
-    feed["date"] = today
-    save("study/feed.json", feed)
-    summary.append("数据分析视频已更新（今日%d条，历史保留）" % len(today_feed))
+    try:
+        chapters = load("study/chapters.json", [])
+        feed = load("study/feed.json", {"updates": []})
+        today_feed = []
+        for ch in chapters:
+            cid = ch.get("id", "")
+            topics = STUDY_TOPICS.get(cid, ["数据分析"])
+            vs = douyin.get_videos(topics, 2, day_index + hash(cid) % 5, cookie, hot)
+            if not vs:
+                continue
+            old = ch.get("videos", [])
+            ch["videos"] = dedupe(old + vs, lambda v: (v.get("title"), v.get("url")))[-60:]
+            for v in vs:
+                today_feed.append(dict(v, chapterId=cid))
+        save("study/chapters.json", chapters)
+        if today_feed:
+            feed["updates"] = [u for u in feed["updates"] if u.get("date", "") != today]
+            feed["updates"].append({"date": today, "videos": today_feed})
+        cutoff = (now.date() - timedelta(days=90)).strftime("%Y-%m-%d")
+        feed["updates"] = [u for u in feed["updates"] if u.get("date", "") >= cutoff]
+        feed["date"] = today
+        save("study/feed.json", feed)
+        summary.append("数据分析视频已更新（今日%d条，历史保留）" % len(today_feed))
+    except Exception as e:
+        summary.append("数据分析更新失败（下次自动重试）：%s" % e)
 
     # 4) 菜谱：每日 3 道川菜（池内轮换），历史保留最近 12 道
     base = load("recipes/recipes.json", {}).get("recipes", [])
@@ -126,16 +135,19 @@ def main():
     cet6 = load("words/cet6.json", [])
     ielts = load("words/ielts.json", [])
     job = load("words/job.json", [])
-    cet6_new = content.refresh_word_bank("cet6", cet6)
-    ielts_new = content.refresh_word_bank("ielts", ielts)
-    job_new = content.derive_job_bank(cet6_new, ielts_new, job)
-    if cet6_new != cet6 or ielts_new != ielts or job_new != job:
-        save("words/cet6.json", cet6_new)
-        save("words/ielts.json", ielts_new)
-        save("words/job.json", job_new)
-        summary.append("词库扩充（六级%d 雅思%d 求职%d）" % (len(cet6_new), len(ielts_new), len(job_new)))
-    else:
-        summary.append("词库充足，无需更新（六级%d 雅思%d 求职%d）" % (len(cet6), len(ielts), len(job)))
+    try:
+        cet6_new = content.refresh_word_bank("cet6", cet6)
+        ielts_new = content.refresh_word_bank("ielts", ielts)
+        job_new = content.derive_job_bank(cet6_new, ielts_new, job)
+        if cet6_new != cet6 or ielts_new != ielts or job_new != job:
+            save("words/cet6.json", cet6_new)
+            save("words/ielts.json", ielts_new)
+            save("words/job.json", job_new)
+            summary.append("词库扩充（六级%d 雅思%d 求职%d）" % (len(cet6_new), len(ielts_new), len(job_new)))
+        else:
+            summary.append("词库充足，无需更新（六级%d 雅思%d 求职%d）" % (len(cet6), len(ielts), len(job)))
+    except Exception as e:
+        summary.append("词库更新失败（下次自动重试）：%s" % e)
 
     # 6) 场景口语：合并扩充池（每周轮换展示）
     oral = load("oral.json", {})
@@ -170,7 +182,11 @@ def main():
         if not bid:
             continue
         if not (DATA / "books" / (bid + ".json")).exists():
-            chapters_text = content.fetch_book(bid, b)
+            try:
+                chapters_text = content.fetch_book(bid, b)
+            except Exception as e:
+                chapters_text = None
+                summary.append("书籍抓取异常（下次自动重试）：%s %s" % (b.get("title", bid), e))
             if chapters_text:
                 save("books/%s.json" % bid, {"id": bid, "title": b.get("title", ""), "author": b.get("author", ""), "chapters": chapters_text})
                 summary.append("书籍全文已抓取：%s" % b.get("title", bid))
