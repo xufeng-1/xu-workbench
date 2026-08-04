@@ -225,6 +225,9 @@
     await route();
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
       navigator.serviceWorker.register('sw.js').catch(() => {});
+      navigator.serviceWorker.addEventListener('message', (e) => {
+        if (e.data && e.data.type === 'XU_UPDATE') location.reload();
+      });
     }
   }
 
