@@ -1,0 +1,38 @@
+﻿name: 每日自动更新
+
+on:
+  schedule:
+    # 北京时间每天 07:20（UTC 23:20）
+    - cron: "20 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 每日更新（爬取抖音热门 + 生成全部内容）
+        env:
+          DOUYIN_COOKIE: ${{ secrets.DOUYIN_COOKIE }}
+        run: python scraper/daily.py "$GITHUB_WORKSPACE"
+
+      - name: 提交每日更新（自动保活工作流）
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 每日自动更新 $(date +%F)"
+          commit_options: "--no-verify"
