@@ -35,7 +35,8 @@
     saves: '<path d="M6 3.5h12V21l-6-4.5L6 21Z"/>',
     games: '<rect x="2.5" y="7" width="19" height="11" rx="4"/><path d="M7 10v5M4.5 12.5h5M16 11h.01M18.5 13.5h.01"/>',
     habits: '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/>',
-    diary: '<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M9 3v18M12 8h4M12 12h4"/>'
+    diary: '<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M9 3v18M12 8h4M12 12h4"/>',
+    smoke: '<rect x="2.5" y="10.5" width="15" height="3" rx="1.5"/><rect x="16.5" y="10.5" width="5" height="3" rx="1.5"/><path d="M19 9.5c1.2-1 2.8-1 3.5-2.5M19 6.5c1.2-1 2.8-1 3.5-2.5"/>'
   };
   XU.ICONS = ICONS;
   XU.icon = (name, cls) => '<svg class="' + (cls || '') + '" viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[name] || '') + '</svg>';
@@ -50,6 +51,7 @@
     { id: 'mood', label: '心情' },
     { id: 'pomodoro', label: '番茄钟' },
     { id: 'habits', label: '习惯' },
+    { id: 'smoke', label: '抽烟' },
     { id: 'diary', label: '日记' },
     { id: 'games', label: '游戏' },
     { id: 'money', label: '记账' },
