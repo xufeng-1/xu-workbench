@@ -24,6 +24,20 @@
     "duration": "",
     "url": "https://www.douyin.com/search/%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C?type=video",
     "cover": ""
+   },
+   {
+    "title": "数据分析基础",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80?type=video",
+    "cover": ""
+   },
+   {
+    "title": "统计学入门",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%85%A5%E9%97%A8?type=video",
+    "cover": ""
    }
   ]
  },
@@ -80,6 +94,20 @@
     "duration": "",
     "url": "https://www.douyin.com/search/SQL%E6%95%99%E7%A8%8B?type=video",
     "cover": ""
+   },
+   {
+    "title": "窗口函数",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0?type=video",
+    "cover": ""
+   },
+   {
+    "title": "SQL面试",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/SQL%E9%9D%A2%E8%AF%95?type=video",
+    "cover": ""
    }
   ]
  },
@@ -107,6 +135,13 @@
     "author": "抖音热门",
     "duration": "",
     "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97?type=video",
+    "cover": ""
+   },
+   {
+    "title": "Python数据分析",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90?type=video",
     "cover": ""
    }
   ]
@@ -136,6 +171,13 @@
     "duration": "",
     "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96?type=video",
     "cover": ""
+   },
+   {
+    "title": "仪表盘",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E4%BB%AA%E8%A1%A8%E7%9B%98?type=video",
+    "cover": ""
    }
   ]
  },
@@ -163,6 +205,20 @@
     "author": "抖音热门",
     "duration": "",
     "url": "https://www.douyin.com/search/AI%E6%95%99%E7%A8%8B?type=video",
+    "cover": ""
+   },
+   {
+    "title": "机器学习入门",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8?type=video",
+    "cover": ""
+   },
+   {
+    "title": "深度学习",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0?type=video",
     "cover": ""
    }
   ]
