@@ -11,15 +11,21 @@
 
     if (!index.length) { const eb = document.createElement('div'); eb.innerHTML = '<div class="card"><div class="empty">书库更新中…</div></div>'; return eb; }
 
+    const CATS = [
+      { id: 'all', label: '全部' }, { id: 'growth', label: '成长' }, { id: 'mind', label: '认知' },
+      { id: 'money', label: '理财' }, { id: 'life', label: '生活' }, { id: 'lit', label: '文学' }
+    ];
     const box = document.createElement('div');
     box.innerHTML =
-      '<div class="card"><h2>📚 书籍</h2><p class="sub">公版经典全文 · 下载后保存在本机可离线阅读 · 自动保存进度</p>' +
+      '<div class="card"><h2>📚 书籍</h2><p class="sub">成长 · 认知 · 理财 · 生活 · 文学，公版经典全文 · 下载后本机离线阅读 · 自动保存进度</p>' +
+      '<div class="tabs" id="bookCats">' + CATS.map((c) => '<button class="tab' + (c.id === 'all' ? ' active' : '') + '" data-cat="' + c.id + '">' + c.label + '</button>').join('') + '</div>' +
       '<input id="bookSearch" class="input" placeholder="🔍 搜索免费书籍（书名 / 作者）" style="width:100%;margin-bottom:10px">' +
       '<div class="list" id="bookList"></div>' +
       '<p class="sub" style="margin-top:8px">💡 想看的书没找到？告诉我书名，我会加进每日更新的书库</p></div>';
 
     const list = XU.$('#bookList', box);
     let query = '';
+    let curCat = 'all';
 
     async function cachedMap() {
       const m = {};
@@ -34,7 +40,9 @@
     async function render() {
       const cached = await cachedMap();
       const q = query.trim().toLowerCase();
-      const items = index.filter((b) => !q || (b.title + ' ' + (b.author || '') + ' ' + (b.intro || '')).toLowerCase().indexOf(q) >= 0);
+      const items = index.filter((b) =>
+        (curCat === 'all' || (b.cat || '') === curCat) &&
+        (!q || (b.title + ' ' + (b.author || '') + ' ' + (b.intro || '')).toLowerCase().indexOf(q) >= 0));
       list.innerHTML = items.length ? items.map((b) => {
         const p = progMap[b.id];
         const last = p ? '读到：' + (p.chapterTitle || '') : '未开始';
@@ -47,6 +55,13 @@
     }
 
     XU.$('#bookSearch', box).addEventListener('input', (e) => { query = e.target.value; render(); });
+    XU.$('#bookCats', box).addEventListener('click', (e) => {
+      const b = e.target.closest('[data-cat]');
+      if (!b) return;
+      curCat = b.getAttribute('data-cat');
+      XU.$$('button', XU.$('#bookCats', box)).forEach((x) => x.classList.toggle('active', x === b));
+      render();
+    });
     box.addEventListener('click', (e) => {
       const item = e.target.closest('[data-book]');
       if (item) {
