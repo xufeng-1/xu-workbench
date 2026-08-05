@@ -120,9 +120,13 @@
   XU.toast = function (msg, ms) {
     const t = XU.$('#toast');
     t.textContent = msg;
+    t.classList.remove('hide');
     t.hidden = false;
     clearTimeout(XU._toastTimer);
-    XU._toastTimer = setTimeout(() => { t.hidden = true; }, ms || 1800);
+    XU._toastTimer = setTimeout(() => {
+      t.classList.add('hide');
+      setTimeout(() => { t.hidden = true; }, 280);
+    }, ms || 1800);
   };
 
   XU.modal = function (html, opts) {
@@ -222,7 +226,7 @@
     return '<a class="video-card" href="' + url + '" target="' + XU.videoTarget + '" rel="noopener noreferrer" data-url="' + url + '"' + (play ? ' data-play="' + play + '"' : '') + '>' +
       (cover ? '<img src="' + XU.esc(cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' : '<div style="width:86px;height:58px;border-radius:10px;flex:0 0 auto;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;color:var(--primary)">' + XU.icon('play') + '</div>') +
       '<div class="grow"><div class="vt">' + XU.esc(v.title || '') + '</div>' +
-      '<div class="vd">' + XU.esc(v.author || '') + (v.duration ? ' · ' + XU.esc(v.duration) : '') + '</div></div>' +
+      '<div class="vd">' + XU.esc(v.author || '') + (v.duration ? ' · ' + XU.esc(v.duration) : '') + (play ? ' <span class="pure-tag">' + XU.icon('play', 's10') + ' 纯视频</span>' : '') + '</div></div>' +
       '<span class="play-badge">' + XU.icon('play', 's16') + '</span></a>';
   };
 
