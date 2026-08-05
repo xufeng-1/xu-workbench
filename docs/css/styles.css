@@ -283,3 +283,40 @@ a.link{color:var(--primary);text-decoration:none;font-weight:600}
 /* ---------- 收藏 ---------- */
 input[type=search]{width:100%;box-sizing:border-box;padding:10px 12px;border-radius:12px;border:1.5px solid var(--primary-soft);background:#fff;color:var(--text);font-size:14px;outline:none;transition:border-color .18s,box-shadow .18s}
 input[type=search]:focus{border-color:var(--primary);box-shadow:0 0 0 3.5px rgba(124,107,212,.12)}
+
+/* ---------- 游戏 ---------- */
+.game-pick{display:flex;flex-direction:column;align-items:flex-start;gap:3px;border:none;background:var(--card-tint);border-radius:18px;padding:14px;cursor:pointer;text-align:left;transition:transform .14s ease,box-shadow .2s ease,border-color .2s;border:1.5px solid transparent}
+.game-pick:active{transform:scale(.96)}
+.game-pick.on{border-color:var(--primary);background:#fff;box-shadow:0 8px 20px rgba(124,107,212,.16)}
+.gp-emoji{font-size:26px}
+.game-pick b{font-size:14.5px;color:var(--text)}
+.game-pick i{font-style:normal;font-size:11.5px;color:var(--muted);line-height:1.4}
+.game-pick em{font-style:normal;font-size:11px;color:var(--primary);font-weight:700;margin-top:2px}
+.game-head{display:flex;align-items:center;justify-content:space-between;margin:14px 0 10px;font-size:13.5px;color:var(--muted)}
+.game-head b{color:var(--primary);font-size:16px}
+.g2048{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:300px;margin:0 auto;background:var(--card-tint);border-radius:16px;padding:8px;touch-action:none}
+.g2048>div{aspect-ratio:1;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:var(--muted);background:#fff}
+.g2048 .t2{background:#FDEFF2;color:#E2574C}.g2048 .t4{background:#FDE3E9;color:#D94F5C}.g2048 .t8{background:#FBD2DC;color:#C2384A}
+.g2048 .t16{background:#F8BFCB;color:#A82C3E}.g2048 .t32{background:#F5A9B8;color:#8E2233}.g2048 .t64{background:#F18FA2;color:#fff}
+.g2048 .t128{background:#EE7690;color:#fff}.g2048 .t256{background:#E95C7C;color:#fff}.g2048 .t512{background:#E3456B;color:#fff}
+.g2048 .t1024{background:#D92F5C;color:#fff}.g2048 .t2048{background:#C91F4D;color:#fff}
+.mem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:300px;margin:0 auto}
+.mem-card{aspect-ratio:1;border:none;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-size:26px;cursor:pointer;box-shadow:0 4px 12px rgba(124,107,212,.25);transition:transform .14s ease;touch-action:manipulation}
+.mem-card:active{transform:scale(.92)}
+.mem-card.on{background:#fff;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.guess-wrap{max-width:300px;margin:0 auto}
+.guess-num{background:var(--card-tint);border-radius:14px;padding:16px;text-align:center;font-size:15px;font-weight:600;color:var(--primary);margin-bottom:12px;min-height:52px;display:flex;align-items:center;justify-content:center}
+
+/* ---------- 习惯 ---------- */
+.habit-suggest{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.habit-suggest button{border:none;background:var(--card-tint);border-radius:999px;padding:6px 12px;font-size:12.5px;cursor:pointer;color:var(--text);font-weight:600}
+.habit-suggest button:active{transform:scale(.94)}
+.habit-week-row{display:flex;gap:8px;margin-top:6px}
+.hw-day{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px}
+.hw-ring{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:conic-gradient(var(--ok) 0%,var(--card-tint) 0)}
+.hw-ring i{font-style:normal;font-size:11px;font-weight:800;color:var(--text);background:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.hw-wd{font-size:10.5px;color:var(--muted);font-weight:600}
+
+/* ---------- 日记 ---------- */
+textarea{width:100%;box-sizing:border-box;padding:10px 12px;border-radius:12px;border:1.5px solid var(--primary-soft);background:#fff;color:var(--text);font-size:14px;outline:none;font-family:inherit;resize:vertical;transition:border-color .18s,box-shadow .18s}
+textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3.5px rgba(124,107,212,.12)}
