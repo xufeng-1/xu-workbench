@@ -2,7 +2,7 @@
 (function () {
   const XU = window.XU;
 
-  const CUISINE_ORDER = ['川菜', '粤菜', '湘菜', '东北菜', '江浙菜', '闽菜', '鲁菜', '新疆菜', '台湾菜', '陕西菜'];
+  const CUISINE_ORDER = ['川菜', '粤菜', '湘菜', '东北菜', '江浙菜', '鲁菜', '闽菜', '徽菜', '云南菜', '贵州菜', '湖北菜', '河南菜', '北京菜', '广西菜', '海南菜', '天津菜', '新疆菜', '台湾菜', '陕西菜'];
 
   XU.regPanel('recipes', async function (root) {
     const el = document.createElement('div');
@@ -16,11 +16,11 @@
     });
     const updated = data.updated || XU.meta.updated || '';
 
-    const cuisines = ['全部'].concat(CUISINE_ORDER.filter((c) => recipes.some((r) => r.cuisine === c)));
+    const cuisines = ['全部'].concat(CUISINE_ORDER);
     let cur = '全部';
 
     function cuisineColor(c) {
-      const map = { '川菜': '#E2574C', '粤菜': '#2E9E6B', '湘菜': '#D9534F', '东北菜': '#C96A1F', '江浙菜': '#4C7BB8', '闽菜': '#7A5BB0', '鲁菜': '#B8853A', '新疆菜': '#C2543E', '台湾菜': '#B04E86', '陕西菜': '#A26A28' };
+      const map = { '川菜': '#E2574C', '粤菜': '#2E9E6B', '湘菜': '#D9534F', '东北菜': '#C96A1F', '江浙菜': '#4C7BB8', '鲁菜': '#B8853A', '闽菜': '#7A5BB0', '徽菜': '#8A6D3B', '云南菜': '#B05C2E', '贵州菜': '#C0392B', '湖北菜': '#3E8E7E', '河南菜': '#A67B2D', '北京菜': '#B23A48', '广西菜': '#2F9E63', '海南菜': '#2E9B8F', '天津菜': '#5E7CC2', '新疆菜': '#C2543E', '台湾菜': '#B04E86', '陕西菜': '#A26A28' };
       return map[c] || 'var(--primary)';
     }
 
@@ -50,7 +50,7 @@
               '<span class="chip">做法</span>' +
             '</div>'
           ).join('')
-        : '<div class="empty">该菜系暂时没有菜谱，换个菜系看看吧</div>';
+        : '<div class="empty">今天还没有这个菜系的菜，每天自动轮换，明天可能就有啦</div>';
     }
     renderList();
 
