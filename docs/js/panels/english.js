@@ -88,7 +88,14 @@
           (done ? '<div class="chip" style="margin-top:10px">✔ 已学习</div>' : '') +
         '</div>';
       XU.$('#wSpeak', view).onclick = () => {
-        XU.TTS.speak(w.w + '. ' + (w.ex || ''), 'en', 0.9);
+        const btn = XU.$('#wSpeak', view);
+        if (!btn || btn.disabled) return;
+        btn.disabled = true;
+        btn.innerHTML = XU.icon('sound') + ' 播放中…';
+        XU.TTS.speak(w.w + '. ' + (w.ex || ''), 'en', 0.9).then(() => {
+          btn.disabled = false;
+          btn.innerHTML = XU.icon('sound') + ' 朗读';
+        });
       };
       XU.$('#wMark', card).disabled = done;
       XU.$('#wMark', card).textContent = done ? '已标记 ✔' : '标记已学';
