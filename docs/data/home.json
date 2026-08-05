@@ -23,11 +23,15 @@
   {
    "text": "学做一道菜",
    "icon": "🍳"
+  },
+  {
+   "text": "写日记（反思）",
+   "icon": "📔"
   }
  ],
  "daily": {
   "waterTarget": 8,
   "workoutTarget": 60
  },
- "updated": "2026-08-05"
+ "updated": "2026-08-03"
 }
