@@ -7,7 +7,6 @@
     { text: '早起（9:00前）', icon: '☀️' },
     { text: '健身运动1小时', icon: '💪' },
     { text: '英语口语练习30分钟', icon: '🗣️' },
-    { text: '数据分析学习1小时', icon: '📊' },
     { text: '阅读书籍（提升）', icon: '📖' },
     { text: '学做一道菜', icon: '🍳' }
   ];
@@ -24,6 +23,10 @@
       rec = { id: 'today', date: XU.today(), list };
       await XU.Store.set('tasks', rec);
     }
+    /* 迁移：移除已下线的「数据分析」默认任务，老数据自动清理 */
+    const before = rec.list.length;
+    rec.list = rec.list.filter((t) => !/数据分析/.test(t.text || ''));
+    if (rec.list.length !== before) await XU.Store.set('tasks', rec);
     return rec;
   }
   XU.getTasks = getTasks;
