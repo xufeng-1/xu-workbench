@@ -1,5 +1,5 @@
 {
- "date": "2026-08-05",
+ "date": "2026-08-03",
  "updates": [
   {
    "date": "2026-08-03",
@@ -97,107 +97,6 @@
      "author": "抖音热门",
      "duration": "",
      "url": "https://www.douyin.com/search/AI%E6%95%99%E7%A8%8B?type=video",
-     "cover": "",
-     "chapterId": "ml"
-    }
-   ]
-  },
-  {
-   "date": "2026-08-05",
-   "videos": [
-    {
-     "title": "数据分析基础",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80?type=video",
-     "cover": "",
-     "chapterId": "stats"
-    },
-    {
-     "title": "统计学入门",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%85%A5%E9%97%A8?type=video",
-     "cover": "",
-     "chapterId": "stats"
-    },
-    {
-     "title": "Excel图表",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/Excel%E5%9B%BE%E8%A1%A8?type=video",
-     "cover": "",
-     "chapterId": "excel"
-    },
-    {
-     "title": "VLOOKUP",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/VLOOKUP?type=video",
-     "cover": "",
-     "chapterId": "excel"
-    },
-    {
-     "title": "数据库入门",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%85%A5%E9%97%A8?type=video",
-     "cover": "",
-     "chapterId": "sql"
-    },
-    {
-     "title": "SQL教程",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/SQL%E6%95%99%E7%A8%8B?type=video",
-     "cover": "",
-     "chapterId": "sql"
-    },
-    {
-     "title": "Pandas教程",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/Pandas%E6%95%99%E7%A8%8B?type=video",
-     "cover": "",
-     "chapterId": "python"
-    },
-    {
-     "title": "Python数据分析",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90?type=video",
-     "cover": "",
-     "chapterId": "python"
-    },
-    {
-     "title": "数据可视化",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96?type=video",
-     "cover": "",
-     "chapterId": "viz"
-    },
-    {
-     "title": "仪表盘",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/%E4%BB%AA%E8%A1%A8%E7%9B%98?type=video",
-     "cover": "",
-     "chapterId": "viz"
-    },
-    {
-     "title": "机器学习入门",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8?type=video",
-     "cover": "",
-     "chapterId": "ml"
-    },
-    {
-     "title": "深度学习",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0?type=video",
      "cover": "",
      "chapterId": "ml"
     }
