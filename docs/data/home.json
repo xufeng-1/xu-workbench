@@ -17,10 +17,6 @@
    "icon": "🗣️"
   },
   {
-   "text": "数据分析学习1小时",
-   "icon": "📊"
-  },
-  {
    "text": "阅读书籍（提升）",
    "icon": "📖"
   },
@@ -33,5 +29,5 @@
   "waterTarget": 8,
   "workoutTarget": 60
  },
- "updated": "2026-08-05"
+ "updated": "2026-08-03"
 }
