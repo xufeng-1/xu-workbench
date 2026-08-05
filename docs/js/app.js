@@ -166,11 +166,60 @@
     window.open(url, '_blank', 'noopener');
   };
 
+  /* 全屏内嵌播放器：纯视频无广告 + 右滑返回 */
+  XU.playVideo = function (v) {
+    if (!v || !v.play) return;
+    const root = XU.$('#modalRoot');
+    if (!root) return;
+    const mask = document.createElement('div');
+    mask.className = 'player-mask';
+    let closed = false;
+    let video = null;
+    const close = () => {
+      if (closed) return;
+      closed = true;
+      try { if (video) { video.pause(); video.src = ''; video.load(); } } catch (e) {}
+      mask.remove();
+      document.body.style.overflow = '';
+    };
+    mask.innerHTML =
+      '<div class="player-top">' +
+        '<button class="player-close" aria-label="关闭">' + XU.icon('back') + '</button>' +
+        '<span class="player-title">' + XU.esc(v.title || '纯视频播放') + '</span>' +
+      '</div>' +
+      '<video class="player-video" controls autoplay playsinline preload="auto" referrerpolicy="no-referrer" src="' + XU.esc(v.play) + '"></video>' +
+      '<div class="player-tip">← 向右滑动返回</div>';
+    root.appendChild(mask);
+    video = mask.querySelector('video');
+    let sx = 0, sy = 0, tracking = false;
+    mask.addEventListener('touchstart', (ev) => {
+      const t = ev.changedTouches[0];
+      sx = t.clientX; sy = t.clientY; tracking = true;
+    }, { passive: true });
+    mask.addEventListener('touchend', (ev) => {
+      if (!tracking) return;
+      tracking = false;
+      const t = ev.changedTouches[0];
+      const dx = t.clientX - sx, dy = t.clientY - sy;
+      if (dx > 70 && Math.abs(dy) < 60) close();
+    }, { passive: true });
+    mask.querySelector('.player-close').onclick = close;
+    mask.addEventListener('click', (ev) => { if (ev.target === mask) close(); });
+    video.addEventListener('error', () => {
+      /* 直链失效（防盗链等）→ 自动回退跳转抖音；用户已手动关闭则不打扰 */
+      if (closed) return;
+      close();
+      if (v.url) XU.openUrl(v.url);
+    });
+    document.body.style.overflow = 'hidden';
+  };
+
   XU.videoCard = function (v, opts) {
     opts = opts || {};
     const cover = v.cover || '';
     const url = XU.esc(v.url || '');
-    return '<a class="video-card" href="' + url + '" target="' + XU.videoTarget + '" rel="noopener noreferrer" data-url="' + url + '">' +
+    const play = v.play ? XU.esc(v.play) : '';
+    return '<a class="video-card" href="' + url + '" target="' + XU.videoTarget + '" rel="noopener noreferrer" data-url="' + url + '"' + (play ? ' data-play="' + play + '"' : '') + '>' +
       (cover ? '<img src="' + XU.esc(cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' : '<div style="width:86px;height:58px;border-radius:10px;flex:0 0 auto;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;color:var(--primary)">' + XU.icon('play') + '</div>') +
       '<div class="grow"><div class="vt">' + XU.esc(v.title || '') + '</div>' +
       '<div class="vd">' + XU.esc(v.author || '') + (v.duration ? ' · ' + XU.esc(v.duration) : '') + '</div></div>' +
@@ -180,10 +229,21 @@
   /* 视频卡事件委托 */
   document.addEventListener('click', (e) => {
     const card = e.target.closest('.video-card');
-    if (card && card.tagName !== 'A') {
+    if (!card) return;
+    const play = card.getAttribute('data-play');
+    if (play) {
+      e.preventDefault();
+      XU.playVideo({
+        play: play,
+        url: card.getAttribute('data-url') || '',
+        title: card.querySelector('.vt') ? card.querySelector('.vt').textContent : ''
+      });
+      return;
+    }
+    if (card.tagName !== 'A') {
       const url = card.getAttribute('data-url');
       if (url) XU.openUrl(url);
-    } else if (card && XU.isStandalone && card.getAttribute('target') === '_blank') {
+    } else if (XU.isStandalone && card.getAttribute('target') === '_blank') {
       XU.toast('已在浏览器打开抖音，看完后点手机「最近任务」键即可切回工作台', 2600);
     }
   });
