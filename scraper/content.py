@@ -126,38 +126,27 @@ def generate_nce_lesson(seed):
 
 # ---------------- 公版书全文 ----------------
 BOOK_WIKI = {
-    "lunyu": "論語",
-    "daodejing": "道德經",
-    "sunzi": "孫子兵法",
-    "caigentan": "菜根譚",
-    "xiaochuang": "小窗幽記",
-    "weilu": "圍爐夜話",
-    "daxue": "大學",
-    "zhongyong": "中庸",
-    "mengzi": "孟子",
-    "sanzijing": "三字經",
-    "qianziwen": "千字文",
-    "dizigui": "弟子規",
-    "zengguang": "增廣賢文",
-    "baijiaxing": "百家姓",
-    "tangshi": "唐詩三百首",
-    "songci": "宋詞三百首",
-    "liaofan": "了凡四訓",
-    "fusheng": "浮生六記",
-    "xianqing": "閑情偶寄",
-    "yanshi": "顏氏家訓",
-    "zhuzi": "朱子治家格言",
-    "shishuo": "世說新語",
+    "nahan": "呐喊",
+    "panghuang": "彷徨",
+    "gushixinbian": "故事新编",
+    "luotuoxiangzi": "骆驼祥子",
+    "yueyaer": "月牙儿",
+    "chenlun": "沉沦",
+    "zhaohuaxishi": "朝花夕拾",
+    "beijing": "背影",
+    "hetangyuese": "荷塘月色",
+    "jixiaoduzhe": "寄小读者",
+    "huagaiji": "华盖集",
+    "refeng": "热风",
+    "eryiji": "而已集",
+    "yecao": "野草",
+    "fanxing": "繁星",
+    "chunshui": "春水",
+    "changshi": "尝试集",
+    "zhimodeshi": "志摩的诗",
 }
 
-BOOK_FALLBACK = {
-    "lunyu": ["https://raw.githubusercontent.com/zhengxiaoyang/ConfuciusAnalects/master/lunyu.txt"],
-    "daodejing": [],
-    "sunzi": [],
-    "caigentan": [],
-    "xiaochuang": [],
-    "weilu": [],
-}
+BOOK_FALLBACK = {}
 
 
 def _clean_wiki(text):
