@@ -82,17 +82,24 @@ def main():
     except Exception as e:
         summary.append("创作板块更新失败（下次自动重试）：%s" % e)
 
-    # 4) 菜谱：每日 3 道（川粤湘东北江浙等多菜系轮换），历史保留最近 12 道
+    # 4) 菜谱：每日 5 道（19 大菜系各出 1 道轮换），历史保留最近 12 道
     base = load("recipes/recipes.json", {}).get("recipes", [])
     for r in base:
         r.setdefault("cuisine", "川菜")
     pool = dedupe(base + RECIPES_EXTRA, lambda r: r.get("title", ""))
+    by_cuisine = {}
+    for r in pool:
+        by_cuisine.setdefault(r.get("cuisine", "川菜"), []).append(r)
+    cuisine_list = sorted(by_cuisine.keys())
     picked = []
-    if pool:
-        n = len(pool)
-        start = day_index * 3 % n
-        for i in range(3):
-            r = pool[(start + i) % n]
+    if cuisine_list:
+        n = len(cuisine_list)
+        for i in range(5):
+            c = cuisine_list[(day_index + i) % n]
+            bucket = by_cuisine[c]
+            if not bucket:
+                continue
+            r = bucket[(day_index * 5 + i) % len(bucket)]
             title = r.get("title", "家常菜")
             r = dict(r)
             r["video"] = {
@@ -101,7 +108,7 @@ def main():
             }
             picked.append(r)
     prev = [dict(r) for r in base if r.get("title") not in {p.get("title") for p in picked}]
-    recipes = picked + prev[:9]
+    recipes = picked + prev[:7]
     save("recipes/recipes.json", {"updated": today, "recipes": recipes[:12]})
     summary.append("菜谱已更新（今日新增%d道）" % len(picked))
 
