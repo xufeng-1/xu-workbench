@@ -1,30 +1,27 @@
-/* tts.js —— 系统真实语音朗读（安卓主屏幕模式自动切换在线发音） */
+/* tts.js —— 系统真实语音朗读（单词/短句优先，在线发音多源兜底） */
 (function () {
   const TTS = {
     speaking: false,
     _audio: null,
     supported() { return 'speechSynthesis' in window; },
-    /* 安卓「添加到主屏幕」独立窗口模式：系统语音已知会无声 */
-    isAndroidStandalone() {
-      if (!/Android/i.test(navigator.userAgent || '')) return false;
-      return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
-    },
     pick() {
       if (!this.supported()) return null;
       const vs = speechSynthesis.getVoices();
-      if (!vs.length) return null;
+      if (!vs || !vs.length) return null;
       const zh = vs.find((v) => /zh-CN|zh_CN|Chinese/i.test(v.lang + ' ' + v.name));
-      const en = vs.find((v) => /en(-|_)US/i.test(v.lang));
+      const en = vs.find((v) => /en(-|_)US/i.test(v.lang + ' ' + v.name)) || vs.find((v) => /^en/i.test(v.lang));
       return { zh: zh || null, en: en || null };
     },
-    /* 在线发音源：有道（单词/短语）→ 百度（整句） */
+    /* 在线发音源：有道 → 百度 → Google（多路兜底） */
     _onlineUrls(text, lang) {
       const t = encodeURIComponent(text);
       const urls = [];
       if (lang === 'en') {
-        urls.push('https://dict.youdao.com/dictvoice?audio=' + t + '&type=2');
+        urls.push('https://dict.youdao.com/dictvoice?audio=' + t + '&type=2&le=en');
         urls.push('https://fanyi.baidu.com/gettts?lan=en&text=' + t + '&spd=3&source=web');
+        urls.push('https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=' + t);
       } else {
+        urls.push('https://dict.youdao.com/dictvoice?audio=' + t + '&type=1&le=zh');
         urls.push('https://fanyi.baidu.com/gettts?lan=zh&text=' + t + '&spd=3&source=web');
       }
       return urls;
@@ -32,16 +29,17 @@
     playOnline(text, lang) {
       const urls = this._onlineUrls(text, lang);
       return new Promise((resolve) => {
-        let i = 0, started = false, timer = null;
+        let i = 0, started = false;
         const next = () => {
           if (started || i >= urls.length) { if (!started) resolve(false); return; }
           const a = new Audio();
           a.preload = 'auto';
           a.src = urls[i++];
           this._audio = a;
-          let settled = false;
-          const fail = () => { if (settled) return; settled = true; clearTimeout(timer); next(); };
+          let settled = false, timer = null;
+          const fail = () => { if (settled) return; settled = true; clearTimeout(timer); a.src = ''; next(); };
           a.onerror = fail;
+          a.onstalled = fail;
           timer = setTimeout(fail, 4000);
           a.oncanplay = () => {
             if (settled) return;
@@ -55,7 +53,7 @@
         next();
       });
     },
-    /* 唤醒音频焦点：修复安卓独立窗口系统语音无声的常见问题 */
+    /* 唤醒音频焦点：修复部分安卓机型系统语音无声音 */
     _pokeAudio() {
       try {
         const AC = window.AudioContext || window.webkitAudioContext;
@@ -69,10 +67,12 @@
         setTimeout(() => { try { src.stop(); ctx.close(); } catch (e) {} }, 80);
       } catch (e) {}
     },
+    _warmVoices() {
+      try { if (this.supported()) speechSynthesis.getVoices(); } catch (e) {}
+    },
     _speech(text, lang, rate) {
       return new Promise((resolve) => {
-        let fired = false;
-        let timer = null;
+        let fired = false, timer = null;
         const done = (ok) => {
           if (fired) return;
           fired = true;
@@ -86,11 +86,13 @@
         const u = new SpeechSynthesisUtterance(text);
         u.lang = lang === 'en' ? 'en-US' : 'zh-CN';
         u.rate = rate || 1;
+        u.pitch = 1;
         u.onend = () => done(true);
         u.onerror = () => done(false);
-        /* 2.5 秒内未开始发声则判定为无声，交给在线回退 */
+        /* 2.5 秒内未开始发声则判定无声音，交给在线兜底 */
         timer = setTimeout(() => { if (!fired) { done(false); try { speechSynthesis.cancel(); } catch (e) {} } }, 2500);
         const go = () => {
+          if (fired) return;
           const v = this.pick();
           if (v) u.voice = lang === 'en' ? (v.en || v.zh) : (v.zh || v.en);
           this.speaking = true;
@@ -109,13 +111,10 @@
         }
       });
     },
+    /* 朗读：一律先系统语音（含安卓主屏幕），无声音再自动切在线发音 */
     speak(text, lang, rate) {
       if (!text) return Promise.resolve(false);
-      /* 安卓独立窗口模式：系统语音已知无声，直接在线发音 */
-      if (this.isAndroidStandalone()) {
-        this.speaking = true;
-        return this.playOnline(text, lang).then((ok) => { this.speaking = false; return ok; });
-      }
+      this._warmVoices();
       if (!this.supported()) return this.playOnline(text, lang);
       return this._speech(text, lang, rate).then((ok) => {
         if (!ok) return this.playOnline(text, lang);
@@ -131,6 +130,11 @@
       if (this.supported()) { try { speechSynthesis.cancel(); } catch (e) {} }
     }
   };
+  /* 首屏预热语音列表（部分安卓需要用户交互后才加载） */
+  document.addEventListener('touchstart', function warm() {
+    try { if ('speechSynthesis' in window) speechSynthesis.getVoices(); } catch (e) {}
+    document.removeEventListener('touchstart', warm);
+  }, { passive: true });
   window.XU = window.XU || {};
   XU.TTS = TTS;
 })();
