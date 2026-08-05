@@ -1,146 +1,128 @@
 [
  {
-  "id": "lunyu",
-  "title": "论语",
-  "author": "孔子及弟子",
-  "cat": "growth",
-  "intro": "记录孔子及其弟子言行，儒家核心经典，讲仁义礼智信与为人处世的成长智慧。",
-  "chapters": 20
+  "id": "nahan",
+  "title": "呐喊",
+  "author": "鲁迅",
+  "cat": "fiction",
+  "intro": "中国现代白话小说开山之作，收录《狂人日记》《孔乙己》《阿Q正传》等14篇，直面国民性，发人深省。"
  },
  {
-  "id": "daxue",
-  "title": "大学",
-  "author": "曾参（传）",
-  "cat": "growth",
-  "intro": "儒家「四书」之一，讲修身、齐家、治国、平天下的成长次第。",
-  "chapters": 12
+  "id": "panghuang",
+  "title": "彷徨",
+  "author": "鲁迅",
+  "cat": "fiction",
+  "intro": "鲁迅第二部小说集，收录《祝福》《伤逝》《孤独者》等11篇，写尽知识分子的挣扎与觉醒。"
  },
  {
-  "id": "mengzi",
-  "title": "孟子",
-  "author": "孟子及弟子",
-  "cat": "growth",
-  "intro": "儒家「四书」之一，讲性善论、仁政王道与君子修养。",
-  "chapters": 7
+  "id": "gushixinbian",
+  "title": "故事新编",
+  "author": "鲁迅",
+  "cat": "fiction",
+  "intro": "以神话传说为底色的全新创作，《奔月》《理水》《铸剑》等8篇，幽默犀利，脑洞大开。"
  },
  {
-  "id": "liaofan",
-  "title": "了凡四训",
-  "author": "袁了凡",
-  "cat": "growth",
-  "intro": "立命之学：通过改过、积善、谦德改变命运，经典成长与自我管理之书。",
-  "chapters": 4
+  "id": "luotuoxiangzi",
+  "title": "骆驼祥子",
+  "author": "老舍",
+  "cat": "fiction",
+  "intro": "老舍代表作，讲述北平人力车夫祥子三起三落的奋斗与幻灭，一部关于尊严与坚持的经典。"
  },
  {
-  "id": "yanshi",
-  "title": "颜氏家训",
-  "author": "颜之推",
-  "cat": "growth",
-  "intro": "古代家庭教育典范，讲修身、治学、处世、育子，教人如何成为更好的人。",
-  "chapters": 20
+  "id": "yueyaer",
+  "title": "月牙儿",
+  "author": "老舍",
+  "cat": "fiction",
+  "intro": "老舍短篇名作，以月牙儿为线索写尽母女两代人的命运，文字克制而动人。"
  },
  {
-  "id": "daodejing",
-  "title": "道德经",
-  "author": "老子",
-  "cat": "mind",
-  "intro": "道家哲学经典，81章五千言，讲道法自然、无为而治，提升认知格局。",
-  "chapters": 81
+  "id": "chenlun",
+  "title": "沉沦",
+  "author": "郁达夫",
+  "cat": "fiction",
+  "intro": "郁达夫成名作，中国现代文学史上第一部白话短篇小说集，直白袒露青年的孤独与苦闷。"
  },
  {
-  "id": "sunzi",
-  "title": "孙子兵法",
-  "author": "孙武",
-  "cat": "mind",
-  "intro": "兵学圣典，讲谋略与博弈，其思想被广泛用于商业与人生决策。",
-  "chapters": 13
+  "id": "zhaohuaxishi",
+  "title": "朝花夕拾",
+  "author": "鲁迅",
+  "cat": "prose",
+  "intro": "鲁迅唯一回忆性散文集，从百草园到三味书屋，温情与批判并存。"
  },
  {
-  "id": "zhongyong",
-  "title": "中庸",
-  "author": "子思（传）",
-  "cat": "mind",
-  "intro": "儒家「四书」之一，讲中和之道、诚明合一，训练平衡思维。",
-  "chapters": 33
+  "id": "beijing",
+  "title": "背影",
+  "author": "朱自清",
+  "cat": "prose",
+  "intro": "朱自清散文精选，收录《背影》《匆匆》《春》等名篇，平实文字写尽人间深情。"
  },
  {
-  "id": "zengguang",
-  "title": "增广贤文",
-  "author": "佚名",
-  "cat": "money",
-  "intro": "民间谚语格言集，讲处世哲学与人情世故，内含朴素财富观。",
-  "chapters": 1
+  "id": "hetangyuese",
+  "title": "荷塘月色",
+  "author": "朱自清",
+  "cat": "prose",
+  "intro": "朱自清散文名篇，月色下的荷塘宁静致远，适合夜晚静读。"
  },
  {
-  "id": "zhuzi",
-  "title": "朱子治家格言",
-  "author": "朱柏庐",
-  "cat": "money",
-  "intro": "治家理财名篇：勤俭持家、量入为出、未雨绸缪，字字珠玑。",
-  "chapters": 1
+  "id": "jixiaoduzhe",
+  "title": "寄小读者",
+  "author": "冰心",
+  "cat": "prose",
+  "intro": "冰心最温柔的散文书信集，写给孩子的世界，也是写给每个保有童心的大人。"
  },
  {
-  "id": "caigentan",
-  "title": "菜根谭",
-  "author": "洪应明",
-  "cat": "life",
-  "intro": "处世哲学小品集，融合儒释道，教你淡泊从容、进退有度。",
-  "chapters": 30
+  "id": "huagaiji",
+  "title": "华盖集",
+  "author": "鲁迅",
+  "cat": "zawen",
+  "intro": "鲁迅杂文集，短小精悍、句句见血，训练独立思考的好素材。"
  },
  {
-  "id": "xiaochuang",
-  "title": "小窗幽记",
-  "author": "陈继儒",
-  "cat": "life",
-  "intro": "明代清言小品，讲安顿身心、赏美生活，文字清雅通透。",
-  "chapters": 12
+  "id": "refeng",
+  "title": "热风",
+  "author": "鲁迅",
+  "cat": "zawen",
+  "intro": "鲁迅早期杂文集，「愿中国青年都摆脱冷气，只是向上走」出处，清醒而温暖。"
  },
  {
-  "id": "weilu",
-  "title": "围炉夜话",
-  "author": "王永彬",
-  "cat": "life",
-  "intro": "寒夜围炉谈修身齐家，字字平实，句句入心，生活智慧随笔。",
-  "chapters": 20
+  "id": "eryiji",
+  "title": "而已集",
+  "author": "鲁迅",
+  "cat": "zawen",
+  "intro": "鲁迅杂文集，收录《魏晋风度及文章与药及酒之关系》等名篇。"
  },
  {
-  "id": "fusheng",
-  "title": "浮生六记",
-  "author": "沈复",
-  "cat": "life",
-  "intro": "清代生活美学经典：闲情记趣、浪游记快，教你用心感受生活之美。",
-  "chapters": 6
+  "id": "yecao",
+  "title": "野草",
+  "author": "鲁迅",
+  "cat": "poetry",
+  "intro": "鲁迅散文诗集，《秋夜》《过客》《墓碣文》，黑暗中生长出的诗。"
  },
  {
-  "id": "xianqing",
-  "title": "闲情偶寄",
-  "author": "李渔",
-  "cat": "life",
-  "intro": "生活情趣百科全书：居室、饮馔、养生、颐养，享受生活的高级指南。",
-  "chapters": 8
+  "id": "fanxing",
+  "title": "繁星",
+  "author": "冰心",
+  "cat": "poetry",
+  "intro": "冰心小诗集，短句里藏着母爱、童真与自然之美。"
  },
  {
-  "id": "tangshi",
-  "title": "唐诗三百首",
-  "author": "蘅塘退士 编",
-  "cat": "lit",
-  "intro": "最经典的唐诗选集，共三百余首，适合吟诵与文学滋养。",
-  "chapters": 6
+  "id": "chunshui",
+  "title": "春水",
+  "author": "冰心",
+  "cat": "poetry",
+  "intro": "《繁星》姊妹篇，清丽的小诗写给生活与远方。"
  },
  {
-  "id": "songci",
-  "title": "宋词三百首",
-  "author": "朱孝臧 编",
-  "cat": "lit",
-  "intro": "宋词经典选本，婉约豪放兼收，文学审美必修。",
-  "chapters": 8
+  "id": "changshi",
+  "title": "尝试集",
+  "author": "胡适",
+  "cat": "poetry",
+  "intro": "中国现代文学史上第一部白话诗集，记录白话新诗最初的探索。"
  },
  {
-  "id": "shishuo",
-  "title": "世说新语",
-  "author": "刘义庆",
-  "cat": "lit",
-  "intro": "魏晋名士风流集，千则小故事，见人物风骨与时代趣味。",
-  "chapters": 36
+  "id": "zhimodeshi",
+  "title": "志摩的诗",
+  "author": "徐志摩",
+  "cat": "poetry",
+  "intro": "徐志摩第一本诗集，《雪花的快乐》《这是一个懦怯的世界》等，浪漫主义诗歌的经典。"
  }
 ]
