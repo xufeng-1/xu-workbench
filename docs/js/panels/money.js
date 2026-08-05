@@ -158,7 +158,10 @@
         '<div class="card">' +
           '<div style="display:flex;align-items:center;justify-content:space-between">' +
             '<h2>💰 记账</h2>' +
-            '<button class="btn mini" id="addMoney">+ 记一笔</button>' +
+            '<div style="display:flex;gap:8px">' +
+              '<button class="btn ghost mini" id="importBill">📥 导入账单</button>' +
+              '<button class="btn mini" id="addMoney">+ 记一笔</button>' +
+            '</div>' +
           '</div>' +
           '<div style="display:flex;align-items:center;gap:6px;margin:8px 0">' +
             '<button class="btn ghost mini" id="mPrev"' + (hasPrev ? '' : ' disabled') + '>◀ 上月</button>' +
@@ -185,7 +188,7 @@
             ? '<div class="list">' + entries.slice().sort((a, b) => (b.date + b.time).localeCompare(a.date + a.time)).map((e) =>
                 '<div class="row-item money-item">' +
                   '<div class="ico">' + XU.catIcon(e.cat) + '</div>' +
-                  '<div class="grow"><div class="title">' + XU.catLabel(e.cat) + (e.note ? ' · ' + XU.esc(e.note) : '') + '</div>' +
+                  '<div class="grow"><div class="title">' + XU.catLabel(e.cat) + (e.src ? '<span class="src-tag">' + (e.src === 'wechat' ? '微信' : e.src === 'alipay' ? '支付宝' : '') + '</span>' : '') + (e.note ? ' · ' + XU.esc(e.note) : '') + '</div>' +
                   '<div class="desc">' + e.date + ' ' + e.time + '</div></div>' +
                   '<div class="amt ' + (e.type === 'in' ? 'in' : 'out') + '">' + (e.type === 'in' ? '+' : '-') + XU.money(e.amount) + '</div>' +
                   '<button class="btn mini danger" data-del="' + e.id + '">' + XU.icon('trash') + '</button>' +
@@ -195,6 +198,7 @@
         '</div>';
 
       XU.$('#addMoney', el).onclick = () => XU.addMoney('out');
+      XU.$('#importBill', el).onclick = () => XU.bills && XU.bills.open();
       XU.$('#mPrev', el).onclick = () => {
         const [y, m] = month.split('-').map(Number);
         month = (m === 1 ? (y - 1) + '-12' : y + '-' + String(m - 1).padStart(2, '0'));
