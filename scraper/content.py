@@ -142,7 +142,14 @@ BOOK_WIKI = {
     "baijiaxing": "百家姓",
     "tangshi": "唐詩三百首",
     "songci": "宋詞三百首",
+    "liaofan": "了凡四訓",
+    "fusheng": "浮生六記",
+    "xianqing": "閑情偶寄",
+    "yanshi": "顏氏家訓",
+    "zhuzi": "朱子治家格言",
+    "shishuo": "世說新語",
 }
+
 BOOK_FALLBACK = {
     "lunyu": ["https://raw.githubusercontent.com/zhengxiaoyang/ConfuciusAnalects/master/lunyu.txt"],
     "daodejing": [],
