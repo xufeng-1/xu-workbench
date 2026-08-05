@@ -106,14 +106,6 @@
    "date": "2026-08-05",
    "videos": [
     {
-     "title": "统计学入门",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%85%A5%E9%97%A8?type=video",
-     "cover": "",
-     "chapterId": "stats"
-    },
-    {
      "title": "正态分布",
      "author": "抖音热门",
      "duration": "",
@@ -122,18 +114,26 @@
      "chapterId": "stats"
     },
     {
-     "title": "VLOOKUP",
+     "title": "假设检验",
      "author": "抖音热门",
      "duration": "",
-     "url": "https://www.douyin.com/search/VLOOKUP?type=video",
+     "url": "https://www.douyin.com/search/%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C?type=video",
+     "cover": "",
+     "chapterId": "stats"
+    },
+    {
+     "title": "Excel技巧",
+     "author": "抖音热门",
+     "duration": "",
+     "url": "https://www.douyin.com/search/Excel%E6%8A%80%E5%B7%A7?type=video",
      "cover": "",
      "chapterId": "excel"
     },
     {
-     "title": "数据透视表",
+     "title": "Excel图表",
      "author": "抖音热门",
      "duration": "",
-     "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E9%80%8F%E8%A7%86%E8%A1%A8?type=video",
+     "url": "https://www.douyin.com/search/Excel%E5%9B%BE%E8%A1%A8?type=video",
      "cover": "",
      "chapterId": "excel"
     },
@@ -154,14 +154,6 @@
      "chapterId": "sql"
     },
     {
-     "title": "Pandas教程",
-     "author": "抖音热门",
-     "duration": "",
-     "url": "https://www.douyin.com/search/Pandas%E6%95%99%E7%A8%8B?type=video",
-     "cover": "",
-     "chapterId": "python"
-    },
-    {
      "title": "Python数据分析",
      "author": "抖音热门",
      "duration": "",
@@ -170,18 +162,26 @@
      "chapterId": "python"
     },
     {
-     "title": "仪表盘",
+     "title": "Python爬虫",
      "author": "抖音热门",
      "duration": "",
-     "url": "https://www.douyin.com/search/%E4%BB%AA%E8%A1%A8%E7%9B%98?type=video",
+     "url": "https://www.douyin.com/search/Python%E7%88%AC%E8%99%AB?type=video",
+     "cover": "",
+     "chapterId": "python"
+    },
+    {
+     "title": "数据可视化",
+     "author": "抖音热门",
+     "duration": "",
+     "url": "https://www.douyin.com/search/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96?type=video",
      "cover": "",
      "chapterId": "viz"
     },
     {
-     "title": "Matplotlib",
+     "title": "仪表盘",
      "author": "抖音热门",
      "duration": "",
-     "url": "https://www.douyin.com/search/Matplotlib?type=video",
+     "url": "https://www.douyin.com/search/%E4%BB%AA%E8%A1%A8%E7%9B%98?type=video",
      "cover": "",
      "chapterId": "viz"
     },
