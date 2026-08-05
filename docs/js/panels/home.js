@@ -63,8 +63,15 @@
     return all.filter((m) => m.date === t && m.type === 'out').reduce((s, m) => s + m.amount, 0);
   }
 
-  function statCard(icon, num, lab, accent) {
-    return '<div class="stat-card"><div class="num" style="' + (accent ? 'color:' + accent : '') + '">' + num + '</div><div class="lab">' + lab + '</div></div>';
+  function nowTime() {
+    const d = new Date();
+    return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0') + ':' + String(d.getSeconds()).padStart(2, '0');
+  }
+  function statCard(emoji, num, lab, accent) {
+    return '<div class="stat-card">' +
+      '<div class="ico" style="' + (accent ? 'background:' + accent + '22' : '') + '">' + emoji + '</div>' +
+      '<div class="num" style="' + (accent ? 'color:' + accent : '') + '">' + num + '</div>' +
+      '<div class="lab">' + lab + '</div></div>';
   }
 
   XU.regPanel('home', async function (root) {
@@ -89,15 +96,15 @@
       XU.installHint() +
       '<div class="hero">' +
         '<h1>' + greeting() + '，xu 👋</h1>' +
-        '<div class="time">' + XU.today() + ' · ' + weekday() + '</div>' +
+        '<div class="time" id="homeClock">' + XU.today() + ' · ' + weekday() + ' ' + nowTime() + '</div>' +
         '<p>「' + XU.esc(pickQuote(quotes)) + '」</p>' +
       '</div>' +
 
       '<div class="grid2">' +
-        statCard('', tasksRec.list.filter((t) => t.done).length + '/' + tasksRec.list.length, '今日任务', '') +
-        statCard('', cups + '/' + waterTarget + '杯', '喝水进度', 'var(--water)') +
-        statCard('', minutes + '/' + workoutTarget + '分', '运动打卡', 'var(--ok)') +
-        statCard('', XU.money(spent), '今日花费', 'var(--warn)') +
+        statCard('✅', tasksRec.list.filter((t) => t.done).length + '/' + tasksRec.list.length, '今日任务', '') +
+        statCard('💧', cups + '/' + waterTarget + '杯', '喝水进度', 'var(--water)') +
+        statCard('💪', minutes + '/' + workoutTarget + '分', '运动打卡', 'var(--ok)') +
+        statCard('💰', XU.money(spent), '今日花费', 'var(--warn)') +
       '</div>' +
 
       '<div class="card" style="margin-top:14px">' +
@@ -118,6 +125,13 @@
         '<p class="sub">点左侧圆圈完成打卡，可随时增删</p>' +
         '<div class="list" id="taskList"></div>' +
       '</div>';
+
+    if (XU._clockTimer) clearInterval(XU._clockTimer);
+    const clockEl = XU.$('#homeClock', el);
+    if (clockEl) {
+      const tick = () => { clockEl.textContent = XU.today() + ' · ' + weekday() + ' ' + nowTime(); };
+      XU._clockTimer = setInterval(tick, 1000);
+    }
 
     const taskListEl = XU.$('#taskList', el);
     function renderTasks() {
