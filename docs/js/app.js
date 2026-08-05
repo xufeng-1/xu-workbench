@@ -32,7 +32,10 @@
     english: '<circle cx="12" cy="12" r="9"/><path d="M3.5 9.5h17M3.5 14.5h17M12 3c-2.8 2.7-2.8 15.3 0 18M12 3c2.8 2.7 2.8 15.3 0 18"/>',
     mood: '<circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4.8 4.8 0 0 0 7 0"/><path d="M9 9.5h.01M15 9.5h.01"/>',
     pomodoro: '<circle cx="12" cy="13" r="6.5"/><path d="M12 6.5c-2-1.8-5-1.2-5.8 1 1.7.7 3.9.5 5.8-1Z"/><path d="M12 6.5c2-1.8 5-1.2 5.8 1-1.7.7-3.9.5-5.8-1Z"/>',
-    saves: '<path d="M6 3.5h12V21l-6-4.5L6 21Z"/>'
+    saves: '<path d="M6 3.5h12V21l-6-4.5L6 21Z"/>',
+    games: '<rect x="2.5" y="7" width="19" height="11" rx="4"/><path d="M7 10v5M4.5 12.5h5M16 11h.01M18.5 13.5h.01"/>',
+    habits: '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/>',
+    diary: '<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M9 3v18M12 8h4M12 12h4"/>'
   };
   XU.ICONS = ICONS;
   XU.icon = (name, cls) => '<svg class="' + (cls || '') + '" viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[name] || '') + '</svg>';
@@ -46,6 +49,9 @@
     { id: 'reading', label: '阅读' },
     { id: 'mood', label: '心情' },
     { id: 'pomodoro', label: '番茄钟' },
+    { id: 'habits', label: '习惯' },
+    { id: 'diary', label: '日记' },
+    { id: 'games', label: '游戏' },
     { id: 'money', label: '记账' },
     { id: 'recipes', label: '菜谱' },
     { id: 'saves', label: '收藏' }
