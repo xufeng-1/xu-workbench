@@ -70,19 +70,33 @@ def _parse_search(text):
             author = (a.get("author") or {}).get("nickname", "") or ""
             duration = a.get("duration", 0) or 0
             dur = "%02d:%02d" % (duration // 1000 // 60, duration // 1000 % 60) if duration else ""
+            aweme_id = str(a.get("aweme_id", "") or "")
             share = ""
             for k in ("share_url", "url"):
                 if a.get(k):
                     share = a[k]
                     break
-            if not share:
-                share = "https://www.douyin.com/video/" + str(a.get("aweme_id", ""))
+            if not share and aweme_id:
+                share = "https://www.douyin.com/video/" + aweme_id
             cover = ""
+            play = ""
             vid = a.get("video") or {}
             cover_list = vid.get("cover") or {}
             if cover_list.get("url_list"):
                 cover = cover_list["url_list"][0]
-            out.append({"title": desc, "author": author, "duration": dur, "url": share, "cover": cover})
+            play_list = vid.get("play_addr") or {}
+            if play_list.get("url_list"):
+                for u in play_list["url_list"]:
+                    if "playwm" in u:
+                        continue  # 跳过带水印地址
+                    play = u
+                    break
+                if not play:
+                    play = play_list["url_list"][0]
+            item = {"title": desc, "author": author, "duration": dur, "url": share, "cover": cover}
+            if play:
+                item["play"] = play
+            out.append(item)
         except Exception:
             continue
     return out
