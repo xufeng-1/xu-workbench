@@ -166,6 +166,15 @@ table.tbl{width:100%;border-collapse:collapse;font-size:13px}
 .step{display:flex;gap:10px;margin-bottom:10px}
 .step::before{counter-increment:step;content:counter(step);flex:0 0 24px;height:24px;border-radius:50%;background:var(--primary);color:#fff;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
 
+/* 全屏视频播放器 */
+.player-mask{position:fixed;inset:0;z-index:999;background:#000;display:flex;flex-direction:column;animation:fadeUp .18s ease}
+.player-top{display:flex;align-items:center;gap:10px;padding:10px 12px;color:#fff;flex:0 0 auto;background:rgba(0,0,0,.4)}
+.player-close{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:none;background:rgba(255,255,255,.14);color:#fff;border-radius:50%;cursor:pointer;flex:0 0 auto}
+.player-close svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.player-title{flex:1;font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#eee}
+.player-video{flex:1;width:100%;min-height:0;background:#000;object-fit:contain;touch-action:none}
+.player-tip{text-align:center;color:#9a9a9a;font-size:12px;padding:8px 0 12px;flex:0 0 auto}
+
 /* 弹窗 */
 .modal-mask{position:fixed;inset:0;background:rgba(58,52,80,.45);display:flex;align-items:flex-end;justify-content:center;z-index:50;animation:fadeUp .18s ease}
 @media(min-width:560px){.modal-mask{align-items:center}}
