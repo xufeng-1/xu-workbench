@@ -12,12 +12,12 @@
     if (!index.length) { const eb = document.createElement('div'); eb.innerHTML = '<div class="card"><div class="empty">书库更新中…</div></div>'; return eb; }
 
     const CATS = [
-      { id: 'all', label: '全部' }, { id: 'growth', label: '成长' }, { id: 'mind', label: '认知' },
-      { id: 'money', label: '理财' }, { id: 'life', label: '生活' }, { id: 'lit', label: '文学' }
+      { id: 'all', label: '全部' }, { id: 'fiction', label: '小说' }, { id: 'prose', label: '散文' },
+      { id: 'poetry', label: '诗歌' }, { id: 'zawen', label: '杂文' }
     ];
     const box = document.createElement('div');
     box.innerHTML =
-      '<div class="card"><h2>📚 书籍</h2><p class="sub">成长 · 认知 · 理财 · 生活 · 文学，公版经典全文 · 下载后本机离线阅读 · 自动保存进度</p>' +
+      '<div class="card"><h2>📚 书籍</h2><p class="sub">现代文学经典 · 小说/散文/诗歌/杂文 · 全文下载后本机离线阅读 · 自动保存进度</p>' +
       '<div class="tabs" id="bookCats">' + CATS.map((c) => '<button class="tab' + (c.id === 'all' ? ' active' : '') + '" data-cat="' + c.id + '">' + c.label + '</button>').join('') + '</div>' +
       '<input id="bookSearch" class="input" placeholder="🔍 搜索免费书籍（书名 / 作者）" style="width:100%;margin-bottom:10px">' +
       '<div class="list" id="bookList"></div>' +
@@ -99,7 +99,7 @@
         let book = null;
         try { book = await loadBook(b.id); } catch (e) { book = null; }
         if (!book) {
-          rb.innerHTML = '<div class="empty">下载失败，请检查网络后重试<br><button class="btn" id="rdRetry" style="margin-top:12px">重试</button></div>';
+          rb.innerHTML = '<div class="empty">全文还在自动下载中，通常当天就会备好，请稍后再试<br><button class="btn" id="rdRetry" style="margin-top:12px">重新尝试</button></div>';
           XU.$('#rdRetry', close).onclick = () => { close(); openBook(b); };
           return;
         }
