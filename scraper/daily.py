@@ -10,8 +10,7 @@ from pathlib import Path
 import content
 import douyin
 from pools import (CREATION_DRAMA_TOPICS, CREATION_SCRIPT_TOPICS, FITNESS_TOPICS,
-                   FOOD_KEYWORDS, NCE_TEMPLATES, ORAL_EXTRA, QUOTES_EXTRA,
-                   RECIPES_EXTRA, STUDY_TOPICS)
+                   FOOD_KEYWORDS, NCE_TEMPLATES, ORAL_EXTRA, QUOTES_EXTRA, RECIPES_EXTRA)
 
 TZ = timezone(timedelta(hours=8))
 EPOCH = date(2026, 1, 1)
@@ -83,35 +82,10 @@ def main():
     except Exception as e:
         summary.append("创作板块更新失败（下次自动重试）：%s" % e)
 
-    # 3) 数据分析：每日每章 2 条，历史全部保留
-    try:
-        chapters = load("study/chapters.json", [])
-        feed = load("study/feed.json", {"updates": []})
-        today_feed = []
-        for ch in chapters:
-            cid = ch.get("id", "")
-            topics = STUDY_TOPICS.get(cid, ["数据分析"])
-            vs = douyin.get_videos(topics, 2, day_index + hash(cid) % 5, cookie, hot)
-            if not vs:
-                continue
-            old = ch.get("videos", [])
-            ch["videos"] = dedupe(old + vs, lambda v: (v.get("title"), v.get("url")))[-60:]
-            for v in vs:
-                today_feed.append(dict(v, chapterId=cid))
-        save("study/chapters.json", chapters)
-        if today_feed:
-            feed["updates"] = [u for u in feed["updates"] if u.get("date", "") != today]
-            feed["updates"].append({"date": today, "videos": today_feed})
-        cutoff = (now.date() - timedelta(days=90)).strftime("%Y-%m-%d")
-        feed["updates"] = [u for u in feed["updates"] if u.get("date", "") >= cutoff]
-        feed["date"] = today
-        save("study/feed.json", feed)
-        summary.append("数据分析视频已更新（今日%d条，历史保留）" % len(today_feed))
-    except Exception as e:
-        summary.append("数据分析更新失败（下次自动重试）：%s" % e)
-
-    # 4) 菜谱：每日 3 道川菜（池内轮换），历史保留最近 12 道
+    # 4) 菜谱：每日 3 道（川粤湘东北江浙等多菜系轮换），历史保留最近 12 道
     base = load("recipes/recipes.json", {}).get("recipes", [])
+    for r in base:
+        r.setdefault("cuisine", "川菜")
     pool = dedupe(base + RECIPES_EXTRA, lambda r: r.get("title", ""))
     picked = []
     if pool:
@@ -119,7 +93,7 @@ def main():
         start = day_index * 3 % n
         for i in range(3):
             r = pool[(start + i) % n]
-            title = r.get("title", "川菜")
+            title = r.get("title", "家常菜")
             r = dict(r)
             r["video"] = {
                 "title": title + "做法",
