@@ -67,6 +67,27 @@
     return all.filter((m) => m.date === t && m.type === 'out').reduce((s, m) => s + m.amount, 0);
   }
 
+  /* 站点访问统计（不蒜子 JSONP，失败返回 null） */
+  function siteStats() {
+    return new Promise((resolve) => {
+      try {
+        const cb = 'xu_bsz_' + Date.now().toString(36) + Math.floor(Math.random() * 1e5).toString(36);
+        const s = document.createElement('script');
+        let timer = setTimeout(() => { cleanup(); resolve(null); }, 6000);
+        function cleanup() {
+          clearTimeout(timer);
+          try { delete window[cb]; } catch (e) { window[cb] = undefined; }
+          if (s.parentNode) s.parentNode.removeChild(s);
+        }
+        window[cb] = (d) => { cleanup(); resolve(d || null); };
+        s.onerror = () => { cleanup(); resolve(null); };
+        s.src = 'https://busuanzi.ibruce.info/busuanzi?jsonpCallback=' + cb;
+        document.head.appendChild(s);
+      } catch (e) { resolve(null); }
+    });
+  }
+  function fmtNum(n) { return Number(n || 0).toLocaleString('zh-CN'); }
+
   function nowTime() {
     const d = new Date();
     return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0') + ':' + String(d.getSeconds()).padStart(2, '0');
@@ -109,6 +130,8 @@
         statCard('💧', cups + '/' + waterTarget + '杯', '喝水进度', 'var(--water)') +
         statCard('💪', minutes + '/' + workoutTarget + '分', '运动打卡', 'var(--ok)') +
         statCard('💰', XU.money(spent), '今日花费', 'var(--warn)') +
+        '<div class="stat-card"><div class="ico" style="background:var(--primary)22">📊</div><div class="num" style="color:var(--primary)" id="pvNum">—</div><div class="lab">站点访问</div></div>' +
+        '<div class="stat-card"><div class="ico" style="background:var(--primary)22">👥</div><div class="num" style="color:var(--primary)" id="uvNum">—</div><div class="lab">访客人数</div></div>' +
       '</div>' +
 
       '<div class="card" style="margin-top:14px">' +
@@ -129,6 +152,14 @@
         '<p class="sub">点左侧圆圈完成打卡，可随时增删</p>' +
         '<div class="list" id="taskList"></div>' +
       '</div>';
+
+    /* 站点访问统计（异步加载，不阻塞页面） */
+    siteStats().then((stats) => {
+      if (!stats) return;
+      const pv = XU.$('#pvNum', el), uv = XU.$('#uvNum', el);
+      if (pv) pv.textContent = fmtNum(stats.site_pv);
+      if (uv) uv.textContent = fmtNum(stats.site_uv);
+    });
 
     if (XU._clockTimer) clearInterval(XU._clockTimer);
     const clockEl = XU.$('#homeClock', el);
