@@ -203,17 +203,25 @@
     const quotes = await XU.feed('quotes').catch(() => []);
     if (!quotes.length) { const qb = document.createElement('div'); qb.innerHTML = '<div class="card"><div class="empty">金句更新中…</div></div>'; return qb; }
     const box = document.createElement('div');
-    box.innerHTML = '<div class="card"><h2>✨ 金句</h2><p class="sub">每日更新 · 点击可复制、可朗读</p><div class="list">' +
+    box.innerHTML = '<div class="card"><h2>✨ 金句</h2><p class="sub">每日更新 · 点击可复制、可朗读、可收藏</p><div class="list">' +
       quotes.map((q, i) =>
         '<div class="row-item" style="cursor:pointer" data-q="' + i + '">' +
         '<div class="grow"><div style="font-size:14.5px">「' + XU.esc(q.text || '') + '」</div>' +
         (q.author ? '<div class="desc" style="margin-top:2px">—— ' + XU.esc(q.author) + '</div>' : '') + '</div>' +
-        '<button class="speak-btn" data-qs="' + i + '">' + XU.icon('sound') + '</button></div>'
+        '<button class="speak-btn" data-qs="' + i + '">' + XU.icon('sound') + '</button>' +
+        '<button class="save-star" data-qsave="' + i + '" title="收藏">☆</button></div>'
       ).join('') + '</div></div>';
-    box.addEventListener('click', (e) => {
+    box.addEventListener('click', async (e) => {
+      const sv = e.target.closest('[data-qsave]');
       const s = e.target.closest('[data-qs]');
       const q = e.target.closest('[data-q]');
-      if (s) {
+      if (sv) {
+        const item = quotes[parseInt(sv.getAttribute('data-qsave'), 10)];
+        const saved = await XU.saveToggle({ type: 'quote', title: (item.text || '').slice(0, 30), url: '', note: item.author || '', tags: '金句' });
+        sv.classList.toggle('on', saved);
+        sv.textContent = saved ? '★' : '☆';
+        XU.toast(saved ? '已收藏到「收藏」⭐' : '已取消收藏');
+      } else if (s) {
         const item = quotes[parseInt(s.getAttribute('data-qs'), 10)];
         XU.TTS.speak(item.text + (item.author ? '，' + item.author : ''), 'zh', 1);
       } else if (q) {
@@ -221,6 +229,14 @@
         XU.copy(item.text + (item.author ? ' ——' + item.author : ''), '金句已复制 ✨');
       }
     });
+    /* 刷新星标状态 */
+    XU.saveGet().then((items) => {
+      const saved = new Set(items.filter((it) => it.type === 'quote').map((it) => it.title));
+      XU.$$('[data-qsave]', box).forEach((b, i) => {
+        const t = (quotes[i] ? quotes[i].text : '').slice(0, 30);
+        if (saved.has(t)) { b.classList.add('on'); b.textContent = '★'; }
+      });
+    }).catch(() => {});
     return box;
   }
 
