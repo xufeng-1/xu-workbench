@@ -16,6 +16,34 @@
     return rec && rec.items ? rec : { items: [] };
   }
 
+  /* 全局一键收藏 API：其他面板可调用 */
+  XU.saveGet = async function () { return (await getData()).items; };
+  XU.saveHas = async function (type, title) {
+    const items = await XU.saveGet();
+    return items.some((it) => it.type === type && it.title === title);
+  };
+  XU.saveToggle = async function (item) {
+    const data = await getData();
+    const idx = data.items.findIndex((it) => it.type === item.type && it.title === item.title);
+    if (idx >= 0) {
+      data.items.splice(idx, 1);
+      await XU.Store.kvSet(STORE_KEY, data);
+      return false;
+    }
+    data.items.push({
+      id: 's' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+      type: item.type || 'link',
+      title: item.title || '',
+      url: item.url || '',
+      tags: item.tags || '',
+      note: item.note || '',
+      time: XU.now()
+    });
+    data.items = data.items.slice(-300);
+    await XU.Store.kvSet(STORE_KEY, data);
+    return true;
+  };
+
   XU.regPanel('saves', async function (root) {
     const el = document.createElement('div');
     el.className = 'panel';
