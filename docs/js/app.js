@@ -39,7 +39,8 @@
     fishing: '<path d="M3.5 12c2.8-2.6 6.5-3.8 10-3.8 1.9 0 3.7.3 5.5.9L21.5 12l-2.5 2.9c-1.8.6-3.6.9-5.5.9-3.5 0-7.2-1.2-10-3.8Z"/><path d="M11 8.2V5M14.5 12h.01"/>',
     travel: '<rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V4.5h6V7M3 12h18"/>',
     stock: '<path d="M3 3v18h18"/><rect x="7" y="9" width="2.5" height="7" rx="1"/><path d="M8.25 6.5v2.5M8.25 16v2.5"/><rect x="13.5" y="5.5" width="2.5" height="5" rx="1"/><path d="M14.75 3.5v2M14.75 10.5v3"/>',
-    goals: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.8"/>'
+    goals: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.8"/>',
+    friends: '<circle cx="9" cy="8" r="3.5"/><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><circle cx="17" cy="9" r="2.8"/><path d="M15.5 14.5c2.6.3 4.5 2.1 4.5 4.5"/>'
   };
   XU.ICONS = ICONS;
   XU.icon = (name, cls) => '<svg class="' + (cls || '') + '" viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[name] || '') + '</svg>';
@@ -48,6 +49,7 @@
   const PANELS = [
     { id: 'home', label: '首页' },
     { id: 'fitness', label: '健身' },
+    { id: 'friends', label: '好友' },
     { id: 'creation', label: '创作' },
     { id: 'english', label: '英语' },
     { id: 'reading', label: '阅读' },
