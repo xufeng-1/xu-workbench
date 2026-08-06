@@ -30,13 +30,16 @@
     bookopen: '<path d="M12 6.5C10.5 4.8 8.3 4 5.5 4v14c2.8 0 5 .8 6.5 2.5 1.5-1.7 3.7-2.5 6.5-2.5V4c-2.8 0-5 .8-6.5 2.5Z"/>',
     creation: '<path d="M12 3l2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4Z"/><path d="M19 3.5v3M17.5 5h3"/>',
     english: '<circle cx="12" cy="12" r="9"/><path d="M3.5 9.5h17M3.5 14.5h17M12 3c-2.8 2.7-2.8 15.3 0 18M12 3c2.8 2.7 2.8 15.3 0 18"/>',
-    mood: '<circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4.8 4.8 0 0 0 7 0"/><path d="M9 9.5h.01M15 9.5h.01"/>',
     pomodoro: '<circle cx="12" cy="13" r="6.5"/><path d="M12 6.5c-2-1.8-5-1.2-5.8 1 1.7.7 3.9.5 5.8-1Z"/><path d="M12 6.5c2-1.8 5-1.2 5.8 1-1.7.7-3.9.5-5.8-1Z"/>',
     saves: '<path d="M6 3.5h12V21l-6-4.5L6 21Z"/>',
     games: '<rect x="2.5" y="7" width="19" height="11" rx="4"/><path d="M7 10v5M4.5 12.5h5M16 11h.01M18.5 13.5h.01"/>',
-    habits: '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/>',
     diary: '<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M9 3v18M12 8h4M12 12h4"/>',
-    smoke: '<rect x="2.5" y="10.5" width="15" height="3" rx="1.5"/><rect x="16.5" y="10.5" width="5" height="3" rx="1.5"/><path d="M19 9.5c1.2-1 2.8-1 3.5-2.5M19 6.5c1.2-1 2.8-1 3.5-2.5"/>'
+    smoke: '<rect x="2.5" y="10.5" width="15" height="3" rx="1.5"/><rect x="16.5" y="10.5" width="5" height="3" rx="1.5"/><path d="M19 9.5c1.2-1 2.8-1 3.5-2.5M19 6.5c1.2-1 2.8-1 3.5-2.5"/>',
+    period: '<rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 3v4M16 3v4"/><path d="M12 16.8c-1.4-1.2-2.8-2.4-2.8-3.5a1.6 1.6 0 0 1 2.8-1.1 1.6 1.6 0 0 1 2.8 1.1c0 1.1-1.4 2.3-2.8 3.5Z"/>',
+    fishing: '<path d="M3.5 12c2.8-2.6 6.5-3.8 10-3.8 1.9 0 3.7.3 5.5.9L21.5 12l-2.5 2.9c-1.8.6-3.6.9-5.5.9-3.5 0-7.2-1.2-10-3.8Z"/><path d="M11 8.2V5M14.5 12h.01"/>',
+    travel: '<rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V4.5h6V7M3 12h18"/>',
+    stock: '<path d="M3 3v18h18"/><rect x="7" y="9" width="2.5" height="7" rx="1"/><path d="M8.25 6.5v2.5M8.25 16v2.5"/><rect x="13.5" y="5.5" width="2.5" height="5" rx="1"/><path d="M14.75 3.5v2M14.75 10.5v3"/>',
+    goals: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.8"/>'
   };
   XU.ICONS = ICONS;
   XU.icon = (name, cls) => '<svg class="' + (cls || '') + '" viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[name] || '') + '</svg>';
@@ -48,11 +51,14 @@
     { id: 'creation', label: '创作' },
     { id: 'english', label: '英语' },
     { id: 'reading', label: '阅读' },
-    { id: 'mood', label: '心情' },
+    { id: 'period', label: '经期' },
     { id: 'pomodoro', label: '番茄钟' },
-    { id: 'habits', label: '习惯' },
     { id: 'smoke', label: '抽烟' },
     { id: 'diary', label: '日记' },
+    { id: 'fishing', label: '钓鱼' },
+    { id: 'travel', label: '旅游' },
+    { id: 'stock', label: '股票' },
+    { id: 'goals', label: '目标' },
     { id: 'games', label: '游戏' },
     { id: 'money', label: '记账' },
     { id: 'recipes', label: '菜谱' },
@@ -240,11 +246,26 @@
       (cover ? '<img src="' + XU.esc(cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">' : '<div style="width:86px;height:58px;border-radius:10px;flex:0 0 auto;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;color:var(--primary)">' + XU.icon('play') + '</div>') +
       '<div class="grow"><div class="vt">' + XU.esc(v.title || '') + '</div>' +
       '<div class="vd">' + XU.esc(v.author || '') + (v.duration ? ' · ' + XU.esc(v.duration) : '') + (play ? ' <span class="pure-tag">' + XU.icon('play', 's10') + ' 纯视频</span>' : '') + '</div></div>' +
+      '<span class="save-star" data-vsave="1" data-vtitle="' + XU.esc(v.title || '') + '" data-vurl="' + url + '" data-vauthor="' + XU.esc(v.author || '') + '" title="收藏">☆</span>' +
       '<span class="play-badge">' + XU.icon('play', 's16') + '</span></a>';
   };
 
   /* 视频卡事件委托 */
   document.addEventListener('click', (e) => {
+    const vsave = e.target.closest('[data-vsave]');
+    if (vsave) {
+      e.preventDefault();
+      e.stopPropagation();
+      const title = vsave.getAttribute('data-vtitle') || '';
+      const url = vsave.getAttribute('data-vurl') || '';
+      const author = vsave.getAttribute('data-vauthor') || '';
+      XU.saveToggle({ type: 'video', title: title, url: url, note: author, tags: '视频' }).then((saved) => {
+        vsave.classList.toggle('on', saved);
+        vsave.textContent = saved ? '★' : '☆';
+        XU.toast(saved ? '已收藏到「收藏」⭐' : '已取消收藏');
+      });
+      return;
+    }
     const card = e.target.closest('.video-card');
     if (!card) return;
     const play = card.getAttribute('data-play');
