@@ -31,6 +31,9 @@ jobs:
           DOUYIN_COOKIE: ${{ secrets.DOUYIN_COOKIE }}
         run: python scraper/daily.py "$GITHUB_WORKSPACE"
 
+      - name: 行情快照（指数/板块/个股/基金估值，东方财富公开接口）
+        run: python scraper/market.py "$GITHUB_WORKSPACE"
+
       - name: 提交每日更新（自动保活工作流）
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
