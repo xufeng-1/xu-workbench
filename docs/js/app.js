@@ -80,7 +80,9 @@
     booksIndex: 'data/books/index.json',
     podcasts: 'data/podcasts.json',
     quotes: 'data/quotes.json',
-    recipes: 'data/recipes/recipes.json'
+    recipes: 'data/recipes/recipes.json',
+    travelDest: 'data/travel/destinations.json',
+    market: 'data/market/snapshot.json'
   };
   XU.meta = { updated: '', online: true };
 
