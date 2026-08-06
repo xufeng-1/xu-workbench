@@ -3,12 +3,12 @@
   const XU = window.XU;
 
   const PARTS = [
-    { id: 'chest', label: '胸' },
-    { id: 'back', label: '背' },
-    { id: 'legs', label: '腿' },
-    { id: 'shoulders', label: '肩' },
-    { id: 'abs', label: '腹' },
-    { id: 'full', label: '全身' }
+    { id: 'fatburn', label: '燃脂' },
+    { id: 'strength', label: '增肌' },
+    { id: 'shape', label: '塑形' },
+    { id: 'core', label: '体能' },
+    { id: 'stretch', label: '柔韧' },
+    { id: 'cardio', label: '有氧' }
   ];
 
   async function records() {
@@ -166,7 +166,7 @@
     root.appendChild(el);
     const recs = await records();
     el.innerHTML = '<div id="fitnessBody"></div>' +
-      '<div class="card"><h2>🎯 训练视频推荐</h2><p class="sub">按部位分类 · 每日抖音热门更新</p>' +
+      '<div class="card"><h2>🎯 训练视频推荐</h2><p class="sub">按功能分类：燃脂 / 增肌 / 塑形 / 体能 / 柔韧 / 有氧 · 每日抖音更新</p>' +
       '<div class="tabs" id="partTabs">' + PARTS.map((p) => '<button class="tab" data-part="' + p.id + '">' + p.label + '</button>').join('') + '</div>' +
       '<div id="partVideos"><div class="empty">加载中…</div></div></div>';
 
