@@ -37,8 +37,12 @@
 
     const listEl = XU.$('#recipeList', el);
 
-    function renderList() {
+    function starBtn(saved) {
+      return '<button class="save-star' + (saved ? ' on' : '') + '" data-save="1" title="' + (saved ? '取消收藏' : '收藏这道菜') + '">' + (saved ? '★' : '☆') + '</button>';
+    }
+    async function renderList() {
       const list = cur === '全部' ? recipes : recipes.filter((r) => r.cuisine === cur);
+      const savedSet = new Set((await XU.saveGet()).filter((it) => it.type === 'recipe').map((it) => it.title));
       listEl.innerHTML = list.length
         ? list.map((r, i) =>
             '<div class="row-item" style="cursor:pointer" data-r="' + i + '">' +
@@ -47,6 +51,7 @@
               '<div class="desc"><span class="cuisine-chip" style="background:' + cuisineColor(r.cuisine) + '22;color:' + cuisineColor(r.cuisine) + '">' + XU.esc(r.cuisine) + '</span>' +
                 (r.time ? ' · ' + XU.esc(r.time) : '') + (r.difficulty ? ' · ' + XU.esc(r.difficulty) : '') +
                 (r.tags && r.tags.length ? ' · ' + r.tags.map((t) => '#' + XU.esc(t)).join(' ') : '') + '</div></div>' +
+              starBtn(savedSet.has(r.title)) +
               '<span class="chip">做法</span>' +
             '</div>'
           ).join('')
@@ -62,7 +67,19 @@
       renderList();
     });
 
-    el.addEventListener('click', (e) => {
+    el.addEventListener('click', async (e) => {
+      const star = e.target.closest('[data-save]');
+      if (star) {
+        const row = star.closest('[data-r]');
+        const r = row ? recipes[parseInt(row.getAttribute('data-r'), 10)] : null;
+        if (!r) return;
+        const saved = await XU.saveToggle({ type: 'recipe', title: r.title, url: (r.video && r.video.url) || '', note: r.cuisine + ' · ' + (r.time || '') + (r.difficulty ? ' · ' + r.difficulty : ''), tags: (r.tags || []).join(' ') });
+        star.classList.toggle('on', saved);
+        star.textContent = saved ? '★' : '☆';
+        star.title = saved ? '取消收藏' : '收藏这道菜';
+        XU.toast(saved ? '已收藏到「收藏」⭐' : '已取消收藏');
+        return;
+      }
       const item = e.target.closest('[data-r]');
       if (!item) return;
       const r = recipes[parseInt(item.getAttribute('data-r'), 10)];
