@@ -152,6 +152,17 @@
         '<p class="sub" style="margin-top:8px"><span class="cal-legend" style="background:#FBE3E3;color:#C2384A">经期</span> <span class="cal-legend" style="background:#FDF3E3;color:#C96A1F">排卵期</span> <span class="cal-legend ring">今天</span> <span class="cal-legend"><i class="cal-dot"></i>有记录</span></p>' +
       '</div>' +
       '<div class="card">' +
+        '<h2>🥣 营养补血推荐</h2>' +
+        '<p class="sub">经期及前后 3 天重点补充铁与蛋白质，暖身驱寒</p>' +
+        '<div class="blood-grid">' +
+          '<div class="blood-item">🦸<b>补铁食物</b><span>猪肝、鸭血、瘦牛肉、菠菜、黑木耳</span></div>' +
+          '<div class="blood-item">🥣<b>暖身汤饮</b><span>红柣桂圆红糖水、姜柣茶、酒酿蛋</span></div>' +
+          '<div class="blood-item">🍫<b>加餐零食</b><span>黑巧克力、核桃、芝麻、桂圆干</span></div>' +
+          '<div class="blood-item">💊<b>营养提示</b><span>铁与维生素 C 同食吸收更好；少吃生冷辛辣</span></div>' +
+        '</div>' +
+        '<div class="pd-tip" style="margin-top:8px">🧘 经期第 1-2 天多休息、少剧烈运动；第 3 天起可做舒缓拉伸与散步</div>' +
+      '</div>' +
+      '<div class="card">' +
         '<h2>🩸 症状 / 流量打卡</h2>' +
         '<div class="list" id="periodLogs"></div>' +
       '</div>' +
