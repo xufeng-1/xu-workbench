@@ -8,6 +8,8 @@ import random
 import re
 import sys
 import urllib.request
+from html.parser import HTMLParser
+from urllib.parse import quote
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -146,6 +148,15 @@ BOOK_WIKI = {
     "zhimodeshi": "志摩的诗",
 }
 
+BOOK_WIKI.update({
+    "chahuanv": "茶花女",
+    "bashitian": "八十日環遊地球",
+    "alice": "愛麗絲漫遊奇境記",
+    "lubinxun": "魯濱遜漂流記",
+    "andersen": "安徒生童話",
+    "grimm": "格林童話",
+})
+
 BOOK_FALLBACK = {}
 
 
@@ -175,19 +186,73 @@ def _clean_wiki(text):
     return lines
 
 
+class _WikiText(HTMLParser):
+    """把维基文库渲染 HTML 转成纯文本，并把 h1-h4 标题标成章节分隔线"""
+    def __init__(self):
+        HTMLParser.__init__(self)
+        self.out = []
+        self.skip = 0
+    def handle_starttag(self, tag, attrs):
+        if tag in ("script", "style"):
+            self.skip += 1
+        if tag in ("h1", "h2", "h3", "h4"):
+            self.out.append("\n##TITLE##")
+        if tag in ("p", "div", "br", "li", "tr", "section"):
+            self.out.append("\n")
+    def handle_endtag(self, tag):
+        if tag in ("script", "style"):
+            self.skip = max(0, self.skip - 1)
+        if tag in ("p", "div", "h1", "h2", "h3", "h4", "li"):
+            self.out.append("\n")
+    def handle_data(self, data):
+        if not self.skip:
+            self.out.append(data)
+
+
+def _html_to_text(html):
+    p = _WikiText()
+    try:
+        p.feed(html)
+    except Exception:
+        return ""
+    text = "".join(p.out)
+    text = re.sub(r"[ \t]+\n", "\n", text)
+    lines = [ln.strip() for ln in text.splitlines()]
+    return "\n".join([ln for ln in lines if ln])
+
+
+def _wiki_page_text(page):
+    """先取单页原始文本；目录页（分卷/分回）则用 parse API 展开全部子页面"""
+    if not page:
+        return None
+    try:
+        t = http_get("https://zh.wikisource.org/wiki/%s?action=raw" % quote(page, safe=""), timeout=60)
+        if t and len(t) >= 500:
+            return t
+    except Exception:
+        pass
+    try:
+        url = "https://zh.wikisource.org/w/api.php?action=parse&page=%s&prop=text&format=json" % quote(page, safe="")
+        data = json.loads(http_get(url, timeout=120))
+        html = (data.get("parse", {}).get("text", {}) or {}).get("*", "")
+        return _html_to_text(html)
+    except Exception:
+        return None
+
+
 def fetch_book(book_id, meta):
     """抓取并分章，返回 chapters 列表；失败返回 None"""
     text = None
     page = BOOK_WIKI.get(book_id)
     if page:
         try:
-            text = http_get("https://zh.wikisource.org/wiki/%s?action=raw" % page, timeout=40)
+            text = _wiki_page_text(page)
         except Exception:
             text = None
     if not text:
         for url in BOOK_FALLBACK.get(book_id, []):
             try:
-                text = http_get(url, timeout=40)
+                text = http_get(url, timeout=60)
                 break
             except Exception:
                 continue
