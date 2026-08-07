@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""probe_books2.py —— 验证搜索API阳性对照 + 古腾堡中文书目（带重试与限速）"""
-import json, re, time, urllib.parse, urllib.request
+"""probe_books3.py —— 用 action=query&titles 批量验证页面是否存在（带限速防429）"""
+import json, time, urllib.parse, urllib.request, urllib.error
 
 UA = "Mozilla/5.0 (compatible; xu-probe/1.0)"
-def http_get(url, timeout=40, tries=3):
+def http_get(url, timeout=40, tries=4):
     last = None
     for i in range(tries):
         try:
@@ -13,34 +13,33 @@ def http_get(url, timeout=40, tries=3):
         except Exception as e:
             last = e
             if isinstance(e, urllib.error.HTTPError) and e.code == 429:
-                time.sleep(6 + i * 4)
+                time.sleep(8 + i * 5)
                 continue
             raise
     raise last
 
-def search(t):
-    url = ("https://zh.wikisource.org/w/api.php?action=query&list=search&srsearch=%s"
-           "&srwhat=title&srlimit=6&format=json") % urllib.parse.quote(t, safe="")
+def exists(title):
+    url = ("https://zh.wikisource.org/w/api.php?action=query&titles=%s&format=json&redirects=1"
+           % urllib.parse.quote(title, safe=""))
     data = json.loads(http_get(url))
-    hits = [h.get("title") for h in (data.get("query", {}).get("search", []) or [])]
-    print("SRC|%s|%s" % (t, " ;; ".join(hits)))
-    time.sleep(2)
+    pages = data.get("query", {}).get("pages", {}) or {}
+    for pid, p in pages.items():
+        if pid == "-1" or p.get("missing"):
+            return False, p.get("title", title)
+        return True, p.get("title", title)
+    return False, title
 
-print("== positive controls ==")
-for t in ["呐喊", "駱駝祥子", "朝花夕拾", "茶花女"]:
-    try: search(t)
-    except Exception as e: print("SRCERR|%s|%s|%s" % (t, type(e).__name__, str(e)[:100]))
-
-print("== failing titles ==")
-for t in ["彷徨", "月牙儿", "寄小读者", "野草", "繁星", "八十日環遊地球", "阿麗思漫遊奇境記", "魯濱孫漂流記", "安徒生童話", "格林童話"]:
-    try: search(t)
-    except Exception as e: print("SRCERR|%s|%s|%s" % (t, type(e).__name__, str(e)[:100]))
-
-print("== gutenberg zh ==")
-try:
-    html = http_get("https://www.gutenberg.org/browse/languages/zh")
-    items = re.findall(r'href="/ebooks/(\d+)"[^>]*>([^<]+)</a>', html)
-    for num, name in items[:80]:
-        print("GUT|%s|%s" % (num, name.strip()))
-except Exception as e:
-    print("GUTERR|%s|%s" % (type(e).__name__, str(e)[:150]))
+cands = [
+    "三國演義", "西遊記", "水滸傳", "紅樓夢",
+    "徬徨", "吶喊", "故事新編", "沉淪", "月牙兒", "寄小讀者", "野草", "繁星", "春水", "嘗試集", "志摩的詩",
+    "簡·愛", "愛的教育", "伊索寓言", "湯姆叔叔的小屋", "木偶奇遇記",
+    "阿麗思漫遊奇境記", "八十日環遊地球", "魯濱孫漂流記", "安徒生童話", "格林童話",
+    "巴黎茶花女遺事", "茶花女", "駱駝祥子", "朝花夕拾", "背影", "荷塘月色", "熱風", "而已集", "華蓋集", "彷徨"
+]
+for t in cands:
+    try:
+        ok, real = exists(t)
+        print("CHK|%s|%s|%s" % ("YES" if ok else "NO ", t, real))
+    except Exception as e:
+        print("CHKERR|%s|%s|%s" % (t, type(e).__name__, str(e)[:80]))
+    time.sleep(1.8)
