@@ -40,14 +40,15 @@
     travel: '<rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V4.5h6V7M3 12h18"/>',
     stock: '<path d="M3 3v18h18"/><rect x="7" y="9" width="2.5" height="7" rx="1"/><path d="M8.25 6.5v2.5M8.25 16v2.5"/><rect x="13.5" y="5.5" width="2.5" height="5" rx="1"/><path d="M14.75 3.5v2M14.75 10.5v3"/>',
     goals: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.8"/>',
-    friends: '<circle cx="9" cy="8" r="3.5"/><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><circle cx="17" cy="9" r="2.8"/><path d="M15.5 14.5c2.6.3 4.5 2.1 4.5 4.5"/>'
+    friends: '<circle cx="9" cy="8" r="3.5"/><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><circle cx="17" cy="9" r="2.8"/><path d="M15.5 14.5c2.6.3 4.5 2.1 4.5 4.5"/>',
+    settings: '<circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/>'
   };
   XU.ICONS = ICONS;
   XU.icon = (name, cls) => '<svg class="' + (cls || '') + '" viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[name] || '') + '</svg>';
 
   /* ---------- 面板注册表 ---------- */
-  const PANELS = [
-    { id: 'home', label: '首页' },
+  const ALL_PANELS = [
+    { id: 'home', label: '首页', lock: true },
     { id: 'fitness', label: '健身' },
     { id: 'friends', label: '好友' },
     { id: 'creation', label: '创作' },
@@ -64,8 +65,20 @@
     { id: 'games', label: '游戏' },
     { id: 'money', label: '记账' },
     { id: 'recipes', label: '菜谱' },
-    { id: 'saves', label: '收藏' }
+    { id: 'saves', label: '收藏' },
+    { id: 'settings', label: '设置', lock: true }
   ];
+  XU.ALL_PANELS = ALL_PANELS;
+  XU.getHiddenPanels = function () {
+    try { return (localStorage.getItem('xu_panels_hidden') || '').split(',').filter(Boolean); } catch (e) { return []; }
+  };
+  XU.setPanelHidden = function (id, hidden) {
+    let arr = XU.getHiddenPanels();
+    if (hidden) { if (arr.indexOf(id) < 0) arr.push(id); }
+    else { arr = arr.filter(function (x) { return x !== id; }); }
+    try { localStorage.setItem('xu_panels_hidden', arr.join(',')); } catch (e) {}
+  };
+  const PANELS = ALL_PANELS.filter(function (p) { return p.lock || XU.getHiddenPanels().indexOf(p.id) < 0; });
   XU.panels = {};
   XU.regPanel = (id, renderer) => { XU.panels[id] = renderer; };
 
