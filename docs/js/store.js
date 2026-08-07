@@ -1,4 +1,4 @@
-﻿/* store.js —— IndexedDB 用户数据层 */
+/* store.js —— IndexedDB 用户数据层 */
 (function () {
   const DB_NAME = 'xu-workbench', DB_VER = 1;
   const STORES = ['kv', 'tasks', 'water', 'fitness', 'money', 'words', 'reading', 'workouts', 'custom'];
@@ -34,7 +34,15 @@
     all(store) { return tx(store, 'readonly', (s) => s.getAll()); },
     kvGet(key) { return this.get('kv', key).then((r) => (r ? r.v : null)); },
     kvSet(key, v) { return this.set('kv', { id: key, v }); },
-    kvDel(key) { return this.del('kv', key); }
+    kvDel(key) { return this.del('kv', key); },
+    clear() {
+      return open().then((db) => new Promise((res, rej) => {
+        const t = db.transaction(STORES, 'readwrite');
+        STORES.forEach((s) => t.objectStore(s).clear());
+        t.oncomplete = () => res(true);
+        t.onerror = () => rej(t.error);
+      }));
+    }
   };
   window.XU = window.XU || {};
   XU.Store = Store;
