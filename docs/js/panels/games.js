@@ -20,7 +20,8 @@
     { id: 'g2048', emoji: '🔢', name: '2048', desc: '滑动合并数字，冲击 2048' },
     { id: 'snake', emoji: '🐍', name: '贪吃蛇', desc: '经典街机，越吃越长' },
     { id: 'memory', emoji: '🃏', name: '记忆翻牌', desc: '翻牌配对，挑战最少步数' },
-    { id: 'guess', emoji: '🎯', name: '猜数字', desc: '1-100 猜中它，越少步越好' }
+    { id: 'guess', emoji: '🎯', name: '猜数字', desc: '1-100 猜中它，越少步越好' },
+    { id: 'tower', emoji: '🏰', name: '无限冲关', desc: '限时答题闯关，看你能冲到第几关' }
   ];
 
   let activeKey = null;
@@ -58,6 +59,7 @@
       if (id === 'g2048') { game2048(box); activeKey = keyDir2048; }
       else if (id === 'snake') { snakeGame(box); activeKey = keySnake; }
       else if (id === 'memory') memoryGame(box);
+      else if (id === 'tower') towerGame(box);
       else guessGame(box);
     }
 
@@ -328,7 +330,87 @@
     }
     XU.$('#guessBtn', box).onclick = go;
     XU.$('#guessInput', box).addEventListener('keydown', (e) => { if (e.key === 'Enter') go(); });
+
     XU.$('#guessRestart', box).onclick = reset;
     reset();
+  }
+
+  /* ============ 无限冲关（限时答题）============ */
+  function towerGame(box) {
+    const rnd = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+    function makeQ(lv) {
+      let text, ans, opts;
+      if (lv <= 3) {
+        const a = rnd(10, 99), b = rnd(10, 99), c = rnd(10, 99);
+        text = '三个数中最大的是？'; ans = Math.max(a, b, c); opts = [a, b, c];
+      } else if (lv <= 6) {
+        const a = rnd(11, 80), b = rnd(11, 80);
+        text = a + ' + ' + b + ' = ?'; ans = a + b;
+        opts = [ans, ans + rnd(1, 9), ans - rnd(1, 9), ans + rnd(10, 20)];
+      } else if (lv <= 9) {
+        const b = rnd(11, 60), a = b + rnd(11, 60);
+        text = a + ' \u2212 ' + b + ' = ?'; ans = a - b;
+        opts = [ans, ans + rnd(1, 9), ans - rnd(1, 9), ans + rnd(10, 20)];
+      } else if (lv <= 14) {
+        const a = rnd(3, 9), b = rnd(3, 9);
+        text = a + ' \u00d7 ' + b + ' = ?'; ans = a * b;
+        opts = [ans, ans + rnd(1, 6), ans - rnd(1, 6), ans + rnd(7, 15)];
+      } else {
+        const k = rnd(0, 2);
+        if (k === 0) { const a = rnd(25, 150), b = rnd(25, 150); text = a + ' + ' + b + ' = ?'; ans = a + b; }
+        else if (k === 1) { const b = rnd(25, 120), a = b + rnd(25, 120); text = a + ' \u2212 ' + b + ' = ?'; ans = a - b; }
+        else { const a = rnd(6, 13), b = rnd(6, 13); text = a + ' \u00d7 ' + b + ' = ?'; ans = a * b; }
+        opts = [ans, ans + rnd(1, 9), ans - rnd(1, 9), ans + rnd(11, 25)];
+      }
+      opts = Array.from(new Set(opts));
+      while (opts.length < 4) opts.push(ans + opts.length * 3 + 1);
+      for (let i = opts.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [opts[i], opts[j]] = [opts[j], opts[i]]; }
+      return { text: text, ans: ans, opts: opts };
+    }
+    let lv = 1, completed = 0, timer = null, curQ = null;
+    box.innerHTML =
+      '<div class="game-head"><div>第 <b id="twLevel">1</b> 关 · 最佳 <b id="twBest">0</b> 关</div>' +
+      '<button class="btn mini ghost" id="twRestart">重开</button></div>' +
+      '<div class="tower-q" id="twQ">准备…</div>' +
+      '<div class="tower-timer"><i id="twBar"></i></div>' +
+      '<div class="tower-opts" id="twOpts"></div>' +
+      '<p class="sub" style="text-align:center">限时答题 · 答对升级 · 答错/超时结束</p>';
+    const q = XU.$('#twQ', box), opts = XU.$('#twOpts', box), bar = XU.$('#twBar', box);
+    const lvlEl = XU.$('#twLevel', box), bestEl = XU.$('#twBest', box), restart = XU.$('#twRestart', box);
+    getBest().then((b) => { if (b.tower) bestEl.textContent = b.tower; });
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function saveBest() {
+      updateBest('tower', completed).then((b) => { bestEl.textContent = b; });
+    }
+    function gameOver(reason, answer) {
+      stop();
+      saveBest();
+      q.innerHTML = reason + ' 共完成 <b>' + completed + '</b> 关';
+      opts.innerHTML = '<button class="tower-opt" id="twAgain" style="grid-column:1/-1;background:var(--primary);color:#fff">🔄 再来一局</button>';
+      restart.textContent = '重开';
+      XU.toast('冲关结束！完成 ' + completed + ' 关' + (answer != null ? '，正确答案 ' + answer : ''));
+    }
+    function next() {
+      stop();
+      curQ = makeQ(lv);
+      q.textContent = curQ.text;
+      opts.innerHTML = curQ.opts.map((o) => '<button class="tower-opt">' + o + '</button>').join('');
+      lvlEl.textContent = lv;
+      const left = Math.max(6, 12 - Math.floor(lv / 3));
+      bar.style.transition = 'none'; bar.style.width = '100%';
+      setTimeout(() => { bar.style.transition = 'width ' + left + 's linear'; bar.style.width = '0%'; }, 40);
+      timer = setInterval(() => { if (!timer) return; gameOver('⏰ 时间到！', curQ.ans); }, left * 1000 + 200);
+    }
+    opts.addEventListener('click', (e) => {
+      const b = e.target.closest('.tower-opt');
+      if (!b) return;
+      if (b.id === 'twAgain') { lv = 1; completed = 0; restart.textContent = '重开'; next(); return; }
+      const v = parseInt(b.textContent, 10);
+      stop();
+      if (v === curQ.ans) { lv++; completed++; next(); }
+      else gameOver('❌ 答错啦！', curQ.ans);
+    });
+    restart.onclick = () => { lv = 1; completed = 0; restart.textContent = '重开'; next(); };
+    next();
   }
 })();
