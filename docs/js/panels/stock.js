@@ -301,7 +301,10 @@
       const concepts = (live && live.concepts && live.concepts.length) ? live.concepts : (snap ? snap.concepts : []);
       const movers = snap ? snap.movers : [];
       const timeStr = liveTime ? ('实时数据 · ' + liveTime) : (snap && snap.time ? '快照数据 · ' + snap.time : '暂无快照，待每日自动更新');
-      box.innerHTML =
+      const banner = liveTime
+        ? '<div class="live-banner"><span class="lb-dot"></span><div><b>实时行情已刷新</b><div class="sub">' + esc(liveTime) + ' · 进入本页自动拉取，盘中每 60 秒自动更新</div></div></div>'
+        : '<div class="snap-banner">⏰ <b>当前为每日快照（约 07:20 自动更新）</b><div class="sub">非盘中实时 · 点右上角「🔄 刷新行情」立即获取实时数据</div></div>';
+      box.innerHTML = banner +
         '<div class="card">' +
           '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px">' +
             '<div><h2 style="margin:0">📈 大盘指数</h2><p class="sub" style="margin:2px 0 0">' + esc(timeStr) + '</p></div>' +
@@ -419,8 +422,8 @@
         XU.toast('已添加基金 ✅');
       };
     }    /* ---------- 实时刷新 ---------- */
-    async function doRefresh() {
-      XU.toast('正在刷新实时行情…');
+    async function doRefresh(silent) {
+      if (!silent) XU.toast('正在刷新实时行情…');
       const result = { indices: [], stocks: {}, sectors: [], concepts: [], funds: {} };
       const EM = 'https://push2.eastmoney.com/api/qt/';
       const tasks = [];
@@ -450,7 +453,7 @@
       live = result;
       liveTime = new Date().toLocaleTimeString('zh-CN', { hour12: false });
       const gotAny = result.indices.length || result.sectors.length || result.concepts.length || Object.keys(result.stocks).length || Object.keys(result.funds).length;
-      XU.toast(gotAny ? '实时行情已刷新 ✅' : '实时行情获取失败（网络受限），显示最近快照');
+      if (!silent) XU.toast(gotAny ? '实时行情已刷新 ✅' : '实时行情获取失败（网络受限），显示最近快照');
       renderAll();
     }
 
@@ -510,6 +513,12 @@
     renderFund();
 
     XU.$('#stRefresh', el).onclick = doRefresh;
+    /* 自动刷新：进入面板立即拉取实时行情，盘中每 60 秒自动更新（离开页面自动停止） */
+    doRefresh(true);
+    const stAutoTimer = setInterval(() => {
+      if (!el.isConnected) { clearInterval(stAutoTimer); return; }
+      doRefresh(true);
+    }, 60000);
     XU.$('#stTabs', el).addEventListener('click', (e) => {
       const b = e.target.closest('.tab');
       if (!b) return;
