@@ -263,6 +263,51 @@ def _wiki_page_text(page):
     return None
 
 
+def _lcs_len(a, b):
+    """两个标题的最长公共子序列长度（粗略相似度）"""
+    if not a or not b:
+        return 0
+    m, n = len(a), len(b)
+    dp = [0] * (n + 1)
+    for i in range(1, m + 1):
+        prev = 0
+        for j in range(1, n + 1):
+            tmp = dp[j]
+            if a[i - 1] == b[j - 1]:
+                dp[j] = prev + 1
+            else:
+                dp[j] = max(dp[j], dp[j - 1])
+            prev = tmp
+    return dp[n]
+
+
+def _wiki_resolve(page):
+    """解析维基文库真实页面：直接抓取 → 搜索 API 找到最接近的真实标题（自动纠正简繁/异体字）"""
+    t = _wiki_page_text(page)
+    if t:
+        return t
+    try:
+        url = ("https://zh.wikisource.org/w/api.php?action=query&list=search&srsearch=%s"
+               "&srwhat=title&srlimit=8&format=json" % quote(page, safe=""))
+        data = json.loads(http_get(url, timeout=60))
+        hits = (data.get("query", {}).get("search", []) or [])
+        best, best_score = None, 0
+        for hit in hits:
+            title = (hit.get("title") or "").replace(" (消歧義)", "").replace("（消歧義）", "").strip()
+            if not title:
+                continue
+            score = _lcs_len(title, page)
+            if score > best_score:
+                best, best_score = title, score
+        if best and best_score >= 2 and best != page:
+            t = _wiki_page_text(best)
+            if t:
+                return t
+    except Exception:
+        pass
+    return None
+
+
 def fetch_book(book_id, meta):
     """抓取并分章，返回 chapters 列表；失败抛出异常（含尝试过的页面）"""
     text = None
@@ -273,7 +318,7 @@ def fetch_book(book_id, meta):
             continue
         tried.append(page)
         try:
-            text = _wiki_page_text(page)
+            text = _wiki_resolve(page)
         except Exception:
             text = None
         if text:
