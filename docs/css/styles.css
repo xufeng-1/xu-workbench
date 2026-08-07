@@ -1,4 +1,4 @@
-﻿/* ============ xu的工作台 · 薰衣草玻璃光感主题 ============ */
+/* ============ xu的工作台 · 薰衣草玻璃光感主题 ============ */
 :root{
   --bg:#ECE9F9;          /* 页面背景淡紫 */
   --bg2:#E1DBF5;
@@ -138,6 +138,7 @@ label.lbl{display:block;font-size:12.5px;color:var(--muted);margin:8px 0 4px;fon
 .row-item .title{font-weight:600;font-size:14px}
 .row-item .desc{color:var(--muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:12px;scrollbar-width:none}
+.wrap-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .tabs::-webkit-scrollbar{display:none}
 .input{width:100%;box-sizing:border-box;padding:10px 12px;border-radius:12px;border:1.5px solid var(--primary-soft);background:#fff;color:var(--text);font-size:14px;outline:none;transition:border-color .18s,box-shadow .18s}.input:focus{border-color:var(--primary);box-shadow:0 0 0 3.5px rgba(124,107,212,.12)}
 .tab{white-space:nowrap;border:none;background:var(--card-tint);color:var(--muted);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;transition:transform .14s ease,background .2s ease,color .2s ease}
@@ -378,3 +379,39 @@ select:focus{border-color:var(--primary);box-shadow:0 0 0 3.5px rgba(124,107,212
 .chat-input{display:flex;gap:8px;position:sticky;bottom:0;background:var(--bg);padding:10px 2px;border-top:1px solid rgba(124,107,212,.12)}
 .chat-input input{flex:1;min-width:0}
 #chatMsgs{max-height:56vh;overflow-y:auto;padding:2px 2px 8px}
+
+.live-banner{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#E7F6EC,#DFF1E7);border:1px solid #CDEBD8;border-radius:14px;padding:10px 12px;margin-bottom:10px}
+.live-banner b{font-size:13px;color:#1E7A46}
+.live-banner .sub{color:#4C8A66;font-size:11.5px;margin-top:2px}
+.lb-dot{width:9px;height:9px;border-radius:50%;background:#2EAD62;flex:0 0 auto;box-shadow:0 0 0 4px rgba(46,173,98,.18);animation:lbPulse 1.8s ease-in-out infinite}
+@keyframes lbPulse{0%,100%{box-shadow:0 0 0 3px rgba(46,173,98,.16)}50%{box-shadow:0 0 0 7px rgba(46,173,98,.06)}}
+.snap-banner{background:linear-gradient(135deg,#FDF3E3,#FBEBD9);border:1px solid #F3DFC0;border-radius:14px;padding:10px 12px;margin-bottom:10px;color:#9A6A1F;font-size:12.5px}
+.snap-banner b{font-size:13px;color:#8A5A14}
+.snap-banner .sub{color:#A9804A;font-size:11.5px;margin-top:2px}
+
+.plan-day{background:var(--card-tint);border:1px solid rgba(124,107,212,.14);border-radius:14px;padding:10px 12px;margin-bottom:8px}
+.pd-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.pd-head b{font-size:13.5px;color:var(--primary)}
+.pd-tag{background:#fff;border:1px solid var(--primary-soft);color:var(--primary);border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700}
+.plan-ex{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;padding:5px 0;border-bottom:1px dashed rgba(124,107,212,.12);font-size:12.5px}
+.plan-ex:last-child{border-bottom:none}
+.plan-ex b{font-size:12.5px}
+.plan-ex span{color:var(--primary);font-weight:700;font-size:11.5px}
+.plan-ex i{color:var(--muted);font-size:11px;font-style:normal;flex-basis:100%}
+.pd-tip{background:#F3EEFB;color:#6A5ACD;border-radius:10px;padding:6px 10px;font-size:11.5px;margin-top:6px}
+.meal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:8px}
+.meal-card{background:linear-gradient(135deg,#FFF7EC,#FDEEDC);border:1px solid #F3DFC0;border-radius:14px;padding:10px 12px}
+.meal-card b{font-size:12.5px;color:#9A6A1F}
+.meal-card p{margin:4px 0 0;font-size:11.5px;color:#7A5A2A;line-height:1.5}
+
+.tower-q{font-size:22px;font-weight:800;text-align:center;padding:20px 10px;background:var(--card-tint);border-radius:14px;margin-bottom:12px}
+.tower-timer{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-bottom:14px}
+.tower-timer i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#B9AEF2,#7C6BD4);border-radius:99px}
+.tower-opts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tower-opt{border:none;background:var(--card-tint);border-radius:14px;padding:18px 10px;font-size:20px;font-weight:800;color:var(--text);cursor:pointer;transition:transform .14s ease,background .2s ease;box-shadow:0 2px 8px rgba(124,107,212,.1)}
+.tower-opt:active{transform:scale(.94);background:#efeafc}
+
+.blood-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.blood-item{background:var(--card-tint);border:1px solid rgba(124,107,212,.12);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:3px}
+.blood-item b{font-size:12.5px;color:var(--primary)}
+.blood-item span{font-size:11.5px;color:var(--muted);line-height:1.5}
