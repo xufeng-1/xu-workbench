@@ -1,120 +1,106 @@
 {
- "updated": "2026-08-06 09:04",
+ "updated": "2026-08-07",
  "parts": {
   "fatburn": [
    {
-    "title": "HIIT训练",
+    "title": "全身燃脂",
     "author": "抖音热门",
     "duration": "",
-    "url": "https://www.douyin.com/search/HIIT%E8%AE%AD%E7%BB%83?type=video",
+    "url": "https://www.douyin.com/search/%E5%85%A8%E8%BA%AB%E7%87%83%E8%84%82?type=video",
     "cover": ""
    },
    {
-    "title": "深蹲教学",
+    "title": "跳绳燃脂",
     "author": "抖音热门",
     "duration": "",
-    "url": "https://www.douyin.com/search/%E6%B7%B1%E8%B9%B2%E6%95%99%E5%AD%A6?type=video",
+    "url": "https://www.douyin.com/search/%E8%B7%B3%E7%BB%B3%E7%87%83%E8%84%82?type=video",
+    "cover": ""
+   },
+   {
+    "title": "HIIT燃脂",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/HIIT%E7%87%83%E8%84%82?type=video",
     "cover": ""
    }
   ],
   "strength": [
    {
-    "title": "俯卧撑教学",
+    "title": "增肌训练",
     "author": "抖音热门",
     "duration": "",
-    "url": "https://www.douyin.com/search/%E4%BF%AF%E5%8D%A7%E6%92%91%E6%95%99%E5%AD%A6?type=video",
+    "url": "https://www.douyin.com/search/%E5%A2%9E%E8%82%8C%E8%AE%AD%E7%BB%83?type=video",
     "cover": ""
    },
    {
-    "title": "居家练胸",
+    "title": "无器械增肌",
     "author": "抖音热门",
     "duration": "",
-    "url": "https://www.douyin.com/search/%E5%B1%85%E5%AE%B6%E7%BB%83%E8%83%B8?type=video",
+    "url": "https://www.douyin.com/search/%E6%97%A0%E5%99%A8%E6%A2%B0%E5%A2%9E%E8%82%8C?type=video",
     "cover": ""
    },
    {
-    "title": "哑铃卧推",
+    "title": "哑铃训练",
     "author": "抖音热门",
     "duration": "",
-    "url": "https://www.douyin.com/search/%E5%93%91%E9%93%83%E5%8D%A7%E6%8E%A8?type=video",
-    "cover": ""
-   },
-   {
-    "title": "引体向上",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E5%BC%95%E4%BD%93%E5%90%91%E4%B8%8A?type=video",
-    "cover": ""
-   },
-   {
-    "title": "背阔肌",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E8%83%8C%E9%98%94%E8%82%8C?type=video",
-    "cover": ""
-   },
-   {
-    "title": "高位下拉",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E9%AB%98%E4%BD%8D%E4%B8%8B%E6%8B%89?type=video",
-    "cover": ""
-   },
-   {
-    "title": "腿部训练",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E8%85%BF%E9%83%A8%E8%AE%AD%E7%BB%83?type=video",
+    "url": "https://www.douyin.com/search/%E5%93%91%E9%93%83%E8%AE%AD%E7%BB%83?type=video",
     "cover": ""
    }
   ],
   "shape": [
-   {
-    "title": "侧平举",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E4%BE%A7%E5%B9%B3%E4%B8%BE?type=video",
-    "cover": ""
-   },
-   {
-    "title": "肩膀塑形",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E8%82%A9%E8%86%80%E5%A1%91%E5%BD%A2?type=video",
-    "cover": ""
-   },
    {
     "title": "直角肩",
     "author": "抖音热门",
     "duration": "",
     "url": "https://www.douyin.com/search/%E7%9B%B4%E8%A7%92%E8%82%A9?type=video",
     "cover": ""
+   },
+   {
+    "title": "瘦手臂",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E7%98%A6%E6%89%8B%E8%87%82?type=video",
+    "cover": ""
+   },
+   {
+    "title": "马甲线",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E9%A9%AC%E7%94%B2%E7%BA%BF?type=video",
+    "cover": ""
    }
   ],
   "core": [
-   {
-    "title": "卷腹",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E5%8D%B7%E8%85%B9?type=video",
-    "cover": ""
-   },
-   {
-    "title": "平板支撑",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E5%B9%B3%E6%9D%BF%E6%94%AF%E6%92%91?type=video",
-    "cover": ""
-   },
    {
     "title": "腹肌训练",
     "author": "抖音热门",
     "duration": "",
     "url": "https://www.douyin.com/search/%E8%85%B9%E8%82%8C%E8%AE%AD%E7%BB%83?type=video",
     "cover": ""
+   },
+   {
+    "title": "核心力量",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E6%A0%B8%E5%BF%83%E5%8A%9B%E9%87%8F?type=video",
+    "cover": ""
+   },
+   {
+    "title": "体能训练",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E4%BD%93%E8%83%BD%E8%AE%AD%E7%BB%83?type=video",
+    "cover": ""
    }
   ],
   "stretch": [
+   {
+    "title": "柔韧性训练",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E6%9F%94%E9%9F%A7%E6%80%A7%E8%AE%AD%E7%BB%83?type=video",
+    "cover": ""
+   },
    {
     "title": "晨间拉伸",
     "author": "抖音热门",
@@ -123,19 +109,33 @@
     "cover": ""
    },
    {
-    "title": "腿部拉伸",
+    "title": "全身拉伸",
     "author": "抖音热门",
     "duration": "",
-    "url": "https://www.douyin.com/search/%E8%85%BF%E9%83%A8%E6%8B%89%E4%BC%B8?type=video",
+    "url": "https://www.douyin.com/search/%E5%85%A8%E8%BA%AB%E6%8B%89%E4%BC%B8?type=video",
     "cover": ""
    }
   ],
   "cardio": [
    {
-    "title": "徒手训练",
+    "title": "室内有氧",
     "author": "抖音热门",
     "duration": "",
-    "url": "https://www.douyin.com/search/%E5%BE%92%E6%89%8B%E8%AE%AD%E7%BB%83?type=video",
+    "url": "https://www.douyin.com/search/%E5%AE%A4%E5%86%85%E6%9C%89%E6%B0%A7?type=video",
+    "cover": ""
+   },
+   {
+    "title": "跳绳",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E8%B7%B3%E7%BB%B3?type=video",
+    "cover": ""
+   },
+   {
+    "title": "心肺训练",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E5%BF%83%E8%82%BA%E8%AE%AD%E7%BB%83?type=video",
     "cover": ""
    }
   ]
