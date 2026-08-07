@@ -151,11 +151,32 @@ BOOK_WIKI = {
 BOOK_WIKI.update({
     "chahuanv": "茶花女",
     "bashitian": "八十日環遊地球",
-    "alice": "愛麗絲漫遊奇境記",
-    "lubinxun": "魯濱遜漂流記",
+    "alice": "阿麗思漫遊奇境記",
+    "lubinxun": "魯濱孫漂流記",
     "andersen": "安徒生童話",
     "grimm": "格林童話",
 })
+
+BOOK_VARIANTS = {
+    "chahuanv": ["茶花女", "巴黎茶花女遺事", "茶花女 (小仲馬)"],
+    "bashitian": ["八十日環遊地球", "八十日环游地球"],
+    "alice": ["阿麗思漫遊奇境記", "愛麗絲漫遊奇境記", "愛麗絲夢遊仙境"],
+    "lubinxun": ["魯濱孫漂流記", "魯濱遜漂流記", "鲁滨逊漂流记"],
+    "andersen": ["安徒生童話", "安徒生童话"],
+    "grimm": ["格林童話", "格林童话"],
+    "nahan": ["呐喊", "吶喊"],
+    "panghuang": ["彷徨", "徬徨"],
+    "gushixinbian": ["故事新编", "故事新編"],
+    "yueyaer": ["月牙儿", "月牙兒"],
+    "chenlun": ["沉沦", "沉淪"],
+    "jixiaoduzhe": ["寄小读者", "寄小讀者"],
+    "huagaiji": ["华盖集", "華蓋集"],
+    "yecao": ["野草", "野草"],
+    "fanxing": ["繁星", "繁星"],
+    "chunshui": ["春水", "春水"],
+    "changshi": ["尝试集", "嘗試集"],
+    "zhimodeshi": ["志摩的诗", "志摩的詩"],
+}
 
 BOOK_FALLBACK = {}
 
@@ -232,32 +253,41 @@ def _wiki_page_text(page):
     except Exception:
         pass
     try:
-        url = "https://zh.wikisource.org/w/api.php?action=parse&page=%s&prop=text&format=json" % quote(page, safe="")
-        data = json.loads(http_get(url, timeout=120))
+        url = "https://zh.wikisource.org/w/api.php?action=parse&page=%s&prop=text&format=json&redirects=1" % quote(page, safe="")
+        data = json.loads(http_get(url, timeout=150))
         html = (data.get("parse", {}).get("text", {}) or {}).get("*", "")
-        return _html_to_text(html)
+        if len(html) >= 3000:
+            return _html_to_text(html)
     except Exception:
-        return None
+        pass
+    return None
 
 
 def fetch_book(book_id, meta):
-    """抓取并分章，返回 chapters 列表；失败返回 None"""
+    """抓取并分章，返回 chapters 列表；失败抛出异常（含尝试过的页面）"""
     text = None
-    page = BOOK_WIKI.get(book_id)
-    if page:
+    tried = []
+    variants = [BOOK_WIKI.get(book_id)] + BOOK_VARIANTS.get(book_id, [])
+    for page in variants:
+        if not page or page in tried:
+            continue
+        tried.append(page)
         try:
             text = _wiki_page_text(page)
         except Exception:
             text = None
+        if text:
+            break
     if not text:
         for url in BOOK_FALLBACK.get(book_id, []):
+            tried.append(url)
             try:
-                text = http_get(url, timeout=60)
+                text = http_get(url, timeout=90)
                 break
             except Exception:
                 continue
     if not text or len(text) < 500:
-        return None
+        raise RuntimeError("fetch failed; tried: " + "; ".join(tried))
     lines = _clean_wiki(text)
     chapters = []
     cur = {"title": "前言", "paras": []}
