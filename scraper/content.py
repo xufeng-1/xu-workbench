@@ -139,11 +139,9 @@ BOOK_WIKI = {
     "yecao": "野艸",
     "chahuanv": "巴黎茶花女遺事",
     "aijiaoyu": "愛的教育",
-    "yisuo": "伊索寓言",
     "heinu": "黑奴籲天錄",
     "sanguo": "三國演義",
     "xiyou": "西遊記",
-    "shuihu": "水滸傳",
     "honglou": "紅樓夢",
 }
 
@@ -151,11 +149,9 @@ BOOK_VARIANTS = {
     "chahuanv": ["茶花女", "巴黎茶花女遺事"],
     "yecao": ["野草", "野艸"],
     "aijiaoyu": ["愛的教育", "爱的教育"],
-    "yisuo": ["伊索寓言"],
     "heinu": ["黑奴籲天錄", "湯姆叔叔的小屋"],
     "sanguo": ["三國演義"],
     "xiyou": ["西遊記"],
-    "shuihu": ["水滸傳"],
     "honglou": ["紅樓夢"],
 }
 
