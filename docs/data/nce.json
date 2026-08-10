@@ -1,6 +1,6 @@
 {
- "updated": "2026-08-09",
- "lastAdded": "2026-08-03",
+ "updated": "2026-08-10",
+ "lastAdded": "2026-08-10",
  "lessons": [
   {
    "id": "nce-001",
@@ -209,6 +209,56 @@
     }
    ],
    "id": "nce-20260803"
+  },
+  {
+   "title": "Lesson: Write Day by Day",
+   "en": [
+    "Xu gets up early and looks out of the window. The warm spring rain makes Xu smile.",
+    "Every day, Xu follows the same simple rule: write down three things to be thankful for.",
+    "From that day on, Xu started to take a ten-minute walk every morning.",
+    "It was not easy at first, but Xu never gave up.",
+    "This is the power of small steps. Day by day, we become better versions of ourselves."
+   ],
+   "cn": [
+    "Xu早早起床，望向窗外。清新的空气让Xu露出了微笑。",
+    "每天，Xu都遵循同一条简单的准则：睡前阅读三十分钟。",
+    "从那天起，Xu每天早上开始散步十分钟。",
+    "起初并不容易，但Xu从不放弃。",
+    "这就是小步前进的力量。日复一日，我们成为更好的自己。"
+   ],
+   "words": [
+    {
+     "w": "patience",
+     "p": "/ˈpeɪʃns/",
+     "m": "n. 耐心"
+    },
+    {
+     "w": "habit",
+     "p": "/ˈhæbɪt/",
+     "m": "n. 习惯"
+    },
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    },
+    {
+     "w": "decision",
+     "p": "/dɪˈsɪʒn/",
+     "m": "n. 决定"
+    },
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    },
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    }
+   ],
+   "id": "nce-20260810"
   }
  ]
 }
