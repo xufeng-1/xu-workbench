@@ -1,5 +1,5 @@
 ﻿/* xu的工作台 Service Worker：离线可用 + 数据缓存 */
-const VERSION = 'xu-v2';
+const VERSION = 'xu-v3';
 const SHELL = [
   './',
   './index.html',
@@ -16,6 +16,15 @@ const SHELL = [
   './js/panels/study.js',
   './js/panels/money.js',
   './js/panels/recipes.js',
+  './js/lib/lunar.js',
+  './js/panels/weather.js',
+  './js/panels/calendar.js',
+  './js/panels/countdown.js',
+  './js/panels/notes.js',
+  './js/panels/sounds.js',
+  './js/panels/zodiac.js',
+  './js/panels/almanac.js',
+  './js/panels/tools.js',
   './icons/icon-192.png',
   './icons/icon-512.png'
 ];
