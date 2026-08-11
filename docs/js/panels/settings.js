@@ -28,8 +28,10 @@
     zodiac: '每日星座运势',
     almanac: '农历黄历、宜忌',
     tools: '单位换算、汇率、健康计算、决策',
+  todos: '待办清单、优先级管理、完成统计',
+  water: '每日喝水打卡、目标进度、7日统计',
   };
-  const EMOJI = { home:'🏠', fitness:'🏋️', friends:'👥', creation:'🎬', english:'🇬🇧', reading:'📚', period:'🌸', pomodoro:'🍅', smoke:'🚬', diary:'📓', fishing:'🎣', travel:'🧳', stock:'📈', goals:'🎯', games:'🎮', money:'💰', recipes:'🍳', saves:'⭐', weather:'⛅', calendar:'📅', countdown:'⏳', notes:'📝', sounds:'🎧', zodiac:'♌', almanac:'📜', tools:'🧰', settings:'⚙️' };
+  const EMOJI = { home:'🏠', fitness:'🏋️', friends:'👥', creation:'🎬', english:'🇬🇧', reading:'📚', period:'🌸', pomodoro:'🍅', smoke:'🚬', diary:'📓', fishing:'🎣', travel:'🧳', stock:'📈', goals:'🎯', games:'🎮', money:'💰', recipes:'🍳', saves:'⭐', weather:'⛅', calendar:'📅', countdown:'⏳', notes:'📝', sounds:'🎧', zodiac:'♌', almanac:'📜', tools:'🧰', todos:'✅', water:'💧', settings:'⚙️' };
 
   XU.regPanel('settings', async function (root) {
     const el = document.createElement('div');
