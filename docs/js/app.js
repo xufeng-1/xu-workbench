@@ -1,4 +1,4 @@
-﻿/* app.js —— xu的工作台 核心：导航、路由、数据加载、通用组件 */
+/* app.js —— xu的工作台 核心：导航、路由、数据加载、通用组件 */
 (function () {
   const XU = window.XU;
 
@@ -49,6 +49,8 @@
     zodiac: '<path d="M12 3l2.2 5.6L20 10.8l-5.8 2.2L12 18.6l-2.2-5.6L4 10.8l5.8-2.2Z"/><path d="M19 3.2l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8Z"/>',
     almanac: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M9 7h7M9 11h7"/>',
     tools: '<path d="M14.5 6.6a4 4 0 0 0-5.3 4.9L3.9 16.8a1.7 1.7 0 0 0 2.4 2.4l5.3-5.3a4 4 0 0 0 4.9-5.3l-2.4 2.4-2-.5-.5-2Z"/><circle cx="19" cy="5" r="2.2"/>',
+    todo: '<path d="M4 6h16M4 12h16M4 18h10"/><path d="M18 15.5l1.5 1.5 3-3"/>',
+    water: '<path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11Z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/>',
   };
   XU.ICONS = ICONS;
   XU.icon = (name, cls) => '<svg class="' + (cls || '') + '" viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[name] || '') + '</svg>';
@@ -78,6 +80,8 @@
     { id: 'zodiac', label: '星座' },
     { id: 'almanac', label: '黄历' },
     { id: 'tools', label: '工具箱' },
+    { id: 'todos', label: '待办' },
+    { id: 'water', label: '喝水' },
     { id: 'money', label: '记账' },
     { id: 'recipes', label: '菜谱' },
     { id: 'saves', label: '收藏' },
