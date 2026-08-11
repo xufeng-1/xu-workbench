@@ -19,9 +19,17 @@
     games: '摸鱼小游戏、无限冲关',
     money: '收支记账、分类占比',
     recipes: '多菜系菜谱',
-    saves: '收藏的视频/菜谱/书籍'
+    saves: '收藏的视频/菜谱/书籍',
+    weather: '实时天气、7日预报、城市搜索',
+    calendar: '月历视图、日程安排',
+    countdown: '生日/纪念日倒计时',
+    notes: '便签、置顶、搜索',
+    sounds: '白噪音、助眠音效',
+    zodiac: '每日星座运势',
+    almanac: '农历黄历、宜忌',
+    tools: '单位换算、汇率、健康计算、决策',
   };
-  const EMOJI = { home:'🏠', fitness:'🏋️', friends:'👥', creation:'🎬', english:'🇬🇧', reading:'📚', period:'🌸', pomodoro:'🍅', smoke:'🚬', diary:'📓', fishing:'🎣', travel:'🧳', stock:'📈', goals:'🎯', games:'🎮', money:'💰', recipes:'🍳', saves:'⭐', settings:'⚙️' };
+  const EMOJI = { home:'🏠', fitness:'🏋️', friends:'👥', creation:'🎬', english:'🇬🇧', reading:'📚', period:'🌸', pomodoro:'🍅', smoke:'🚬', diary:'📓', fishing:'🎣', travel:'🧳', stock:'📈', goals:'🎯', games:'🎮', money:'💰', recipes:'🍳', saves:'⭐', weather:'⛅', calendar:'📅', countdown:'⏳', notes:'📝', sounds:'🎧', zodiac:'♌', almanac:'📜', tools:'🧰', settings:'⚙️' };
 
   XU.regPanel('settings', async function (root) {
     const el = document.createElement('div');
