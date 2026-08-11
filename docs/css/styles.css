@@ -529,3 +529,17 @@ select:focus{border-color:var(--primary);box-shadow:0 0 0 3.5px rgba(124,107,212
 .d-result{text-align:center;font-size:22px;font-weight:800;color:var(--primary);background:var(--card-tint);border-radius:14px;padding:26px 12px;margin-top:12px;min-height:76px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--primary-3)}
 .d-result.anim{animation:dPop .4s cubic-bezier(.2,.9,.3,1.3)}
 @keyframes dPop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:none}}
+
+/* ===== 待办清单 ===== */
+.td-row { display: flex; align-items: center; gap: 10px; padding: 11px 4px; border-bottom: 1px solid var(--line); }
+.td-row:last-child { border-bottom: 0; }
+.td-row.done .td-text { text-decoration: line-through; opacity: .5; }
+.td-check { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--primary); background: transparent; color: #fff; font-size: 14px; line-height: 1; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: .2s; }
+.td-check.on { background: linear-gradient(135deg, #9d8cf0, #6f5bd8); border-color: transparent; }
+.td-text { font-size: 14.5px; font-weight: 600; }
+.td-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* ===== 喝水打卡 ===== */
+.wt-cups { display: grid; grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap: 8px; }
+.wt-cup { height: 52px; border-radius: 14px 14px 10px 10px; border: 1.5px dashed var(--primary); background: rgba(139,123,216,.07); font-size: 20px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 8px; cursor: pointer; transition: .2s; opacity: .45; filter: grayscale(.6); }
+.wt-cup.full { border-style: solid; background: linear-gradient(180deg, rgba(139,123,216,.32), rgba(111,91,216,.5)); opacity: 1; filter: none; transform: translateY(-2px); }
