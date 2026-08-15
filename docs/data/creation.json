@@ -1,59 +1,59 @@
 {
- "updated": "2026-08-15",
+ "updated": "2026-08-16",
  "drama": [
   {
-   "title": "国漫推荐",
+   "title": "重生漫剧",
    "author": "抖音热门",
    "duration": "",
-   "url": "https://www.douyin.com/search/%E5%9B%BD%E6%BC%AB%E6%8E%A8%E8%8D%90?type=video",
+   "url": "https://www.douyin.com/search/%E9%87%8D%E7%94%9F%E6%BC%AB%E5%89%A7?type=video",
    "cover": ""
   },
   {
-   "title": "热血漫剧",
+   "title": "甜宠漫剧",
    "author": "抖音热门",
    "duration": "",
-   "url": "https://www.douyin.com/search/%E7%83%AD%E8%A1%80%E6%BC%AB%E5%89%A7?type=video",
+   "url": "https://www.douyin.com/search/%E7%94%9C%E5%AE%A0%E6%BC%AB%E5%89%A7?type=video",
    "cover": ""
   },
   {
-   "title": "国漫推荐",
+   "title": "重生漫剧",
    "author": "抖音热门",
    "duration": "",
-   "url": "https://www.douyin.com/search/%E5%9B%BD%E6%BC%AB%E6%8E%A8%E8%8D%90?type=video",
+   "url": "https://www.douyin.com/search/%E9%87%8D%E7%94%9F%E6%BC%AB%E5%89%A7?type=video",
    "cover": ""
   },
   {
-   "title": "热血漫剧",
+   "title": "甜宠漫剧",
    "author": "抖音热门",
    "duration": "",
-   "url": "https://www.douyin.com/search/%E7%83%AD%E8%A1%80%E6%BC%AB%E5%89%A7?type=video",
+   "url": "https://www.douyin.com/search/%E7%94%9C%E5%AE%A0%E6%BC%AB%E5%89%A7?type=video",
    "cover": ""
   },
   {
-   "title": "国漫推荐",
+   "title": "重生漫剧",
    "author": "抖音热门",
    "duration": "",
-   "url": "https://www.douyin.com/search/%E5%9B%BD%E6%BC%AB%E6%8E%A8%E8%8D%90?type=video",
+   "url": "https://www.douyin.com/search/%E9%87%8D%E7%94%9F%E6%BC%AB%E5%89%A7?type=video",
    "cover": ""
   },
   {
-   "title": "热血漫剧",
+   "title": "甜宠漫剧",
    "author": "抖音热门",
    "duration": "",
-   "url": "https://www.douyin.com/search/%E7%83%AD%E8%A1%80%E6%BC%AB%E5%89%A7?type=video",
+   "url": "https://www.douyin.com/search/%E7%94%9C%E5%AE%A0%E6%BC%AB%E5%89%A7?type=video",
    "cover": ""
   }
  ],
  "scripts": [
   {
-   "title": "周口贾鲁河溃口正开展封堵作业",
+   "title": "中超成都蓉城3:2浙江队",
    "author": "抖音今日热榜",
    "duration": "",
-   "url": "https://www.douyin.com/search/%E5%91%A8%E5%8F%A3%E8%B4%BE%E9%B2%81%E6%B2%B3%E6%BA%83%E5%8F%A3%E6%AD%A3%E5%BC%80%E5%B1%95%E5%B0%81%E5%A0%B5%E4%BD%9C%E4%B8%9A?type=video",
+   "url": "https://www.douyin.com/search/%E4%B8%AD%E8%B6%85%E6%88%90%E9%83%BD%E8%93%89%E5%9F%8E3%3A2%E6%B5%99%E6%B1%9F%E9%98%9F?type=video",
    "cover": "",
-   "topic": "周口贾鲁河溃口正开展封堵作业",
+   "topic": "中超成都蓉城3:2浙江队",
    "script": {
-    "concept": "围绕「周口贾鲁河溃口正开展封堵作业」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
+    "concept": "围绕「中超成都蓉城3:2浙江队」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
     "roles": [
      {
       "name": "主角",
@@ -70,52 +70,64 @@
     ],
     "scenes": [
      {
-      "setting": "温馨的家里",
+      "setting": "明亮的办公室",
       "shots": [
        {
-        "shot": "全景",
-        "camera": "推镜",
-        "subtitle": "转折发生，情绪推向高潮",
+        "shot": "大特写",
+        "camera": "延时",
+        "subtitle": "细节特写，暗示真相",
+        "music": "低沉钢琴"
+       },
+       {
+        "shot": "远景",
+        "camera": "固定机位",
+        "subtitle": "主人公下定决心，转身离开",
         "music": "悬念音效"
        },
        {
-        "shot": "全景",
-        "camera": "慢镜头",
+        "shot": "远景",
+        "camera": "俯拍",
         "subtitle": "一句台词，让所有人愣住",
-        "music": "紧张鼓点"
+        "music": "温暖吉他"
        }
       ]
      },
      {
-      "setting": "人来人往的广场",
+      "setting": "安静的咖啡馆",
       "shots": [
        {
-        "shot": "特写",
-        "camera": "延时",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "轻快BGM"
+        "shot": "远景",
+        "camera": "拉镜",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "紧张鼓点"
        },
        {
-        "shot": "大特写",
-        "camera": "环绕运镜",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "温情配乐"
+        "shot": "全景",
+        "camera": "俯拍",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "低沉钢琴"
+       },
+       {
+        "shot": "特写",
+        "camera": "慢镜头",
+        "subtitle": "一句台词，让所有人愣住",
+        "music": "温暖吉他"
        }
       ]
      }
     ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
    }
   },
   {
-   "title": "日本战败投降81周年",
+   "title": "中方回应高市向靖国神社供奉祭祀费",
    "author": "抖音今日热榜",
    "duration": "",
-   "url": "https://www.douyin.com/search/%E6%97%A5%E6%9C%AC%E6%88%98%E8%B4%A5%E6%8A%95%E9%99%8D81%E5%91%A8%E5%B9%B4?type=video",
+   "url": "https://www.douyin.com/search/%E4%B8%AD%E6%96%B9%E5%9B%9E%E5%BA%94%E9%AB%98%E5%B8%82%E5%90%91%E9%9D%96%E5%9B%BD%E7%A5%9E%E7%A4%BE%E4%BE%9B%E5%A5%89%E7%A5%AD%E7%A5%80%E8%B4%B9?type=video",
    "cover": "",
-   "topic": "日本战败投降81周年",
+   "topic": "中方回应高市向靖国神社供奉祭祀费",
    "script": {
-    "concept": "围绕「日本战败投降81周年」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
+    "concept": "围绕「中方回应高市向靖国神社供奉祭祀费」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
     "roles": [
      {
       "name": "好友",
@@ -132,653 +144,59 @@
     ],
     "scenes": [
      {
-      "setting": "安静的咖啡馆",
-      "shots": [
-       {
-        "shot": "特写",
-        "camera": "俯拍",
-        "subtitle": "一句台词，让所有人愣住",
-        "music": "温暖吉他"
-       },
-       {
-        "shot": "远景",
-        "camera": "固定机位",
-        "subtitle": "一句台词，让所有人愣住",
-        "music": "悬念音效"
-       },
-       {
-        "shot": "全景",
-        "camera": "推镜",
-        "subtitle": "细节特写，暗示真相",
-        "music": "轻快BGM"
-       },
-       {
-        "shot": "远景",
-        "camera": "固定机位",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "低沉钢琴"
-       }
-      ]
-     },
-     {
-      "setting": "人来人往的广场",
-      "shots": [
-       {
-        "shot": "大特写",
-        "camera": "拉镜",
-        "subtitle": "转折发生，情绪推向高潮",
-        "music": "轻快BGM"
-       },
-       {
-        "shot": "特写",
-        "camera": "慢镜头",
-        "subtitle": "一句台词，让所有人愣住",
-        "music": "悬念音效"
-       },
-       {
-        "shot": "远景",
-        "camera": "手持跟拍",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "低沉钢琴"
-       }
-      ]
-     },
-     {
-      "setting": "安静的咖啡馆",
-      "shots": [
-       {
-        "shot": "全景",
-        "camera": "环绕运镜",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "低沉钢琴"
-       },
-       {
-        "shot": "大特写",
-        "camera": "慢镜头",
-        "subtitle": "细节特写，暗示真相",
-        "music": "紧张鼓点"
-       },
-       {
-        "shot": "大特写",
-        "camera": "推镜",
-        "subtitle": "一句台词，让所有人愣住",
-        "music": "轻快BGM"
-       },
-       {
-        "shot": "大特写",
-        "camera": "拉镜",
-        "subtitle": "主人公下定决心，转身离开",
-        "music": "温暖吉他"
-       }
-      ]
-     }
-    ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
-   }
-  },
-  {
-   "title": "旅行故事",
-   "author": "抖音热门",
-   "duration": "",
-   "url": "https://www.douyin.com/search/%E6%97%85%E8%A1%8C%E6%95%85%E4%BA%8B?type=video",
-   "cover": "",
-   "topic": "旅行故事",
-   "script": {
-    "concept": "围绕「旅行故事」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
-    "roles": [
-     {
-      "name": "老板",
-      "desc": "制造冲突，推动剧情"
-     },
-     {
-      "name": "同事",
-      "desc": "关键时刻提供帮助"
-     },
-     {
-      "name": "配角2",
-      "desc": "性格鲜明，目标明确"
-     }
-    ],
-    "scenes": [
-     {
-      "setting": "人来人往的广场",
-      "shots": [
-       {
-        "shot": "远景",
-        "camera": "环绕运镜",
-        "subtitle": "细节特写，暗示真相",
-        "music": "悬念音效"
-       },
-       {
-        "shot": "远景",
-        "camera": "延时",
-        "subtitle": "转折发生，情绪推向高潮",
-        "music": "低沉钢琴"
-       }
-      ]
-     },
-     {
-      "setting": "安静的咖啡馆",
-      "shots": [
-       {
-        "shot": "大特写",
-        "camera": "推镜",
-        "subtitle": "细节特写，暗示真相",
-        "music": "温情配乐"
-       },
-       {
-        "shot": "特写",
-        "camera": "慢镜头",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "激昂弦乐"
-       }
-      ]
-     },
-     {
-      "setting": "人来人往的广场",
-      "shots": [
-       {
-        "shot": "远景",
-        "camera": "手持跟拍",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "悬念音效"
-       },
-       {
-        "shot": "远景",
-        "camera": "拉镜",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "悬念音效"
-       },
-       {
-        "shot": "特写",
-        "camera": "拉镜",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "低沉钢琴"
-       }
-      ]
-     }
-    ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
-   }
-  },
-  {
-   "title": "情感故事",
-   "author": "抖音热门",
-   "duration": "",
-   "url": "https://www.douyin.com/search/%E6%83%85%E6%84%9F%E6%95%85%E4%BA%8B?type=video",
-   "cover": "",
-   "topic": "情感故事",
-   "script": {
-    "concept": "围绕「情感故事」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
-    "roles": [
-     {
-      "name": "陌生人",
-      "desc": "带来反转的关键人物"
-     },
-     {
-      "name": "主角",
-      "desc": "制造冲突，推动剧情"
-     },
-     {
-      "name": "配角2",
-      "desc": "关键时刻提供帮助"
-     }
-    ],
-    "scenes": [
-     {
-      "setting": "明亮的办公室",
-      "shots": [
-       {
-        "shot": "全景",
-        "camera": "环绕运镜",
-        "subtitle": "细节特写，暗示真相",
-        "music": "激昂弦乐"
-       },
-       {
-        "shot": "近景",
-        "camera": "推镜",
-        "subtitle": "转折发生，情绪推向高潮",
-        "music": "紧张鼓点"
-       },
-       {
-        "shot": "全景",
-        "camera": "拉镜",
-        "subtitle": "主人公下定决心，转身离开",
-        "music": "激昂弦乐"
-       },
-       {
-        "shot": "大特写",
-        "camera": "延时",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "温暖吉他"
-       }
-      ]
-     },
-     {
-      "setting": "明亮的办公室",
+      "setting": "深夜的路边摊",
       "shots": [
        {
         "shot": "中景",
         "camera": "环绕运镜",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "紧张鼓点"
+        "subtitle": "一句台词，让所有人愣住",
+        "music": "低沉钢琴"
        },
        {
         "shot": "远景",
         "camera": "环绕运镜",
-        "subtitle": "转折发生，情绪推向高潮",
-        "music": "悬念音效"
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "紧张鼓点"
        },
        {
-        "shot": "大特写",
+        "shot": "近景",
         "camera": "延时",
         "subtitle": "镜头慢慢拉近，气氛开始变化",
         "music": "温暖吉他"
        },
        {
-        "shot": "大特写",
-        "camera": "固定机位",
-        "subtitle": "细节特写，暗示真相",
-        "music": "低沉钢琴"
+        "shot": "近景",
+        "camera": "俯拍",
+        "subtitle": "一句台词，让所有人愣住",
+        "music": "温暖吉他"
        }
       ]
      },
      {
-      "setting": "人来人往的广场",
+      "setting": "熟悉的街角",
       "shots": [
        {
-        "shot": "全景",
+        "shot": "近景",
         "camera": "俯拍",
         "subtitle": "转折发生，情绪推向高潮",
         "music": "紧张鼓点"
        },
        {
         "shot": "大特写",
-        "camera": "手持跟拍",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "轻快BGM"
-       },
-       {
-        "shot": "大特写",
-        "camera": "延时",
-        "subtitle": "一句台词，让所有人愣住",
-        "music": "温暖吉他"
-       }
-      ]
-     }
-    ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
-   }
-  },
-  {
-   "title": "生活记录",
-   "author": "抖音热门",
-   "duration": "",
-   "url": "https://www.douyin.com/search/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95?type=video",
-   "cover": "",
-   "topic": "生活记录",
-   "script": {
-    "concept": "围绕「生活记录」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
-    "roles": [
-     {
-      "name": "家人",
-      "desc": "情感线的核心"
-     },
-     {
-      "name": "好友",
-      "desc": "带来反转的关键人物"
-     }
-    ],
-    "scenes": [
-     {
-      "setting": "明亮的办公室",
-      "shots": [
-       {
-        "shot": "远景",
-        "camera": "延时",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "低沉钢琴"
-       },
-       {
-        "shot": "近景",
         "camera": "拉镜",
-        "subtitle": "主人公下定决心，转身离开",
-        "music": "悬念音效"
-       },
-       {
-        "shot": "全景",
-        "camera": "手持跟拍",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "激昂弦乐"
-       }
-      ]
-     },
-     {
-      "setting": "人来人往的广场",
-      "shots": [
-       {
-        "shot": "远景",
-        "camera": "推镜",
-        "subtitle": "一句台词，让所有人愣住",
-        "music": "激昂弦乐"
-       },
-       {
-        "shot": "特写",
-        "camera": "手持跟拍",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "紧张鼓点"
-       },
-       {
-        "shot": "全景",
-        "camera": "手持跟拍",
         "subtitle": "一句台词，让所有人愣住",
         "music": "欢快收尾"
        },
        {
-        "shot": "近景",
-        "camera": "固定机位",
-        "subtitle": "转折发生，情绪推向高潮",
-        "music": "温情配乐"
-       }
-      ]
-     },
-     {
-      "setting": "明亮的办公室",
-      "shots": [
-       {
-        "shot": "特写",
-        "camera": "环绕运镜",
-        "subtitle": "一句台词，让所有人愣住",
-        "music": "紧张鼓点"
-       },
-       {
-        "shot": "远景",
-        "camera": "延时",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "温情配乐"
-       }
-      ]
-     }
-    ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
-   }
-  },
-  {
-   "title": "家庭温情",
-   "author": "抖音热门",
-   "duration": "",
-   "url": "https://www.douyin.com/search/%E5%AE%B6%E5%BA%AD%E6%B8%A9%E6%83%85?type=video",
-   "cover": "",
-   "topic": "家庭温情",
-   "script": {
-    "concept": "围绕「家庭温情」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
-    "roles": [
-     {
-      "name": "同事",
-      "desc": "引出主题的配角"
-     },
-     {
-      "name": "老板",
-      "desc": "情感线的核心"
-     }
-    ],
-    "scenes": [
-     {
-      "setting": "深夜的路边摊",
-      "shots": [
-       {
-        "shot": "大特写",
-        "camera": "拉镜",
-        "subtitle": "转折发生，情绪推向高潮",
-        "music": "温暖吉他"
-       },
-       {
-        "shot": "近景",
-        "camera": "俯拍",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "紧张鼓点"
-       },
-       {
-        "shot": "特写",
-        "camera": "慢镜头",
-        "subtitle": "转折发生，情绪推向高潮",
-        "music": "紧张鼓点"
-       }
-      ]
-     },
-     {
-      "setting": "深夜的路边摊",
-      "shots": [
-       {
         "shot": "特写",
         "camera": "拉镜",
-        "subtitle": "细节特写，暗示真相",
-        "music": "轻快BGM"
-       },
-       {
-        "shot": "全景",
-        "camera": "手持跟拍",
-        "subtitle": "细节特写，暗示真相",
-        "music": "紧张鼓点"
-       }
-      ]
-     }
-    ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
-   }
-  },
-  {
-   "title": "剧情反转",
-   "author": "抖音热门",
-   "duration": "",
-   "url": "https://www.douyin.com/search/%E5%89%A7%E6%83%85%E5%8F%8D%E8%BD%AC?type=video",
-   "cover": "",
-   "topic": "剧情反转",
-   "script": {
-    "concept": "围绕「剧情反转」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
-    "roles": [
-     {
-      "name": "主角",
-      "desc": "性格鲜明，目标明确"
-     },
-     {
-      "name": "陌生人",
-      "desc": "引出主题的配角"
-     }
-    ],
-    "scenes": [
-     {
-      "setting": "深夜的路边摊",
-      "shots": [
-       {
-        "shot": "大特写",
-        "camera": "拉镜",
-        "subtitle": "细节特写，暗示真相",
-        "music": "欢快收尾"
-       },
-       {
-        "shot": "特写",
-        "camera": "俯拍",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "温暖吉他"
-       },
-       {
-        "shot": "全景",
-        "camera": "环绕运镜",
-        "subtitle": "一句台词，让所有人愣住",
-        "music": "温情配乐"
-       }
-      ]
-     },
-     {
-      "setting": "安静的咖啡馆",
-      "shots": [
-       {
-        "shot": "远景",
-        "camera": "手持跟拍",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "温情配乐"
-       },
-       {
-        "shot": "远景",
-        "camera": "环绕运镜",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "温暖吉他"
-       }
-      ]
-     }
-    ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
-   }
-  },
-  {
-   "title": "创业故事",
-   "author": "抖音热门",
-   "duration": "",
-   "url": "https://www.douyin.com/search/%E5%88%9B%E4%B8%9A%E6%95%85%E4%BA%8B?type=video",
-   "cover": "",
-   "topic": "创业故事",
-   "script": {
-    "concept": "围绕「创业故事」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
-    "roles": [
-     {
-      "name": "好友",
-      "desc": "关键时刻提供帮助"
-     },
-     {
-      "name": "家人",
-      "desc": "性格鲜明，目标明确"
-     },
-     {
-      "name": "配角2",
-      "desc": "引出主题的配角"
-     }
-    ],
-    "scenes": [
-     {
-      "setting": "安静的咖啡馆",
-      "shots": [
-       {
-        "shot": "远景",
-        "camera": "环绕运镜",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "悬念音效"
-       },
-       {
-        "shot": "远景",
-        "camera": "手持跟拍",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "低沉钢琴"
-       },
-       {
-        "shot": "远景",
-        "camera": "拉镜",
-        "subtitle": "细节特写，暗示真相",
-        "music": "温暖吉他"
-       },
-       {
-        "shot": "近景",
-        "camera": "推镜",
         "subtitle": "主人公下定决心，转身离开",
-        "music": "紧张鼓点"
-       }
-      ]
-     },
-     {
-      "setting": "温馨的家里",
-      "shots": [
-       {
-        "shot": "大特写",
-        "camera": "手持跟拍",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
         "music": "温暖吉他"
-       },
-       {
-        "shot": "近景",
-        "camera": "拉镜",
-        "subtitle": "细节特写，暗示真相",
-        "music": "悬念音效"
-       },
-       {
-        "shot": "近景",
-        "camera": "推镜",
-        "subtitle": "镜头慢慢拉近，气氛开始变化",
-        "music": "欢快收尾"
        }
       ]
      }
     ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
-   }
-  },
-  {
-   "title": "励志故事",
-   "author": "抖音热门",
-   "duration": "",
-   "url": "https://www.douyin.com/search/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B?type=video",
-   "cover": "",
-   "topic": "励志故事",
-   "script": {
-    "concept": "围绕「励志故事」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
-    "roles": [
-     {
-      "name": "老板",
-      "desc": "制造冲突，推动剧情"
-     },
-     {
-      "name": "同事",
-      "desc": "关键时刻提供帮助"
-     }
-    ],
-    "scenes": [
-     {
-      "setting": "温馨的家里",
-      "shots": [
-       {
-        "shot": "远景",
-        "camera": "慢镜头",
-        "subtitle": "转折发生，情绪推向高潮",
-        "music": "温暖吉他"
-       },
-       {
-        "shot": "中景",
-        "camera": "环绕运镜",
-        "subtitle": "主人公下定决心，转身离开",
-        "music": "悬念音效"
-       }
-      ]
-     },
-     {
-      "setting": "安静的咖啡馆",
-      "shots": [
-       {
-        "shot": "特写",
-        "camera": "推镜",
-        "subtitle": "主人公下定决心，转身离开",
-        "music": "紧张鼓点"
-       },
-       {
-        "shot": "中景",
-        "camera": "手持跟拍",
-        "subtitle": "转折发生，情绪推向高潮",
-        "music": "激昂弦乐"
-       },
-       {
-        "shot": "全景",
-        "camera": "环绕运镜",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "悬念音效"
-       },
-       {
-        "shot": "全景",
-        "camera": "延时",
-        "subtitle": "画面定格，悬念拉满",
-        "music": "温情配乐"
-       }
-      ]
-     }
-    ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
    }
   },
   {
@@ -792,6 +210,103 @@
     "concept": "围绕「爆款短视频」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
     "roles": [
      {
+      "name": "老板",
+      "desc": "制造冲突，推动剧情"
+     },
+     {
+      "name": "同事",
+      "desc": "关键时刻提供帮助"
+     },
+     {
+      "name": "配角2",
+      "desc": "性格鲜明，目标明确"
+     }
+    ],
+    "scenes": [
+     {
+      "setting": "温馨的家里",
+      "shots": [
+       {
+        "shot": "远景",
+        "camera": "延时",
+        "subtitle": "画面定格，悬念拉满",
+        "music": "悬念音效"
+       },
+       {
+        "shot": "远景",
+        "camera": "环绕运镜",
+        "subtitle": "细节特写，暗示真相",
+        "music": "低沉钢琴"
+       },
+       {
+        "shot": "全景",
+        "camera": "俯拍",
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "悬念音效"
+       }
+      ]
+     },
+     {
+      "setting": "熟悉的街角",
+      "shots": [
+       {
+        "shot": "中景",
+        "camera": "推镜",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "温暖吉他"
+       },
+       {
+        "shot": "大特写",
+        "camera": "俯拍",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "悬念音效"
+       },
+       {
+        "shot": "近景",
+        "camera": "俯拍",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "欢快收尾"
+       },
+       {
+        "shot": "特写",
+        "camera": "拉镜",
+        "subtitle": "一句台词，让所有人愣住",
+        "music": "轻快BGM"
+       }
+      ]
+     },
+     {
+      "setting": "深夜的路边摊",
+      "shots": [
+       {
+        "shot": "中景",
+        "camera": "延时",
+        "subtitle": "画面定格，悬念拉满",
+        "music": "欢快收尾"
+       },
+       {
+        "shot": "特写",
+        "camera": "慢镜头",
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "温情配乐"
+       }
+      ]
+     }
+    ],
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
+   }
+  },
+  {
+   "title": "职场故事",
+   "author": "抖音热门",
+   "duration": "",
+   "url": "https://www.douyin.com/search/%E8%81%8C%E5%9C%BA%E6%95%85%E4%BA%8B?type=video",
+   "cover": "",
+   "topic": "职场故事",
+   "script": {
+    "concept": "围绕「职场故事」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
+    "roles": [
+     {
       "name": "陌生人",
       "desc": "带来反转的关键人物"
      },
@@ -809,31 +324,78 @@
       "setting": "明亮的办公室",
       "shots": [
        {
-        "shot": "大特写",
-        "camera": "手持跟拍",
-        "subtitle": "细节特写，暗示真相",
-        "music": "悬念音效"
+        "shot": "近景",
+        "camera": "推镜",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "温暖吉他"
        },
        {
-        "shot": "特写",
-        "camera": "慢镜头",
-        "subtitle": "细节特写，暗示真相",
-        "music": "紧张鼓点"
+        "shot": "远景",
+        "camera": "环绕运镜",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "温暖吉他"
        }
       ]
      },
      {
-      "setting": "安静的咖啡馆",
+      "setting": "深夜的路边摊",
       "shots": [
        {
-        "shot": "特写",
-        "camera": "手持跟拍",
+        "shot": "全景",
+        "camera": "拉镜",
         "subtitle": "一句台词，让所有人愣住",
-        "music": "温暖吉他"
+        "music": "紧张鼓点"
        },
        {
+        "shot": "近景",
+        "camera": "慢镜头",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "激昂弦乐"
+       }
+      ]
+     }
+    ],
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
+   }
+  },
+  {
+   "title": "搞笑剧情",
+   "author": "抖音热门",
+   "duration": "",
+   "url": "https://www.douyin.com/search/%E6%90%9E%E7%AC%91%E5%89%A7%E6%83%85?type=video",
+   "cover": "",
+   "topic": "搞笑剧情",
+   "script": {
+    "concept": "围绕「搞笑剧情」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
+    "roles": [
+     {
+      "name": "家人",
+      "desc": "情感线的核心"
+     },
+     {
+      "name": "好友",
+      "desc": "带来反转的关键人物"
+     }
+    ],
+    "scenes": [
+     {
+      "setting": "深夜的路边摊",
+      "shots": [
+       {
         "shot": "大特写",
-        "camera": "固定机位",
+        "camera": "拉镜",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "欢快收尾"
+       },
+       {
+        "shot": "中景",
+        "camera": "环绕运镜",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "欢快收尾"
+       },
+       {
+        "shot": "全景",
+        "camera": "手持跟拍",
         "subtitle": "画面定格，悬念拉满",
         "music": "轻快BGM"
        }
@@ -843,27 +405,439 @@
       "setting": "熟悉的街角",
       "shots": [
        {
-        "shot": "中景",
+        "shot": "全景",
+        "camera": "固定机位",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "温暖吉他"
+       },
+       {
+        "shot": "远景",
+        "camera": "环绕运镜",
+        "subtitle": "一句台词，让所有人愣住",
+        "music": "紧张鼓点"
+       }
+      ]
+     }
+    ],
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
+   }
+  },
+  {
+   "title": "旅行故事",
+   "author": "抖音热门",
+   "duration": "",
+   "url": "https://www.douyin.com/search/%E6%97%85%E8%A1%8C%E6%95%85%E4%BA%8B?type=video",
+   "cover": "",
+   "topic": "旅行故事",
+   "script": {
+    "concept": "围绕「旅行故事」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
+    "roles": [
+     {
+      "name": "同事",
+      "desc": "引出主题的配角"
+     },
+     {
+      "name": "老板",
+      "desc": "情感线的核心"
+     },
+     {
+      "name": "配角2",
+      "desc": "带来反转的关键人物"
+     }
+    ],
+    "scenes": [
+     {
+      "setting": "明亮的办公室",
+      "shots": [
+       {
+        "shot": "近景",
+        "camera": "固定机位",
+        "subtitle": "细节特写，暗示真相",
+        "music": "低沉钢琴"
+       },
+       {
+        "shot": "近景",
+        "camera": "固定机位",
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "紧张鼓点"
+       }
+      ]
+     },
+     {
+      "setting": "人来人往的广场",
+      "shots": [
+       {
+        "shot": "大特写",
+        "camera": "慢镜头",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "温情配乐"
+       },
+       {
+        "shot": "近景",
+        "camera": "慢镜头",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "紧张鼓点"
+       }
+      ]
+     }
+    ],
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
+   }
+  },
+  {
+   "title": "情感故事",
+   "author": "抖音热门",
+   "duration": "",
+   "url": "https://www.douyin.com/search/%E6%83%85%E6%84%9F%E6%95%85%E4%BA%8B?type=video",
+   "cover": "",
+   "topic": "情感故事",
+   "script": {
+    "concept": "围绕「情感故事」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
+    "roles": [
+     {
+      "name": "主角",
+      "desc": "性格鲜明，目标明确"
+     },
+     {
+      "name": "陌生人",
+      "desc": "引出主题的配角"
+     }
+    ],
+    "scenes": [
+     {
+      "setting": "安静的咖啡馆",
+      "shots": [
+       {
+        "shot": "大特写",
+        "camera": "手持跟拍",
+        "subtitle": "画面定格，悬念拉满",
+        "music": "温情配乐"
+       },
+       {
+        "shot": "远景",
+        "camera": "固定机位",
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "轻快BGM"
+       },
+       {
+        "shot": "近景",
+        "camera": "慢镜头",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "温暖吉他"
+       }
+      ]
+     },
+     {
+      "setting": "熟悉的街角",
+      "shots": [
+       {
+        "shot": "大特写",
+        "camera": "俯拍",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "激昂弦乐"
+       },
+       {
+        "shot": "远景",
         "camera": "拉镜",
+        "subtitle": "细节特写，暗示真相",
+        "music": "紧张鼓点"
+       },
+       {
+        "shot": "远景",
+        "camera": "俯拍",
         "subtitle": "细节特写，暗示真相",
         "music": "欢快收尾"
        },
        {
         "shot": "特写",
-        "camera": "手持跟拍",
-        "subtitle": "转折发生，情绪推向高潮",
+        "camera": "固定机位",
+        "subtitle": "一句台词，让所有人愣住",
         "music": "欢快收尾"
+       }
+      ]
+     }
+    ],
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
+   }
+  },
+  {
+   "title": "生活记录",
+   "author": "抖音热门",
+   "duration": "",
+   "url": "https://www.douyin.com/search/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95?type=video",
+   "cover": "",
+   "topic": "生活记录",
+   "script": {
+    "concept": "围绕「生活记录」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
+    "roles": [
+     {
+      "name": "好友",
+      "desc": "关键时刻提供帮助"
+     },
+     {
+      "name": "家人",
+      "desc": "性格鲜明，目标明确"
+     },
+     {
+      "name": "配角2",
+      "desc": "引出主题的配角"
+     }
+    ],
+    "scenes": [
+     {
+      "setting": "温馨的家里",
+      "shots": [
+       {
+        "shot": "远景",
+        "camera": "固定机位",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "轻快BGM"
+       },
+       {
+        "shot": "特写",
+        "camera": "慢镜头",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "紧张鼓点"
+       },
+       {
+        "shot": "中景",
+        "camera": "俯拍",
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "悬念音效"
+       },
+       {
+        "shot": "特写",
+        "camera": "延时",
+        "subtitle": "画面定格，悬念拉满",
+        "music": "温暖吉他"
+       }
+      ]
+     },
+     {
+      "setting": "深夜的路边摊",
+      "shots": [
+       {
+        "shot": "全景",
+        "camera": "环绕运镜",
+        "subtitle": "画面定格，悬念拉满",
+        "music": "温情配乐"
+       },
+       {
+        "shot": "近景",
+        "camera": "拉镜",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "轻快BGM"
+       },
+       {
+        "shot": "大特写",
+        "camera": "俯拍",
+        "subtitle": "一句台词，让所有人愣住",
+        "music": "紧张鼓点"
+       }
+      ]
+     },
+     {
+      "setting": "温馨的家里",
+      "shots": [
+       {
+        "shot": "中景",
+        "camera": "俯拍",
+        "subtitle": "一句台词，让所有人愣住",
+        "music": "轻快BGM"
+       },
+       {
+        "shot": "全景",
+        "camera": "慢镜头",
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "温情配乐"
+       }
+      ]
+     }
+    ],
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
+   }
+  },
+  {
+   "title": "家庭温情",
+   "author": "抖音热门",
+   "duration": "",
+   "url": "https://www.douyin.com/search/%E5%AE%B6%E5%BA%AD%E6%B8%A9%E6%83%85?type=video",
+   "cover": "",
+   "topic": "家庭温情",
+   "script": {
+    "concept": "围绕「家庭温情」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
+    "roles": [
+     {
+      "name": "老板",
+      "desc": "制造冲突，推动剧情"
+     },
+     {
+      "name": "同事",
+      "desc": "关键时刻提供帮助"
+     },
+     {
+      "name": "配角2",
+      "desc": "性格鲜明，目标明确"
+     }
+    ],
+    "scenes": [
+     {
+      "setting": "深夜的路边摊",
+      "shots": [
+       {
+        "shot": "大特写",
+        "camera": "环绕运镜",
+        "subtitle": "细节特写，暗示真相",
+        "music": "轻快BGM"
        },
        {
         "shot": "远景",
-        "camera": "手持跟拍",
-        "subtitle": "画面定格，悬念拉满",
+        "camera": "俯拍",
+        "subtitle": "一句台词，让所有人愣住",
+        "music": "温情配乐"
+       },
+       {
+        "shot": "全景",
+        "camera": "慢镜头",
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "欢快收尾"
+       }
+      ]
+     },
+     {
+      "setting": "安静的咖啡馆",
+      "shots": [
+       {
+        "shot": "近景",
+        "camera": "慢镜头",
+        "subtitle": "主人公下定决心，转身离开",
+        "music": "悬念音效"
+       },
+       {
+        "shot": "近景",
+        "camera": "慢镜头",
+        "subtitle": "一句台词，让所有人愣住",
         "music": "激昂弦乐"
        }
       ]
      }
     ],
-    "hook": "结尾提问：如果是你，你会怎么选？评论区见。"
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
+   }
+  },
+  {
+   "title": "剧情反转",
+   "author": "抖音热门",
+   "duration": "",
+   "url": "https://www.douyin.com/search/%E5%89%A7%E6%83%85%E5%8F%8D%E8%BD%AC?type=video",
+   "cover": "",
+   "topic": "剧情反转",
+   "script": {
+    "concept": "围绕「剧情反转」主题，用真实感 + 反转为核心，前三秒用悬念抓住观众，结尾留下互动话题。",
+    "roles": [
+     {
+      "name": "陌生人",
+      "desc": "带来反转的关键人物"
+     },
+     {
+      "name": "主角",
+      "desc": "制造冲突，推动剧情"
+     },
+     {
+      "name": "配角2",
+      "desc": "关键时刻提供帮助"
+     }
+    ],
+    "scenes": [
+     {
+      "setting": "熟悉的街角",
+      "shots": [
+       {
+        "shot": "特写",
+        "camera": "延时",
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "轻快BGM"
+       },
+       {
+        "shot": "大特写",
+        "camera": "推镜",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "欢快收尾"
+       },
+       {
+        "shot": "大特写",
+        "camera": "拉镜",
+        "subtitle": "细节特写，暗示真相",
+        "music": "温暖吉他"
+       },
+       {
+        "shot": "近景",
+        "camera": "手持跟拍",
+        "subtitle": "画面定格，悬念拉满",
+        "music": "悬念音效"
+       }
+      ]
+     },
+     {
+      "setting": "熟悉的街角",
+      "shots": [
+       {
+        "shot": "大特写",
+        "camera": "手持跟拍",
+        "subtitle": "画面定格，悬念拉满",
+        "music": "悬念音效"
+       },
+       {
+        "shot": "远景",
+        "camera": "俯拍",
+        "subtitle": "细节特写，暗示真相",
+        "music": "悬念音效"
+       },
+       {
+        "shot": "特写",
+        "camera": "手持跟拍",
+        "subtitle": "细节特写，暗示真相",
+        "music": "轻快BGM"
+       },
+       {
+        "shot": "全景",
+        "camera": "俯拍",
+        "subtitle": "一句台词，让所有人愣住",
+        "music": "激昂弦乐"
+       }
+      ]
+     },
+     {
+      "setting": "熟悉的街角",
+      "shots": [
+       {
+        "shot": "近景",
+        "camera": "环绕运镜",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "欢快收尾"
+       },
+       {
+        "shot": "全景",
+        "camera": "固定机位",
+        "subtitle": "画面定格，悬念拉满",
+        "music": "激昂弦乐"
+       },
+       {
+        "shot": "远景",
+        "camera": "手持跟拍",
+        "subtitle": "镜头慢慢拉近，气氛开始变化",
+        "music": "欢快收尾"
+       },
+       {
+        "shot": "全景",
+        "camera": "拉镜",
+        "subtitle": "转折发生，情绪推向高潮",
+        "music": "温暖吉他"
+       }
+      ]
+     }
+    ],
+    "hook": "片尾字幕：认真生活的人，运气都不会太差。"
    }
   }
  ]
