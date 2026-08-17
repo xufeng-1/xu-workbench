@@ -1,6 +1,6 @@
 {
- "updated": "2026-08-17",
- "lastAdded": "2026-08-11",
+ "updated": "2026-08-18",
+ "lastAdded": "2026-08-18",
  "lessons": [
   {
    "id": "nce-001",
@@ -259,6 +259,56 @@
     }
    ],
    "id": "nce-20260811"
+  },
+  {
+   "title": "Lesson: Exercise Day by Day",
+   "en": [
+    "Every day, Xu follows the same simple rule: exercise for one hour every day.",
+    "They talked about the study plan, and the friend shared a valuable piece of advice.",
+    "It was not easy at first, but Xu never gave up.",
+    "Slowly, small changes began to appear in Xu's life.",
+    "This is the power of small steps. Day by day, we become better versions of ourselves."
+   ],
+   "cn": [
+    "每天，Xu都遵循同一条简单的准则：睡前阅读三十分钟。",
+    "他们聊起了学习计划，朋友分享了一条宝贵的建议。",
+    "起初并不容易，但Xu从不放弃。",
+    "慢慢地，小小的改变开始出现在Xu的生活里。",
+    "这就是小步前进的力量。日复一日，我们成为更好的自己。"
+   ],
+   "words": [
+    {
+     "w": "achieve",
+     "p": "/əˈtʃiːv/",
+     "m": "v. 达成"
+    },
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "habit",
+     "p": "/ˈhæbɪt/",
+     "m": "n. 习惯"
+    },
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    },
+    {
+     "w": "valuable",
+     "p": "/ˈvæljuəbl/",
+     "m": "adj. 宝贵的"
+    },
+    {
+     "w": "curiosity",
+     "p": "/ˌkjʊəriˈɒsəti/",
+     "m": "n. 好奇心"
+    }
+   ],
+   "id": "nce-20260818"
   }
  ]
 }
