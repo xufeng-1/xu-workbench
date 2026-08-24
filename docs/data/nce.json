@@ -1,6 +1,6 @@
 {
- "updated": "2026-08-24",
- "lastAdded": "2026-08-18",
+ "updated": "2026-08-25",
+ "lastAdded": "2026-08-25",
  "lessons": [
   {
    "id": "nce-001",
@@ -309,6 +309,56 @@
     }
    ],
    "id": "nce-20260818"
+  },
+  {
+   "title": "Lesson: Exercise Day by Day",
+   "en": [
+    "Every day, Mike follows the same simple rule: exercise for one hour every day.",
+    "One afternoon, Mike met an old friend at the city library.",
+    "They talked about the future dreams, and the friend shared a valuable piece of advice.",
+    "It was not easy at first, but Mike never gave up.",
+    "This is the power of small steps. Day by day, we become better versions of ourselves."
+   ],
+   "cn": [
+    "每天，Mike都遵循同一条简单的准则：写下三件值得感恩的事。",
+    "一天下午，Mike在社区公园遇到了一位老朋友。",
+    "他们聊起了未来的梦想，朋友分享了一条宝贵的建议。",
+    "起初并不容易，但Mike从不放弃。",
+    "这就是小步前进的力量。日复一日，我们成为更好的自己。"
+   ],
+   "words": [
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    },
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    },
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "valuable",
+     "p": "/ˈvæljuəbl/",
+     "m": "adj. 宝贵的"
+    },
+    {
+     "w": "journey",
+     "p": "/ˈdʒɜːni/",
+     "m": "n. 旅程"
+    }
+   ],
+   "id": "nce-20260825"
   }
  ]
 }
