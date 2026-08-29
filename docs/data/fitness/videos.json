@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-29",
+ "updated": "2026-08-30",
  "parts": {
   "fatburn": [
    {
@@ -49,13 +49,6 @@
   ],
   "shape": [
    {
-    "title": "马甲线",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E9%A9%AC%E7%94%B2%E7%BA%BF?type=video",
-    "cover": ""
-   },
-   {
     "title": "体态矫正",
     "author": "抖音热门",
     "duration": "",
@@ -68,16 +61,16 @@
     "duration": "",
     "url": "https://www.douyin.com/search/%E7%BF%98%E8%87%80%E8%AE%AD%E7%BB%83?type=video",
     "cover": ""
+   },
+   {
+    "title": "直角肩",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E7%9B%B4%E8%A7%92%E8%82%A9?type=video",
+    "cover": ""
    }
   ],
   "core": [
-   {
-    "title": "核心力量",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E6%A0%B8%E5%BF%83%E5%8A%9B%E9%87%8F?type=video",
-    "cover": ""
-   },
    {
     "title": "体能训练",
     "author": "抖音热门",
@@ -91,9 +84,23 @@
     "duration": "",
     "url": "https://www.douyin.com/search/%E5%B9%B3%E6%9D%BF%E6%94%AF%E6%92%91?type=video",
     "cover": ""
+   },
+   {
+    "title": "徒手训练",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E5%BE%92%E6%89%8B%E8%AE%AD%E7%BB%83?type=video",
+    "cover": ""
    }
   ],
   "stretch": [
+   {
+    "title": "晨间拉伸",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E6%99%A8%E9%97%B4%E6%8B%89%E4%BC%B8?type=video",
+    "cover": ""
+   },
    {
     "title": "全身拉伸",
     "author": "抖音热门",
@@ -107,16 +114,16 @@
     "duration": "",
     "url": "https://www.douyin.com/search/%E7%9D%A1%E5%89%8D%E6%94%BE%E6%9D%BE?type=video",
     "cover": ""
-   },
-   {
-    "title": "瑜伽",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E7%91%9C%E4%BC%BD?type=video",
-    "cover": ""
    }
   ],
   "cardio": [
+   {
+    "title": "跳绳",
+    "author": "抖音热门",
+    "duration": "",
+    "url": "https://www.douyin.com/search/%E8%B7%B3%E7%BB%B3?type=video",
+    "cover": ""
+   },
    {
     "title": "心肺训练",
     "author": "抖音热门",
@@ -129,13 +136,6 @@
     "author": "抖音热门",
     "duration": "",
     "url": "https://www.douyin.com/search/%E7%88%AC%E6%A5%BC%E6%A2%AF?type=video",
-    "cover": ""
-   },
-   {
-    "title": "跑步",
-    "author": "抖音热门",
-    "duration": "",
-    "url": "https://www.douyin.com/search/%E8%B7%91%E6%AD%A5?type=video",
     "cover": ""
    }
   ]
