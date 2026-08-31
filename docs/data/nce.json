@@ -1,6 +1,6 @@
 {
- "updated": "2026-08-31",
- "lastAdded": "2026-08-25",
+ "updated": "2026-09-01",
+ "lastAdded": "2026-09-01",
  "lessons": [
   {
    "id": "nce-001",
@@ -359,6 +359,56 @@
     }
    ],
    "id": "nce-20260825"
+  },
+  {
+   "title": "Lesson: Read Day by Day",
+   "en": [
+    "One afternoon, Mike met an old friend at the old bookstore.",
+    "They talked about the study plan, and the friend shared a valuable piece of advice.",
+    "It was not easy at first, but Mike never gave up.",
+    "Slowly, small changes began to appear in Mike's life.",
+    "This is the power of small steps. Day by day, we become better versions of ourselves."
+   ],
+   "cn": [
+    "一天下午，Mike在社区公园遇到了一位老朋友。",
+    "他们聊起了未来的梦想，朋友分享了一条宝贵的建议。",
+    "起初并不容易，但Mike从不放弃。",
+    "慢慢地，小小的改变开始出现在Mike的生活里。",
+    "这就是小步前进的力量。日复一日，我们成为更好的自己。"
+   ],
+   "words": [
+    {
+     "w": "curiosity",
+     "p": "/ˌkjʊəriˈɒsəti/",
+     "m": "n. 好奇心"
+    },
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "valuable",
+     "p": "/ˈvæljuəbl/",
+     "m": "adj. 宝贵的"
+    },
+    {
+     "w": "patience",
+     "p": "/ˈpeɪʃns/",
+     "m": "n. 耐心"
+    },
+    {
+     "w": "journey",
+     "p": "/ˈdʒɜːni/",
+     "m": "n. 旅程"
+    },
+    {
+     "w": "mind",
+     "p": "/maɪnd/",
+     "m": "n. 头脑；心灵"
+    }
+   ],
+   "id": "nce-20260901"
   }
  ]
 }
