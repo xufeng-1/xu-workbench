@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-07",
- "lastAdded": "2026-09-01",
+ "updated": "2026-09-08",
+ "lastAdded": "2026-09-08",
  "lessons": [
   {
    "id": "nce-001",
@@ -409,6 +409,56 @@
     }
    ],
    "id": "nce-20260901"
+  },
+  {
+   "title": "Lesson: Exercise Day by Day",
+   "en": [
+    "Every day, Mike follows the same simple rule: exercise for one hour every day.",
+    "One afternoon, Mike met an old friend at the community park.",
+    "They talked about the new hobbies, and the friend shared a valuable piece of advice.",
+    "The advice was simple but powerful: \"health always comes first\"",
+    "It was not easy at first, but Mike never gave up."
+   ],
+   "cn": [
+    "每天，Mike都遵循同一条简单的准则：睡前阅读三十分钟。",
+    "一天下午，Mike在旧书店遇到了一位老朋友。",
+    "他们聊起了学习计划，朋友分享了一条宝贵的建议。",
+    "那条建议简单却有力：“健康永远第一”。",
+    "起初并不容易，但Mike从不放弃。"
+   ],
+   "words": [
+    {
+     "w": "habit",
+     "p": "/ˈhæbɪt/",
+     "m": "n. 习惯"
+    },
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    },
+    {
+     "w": "achieve",
+     "p": "/əˈtʃiːv/",
+     "m": "v. 达成"
+    },
+    {
+     "w": "valuable",
+     "p": "/ˈvæljuəbl/",
+     "m": "adj. 宝贵的"
+    },
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    }
+   ],
+   "id": "nce-20260908"
   }
  ]
 }

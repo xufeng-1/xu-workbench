@@ -1,181 +1,181 @@
 {
- "updated": "2026-09-07",
- "time": "2026-09-07 09:07:08",
+ "updated": "2026-09-08",
+ "time": "2026-09-08 09:14:33",
  "indices": [
   {
    "code": "000001",
    "name": "上证指数",
-   "price": 3930.07,
-   "chg": -0.05,
+   "price": 3932.68,
+   "chg": -0.02,
    "pct": 0.0
   },
   {
    "code": "399001",
    "name": "深证成指",
-   "price": 13516.97,
+   "price": 13774.91,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "399006",
    "name": "创业板指",
-   "price": 3286.55,
+   "price": 3398.68,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "000300",
    "name": "沪深300",
-   "price": 4548.05,
-   "chg": 0.0,
+   "price": 4574.87,
+   "chg": -0.15,
    "pct": 0.0
   },
   {
    "code": "000688",
    "name": "科创50",
-   "price": 1577.36,
+   "price": 1615.53,
    "chg": 0.0,
    "pct": 0.0
   }
  ],
  "sectors": [
   {
-   "code": "BK1361",
-   "name": "期货",
-   "price": 521.73,
+   "code": "BK1356",
+   "name": "其他饰品",
+   "price": 534.36,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1514",
-   "name": "水产养殖",
-   "price": 691.04,
+   "code": "BK1414",
+   "name": "锦纶",
+   "price": 591.42,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1253",
-   "name": "医疗美容",
-   "price": 1026.71,
+   "code": "BK1499",
+   "name": "医美服务",
+   "price": 633.0,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK0737",
-   "name": "软件开发",
-   "price": 1090.32,
+   "code": "BK1515",
+   "name": "粮食种植",
+   "price": 1013.24,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1573",
-   "name": "油田服务",
-   "price": 1683.61,
+   "code": "BK1536",
+   "name": "综合包装",
+   "price": 1276.85,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1568",
-   "name": "人力资源服务",
-   "price": 1928.82,
+   "code": "BK1475",
+   "name": "国际工程",
+   "price": 2480.56,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1275",
-   "name": "油服工程",
-   "price": 1930.34,
+   "code": "BK1308",
+   "name": "电工仪器仪表",
+   "price": 2584.81,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1038",
-   "name": "光学光电子",
-   "price": 2050.27,
+   "code": "BK1588",
+   "name": "通信工程及服务",
+   "price": 2808.33,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1292",
-   "name": "广告媒体",
-   "price": 2283.55,
+   "code": "BK1298",
+   "name": "文字媒体",
+   "price": 2878.58,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1577",
-   "name": "啤酒",
-   "price": 2385.55,
+   "code": "BK1365",
+   "name": "租赁",
+   "price": 2944.01,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1474",
-   "name": "钢结构",
-   "price": 2789.05,
+   "code": "BK1332",
+   "name": "电子化学品Ⅲ",
+   "price": 3226.1,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1420",
-   "name": "其他化学原料",
-   "price": 3187.04,
+   "code": "BK1039",
+   "name": "电子化学品Ⅱ",
+   "price": 3226.1,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1439",
-   "name": "膜材料",
-   "price": 3531.27,
+   "code": "BK1265",
+   "name": "包装印刷",
+   "price": 3741.35,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1228",
-   "name": "冶钢原料",
-   "price": 3812.07,
+   "code": "BK1382",
+   "name": "地面兵装Ⅲ",
+   "price": 3781.01,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1259",
-   "name": "养殖业",
-   "price": 4154.91,
+   "code": "BK1229",
+   "name": "地面兵装Ⅱ",
+   "price": 3781.01,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1241",
-   "name": "黑色家电",
-   "price": 4163.82,
+   "code": "BK1519",
+   "name": "电动乘用车",
+   "price": 4264.64,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1393",
-   "name": "工程机械整机",
-   "price": 4253.45,
+   "code": "BK1599",
+   "name": "其他医疗服务",
+   "price": 4311.91,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1383",
-   "name": "航海装备Ⅲ",
-   "price": 5205.24,
+   "code": "BK1453",
+   "name": "彩电",
+   "price": 4363.95,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1230",
-   "name": "航海装备Ⅱ",
-   "price": 5205.24,
+   "code": "BK1501",
+   "name": "动物保健Ⅲ",
+   "price": 4682.39,
    "chg": 0.01,
    "pct": 0.0
   },
   {
-   "code": "BK1204",
-   "name": "国防军工",
-   "price": 5583.11,
+   "code": "BK1254",
+   "name": "动物保健Ⅱ",
+   "price": 4682.39,
    "chg": 0.01,
    "pct": 0.0
   }
@@ -184,204 +184,90 @@
   {
    "code": "BK1753",
    "name": "光刻胶",
-   "price": 1047.81,
+   "price": 1072.87,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1752",
    "name": "2026中报预减",
-   "price": 1054.61,
+   "price": 1065.28,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1751",
    "name": "2026中报首亏",
-   "price": 1058.6,
+   "price": 1070.89,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1750",
    "name": "2026中报扭亏",
-   "price": 971.08,
+   "price": 981.14,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1749",
    "name": "2026中报预增",
-   "price": 1035.68,
+   "price": 1047.13,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1743",
    "name": "券商金股",
-   "price": 974.18,
+   "price": 981.2,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1723",
    "name": "低市净率",
-   "price": 1064.63,
+   "price": 1061.95,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1722",
    "name": "高市净率",
-   "price": 1089.89,
+   "price": 1120.9,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1721",
    "name": "高成长股",
-   "price": 1115.49,
+   "price": 1124.46,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1717",
    "name": "题材股",
-   "price": 1350.03,
+   "price": 1384.53,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1716",
    "name": "反转股",
-   "price": 587.33,
+   "price": 597.65,
    "chg": 0.0,
    "pct": 0.0
   },
   {
    "code": "BK1715",
    "name": "趋势股",
-   "price": 777.55,
+   "price": 790.86,
    "chg": 0.0,
    "pct": 0.0
   }
  ],
- "movers": [
-  {
-   "code": "920992",
-   "name": "中科美菱",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  {
-   "code": "920985",
-   "name": "海泰新能",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  {
-   "code": "920982",
-   "name": "锦波生物",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  {
-   "code": "920981",
-   "name": "晶赛科技",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  {
-   "code": "920978",
-   "name": "开特股份",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  {
-   "code": "920976",
-   "name": "视声智能",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  {
-   "code": "920974",
-   "name": "凯大催化",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  {
-   "code": "920971",
-   "name": "天马新材",
-   "price": null,
-   "chg": null,
-   "pct": null
-  }
- ],
- "quotes": {
-  "920992": {
-   "code": "920992",
-   "name": "中科美菱",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  "920985": {
-   "code": "920985",
-   "name": "海泰新能",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  "920982": {
-   "code": "920982",
-   "name": "锦波生物",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  "920981": {
-   "code": "920981",
-   "name": "晶赛科技",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  "920978": {
-   "code": "920978",
-   "name": "开特股份",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  "920976": {
-   "code": "920976",
-   "name": "视声智能",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  "920974": {
-   "code": "920974",
-   "name": "凯大催化",
-   "price": null,
-   "chg": null,
-   "pct": null
-  },
-  "920971": {
-   "code": "920971",
-   "name": "天马新材",
-   "price": null,
-   "chg": null,
-   "pct": null
-  }
- },
+ "movers": [],
+ "quotes": {},
  "funds": [
   {
    "code": "161725",
