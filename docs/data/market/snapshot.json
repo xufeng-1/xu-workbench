@@ -1,11 +1,387 @@
 {
- "updated": "2026-09-10",
- "time": "2026-09-10 09:10:31",
- "indices": [],
- "sectors": [],
- "concepts": [],
- "movers": [],
- "quotes": {},
+ "updated": "2026-09-11",
+ "time": "2026-09-11 09:12:23",
+ "indices": [
+  {
+   "code": "000001",
+   "name": "上证指数",
+   "price": 3934.15,
+   "chg": -0.25,
+   "pct": -0.01
+  },
+  {
+   "code": "399001",
+   "name": "深证成指",
+   "price": 13617.67,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "399006",
+   "name": "创业板指",
+   "price": 3338.42,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "000300",
+   "name": "沪深300",
+   "price": 4548.04,
+   "chg": -0.35,
+   "pct": -0.01
+  },
+  {
+   "code": "000688",
+   "name": "科创50",
+   "price": 1569.22,
+   "chg": 0.0,
+   "pct": 0.0
+  }
+ ],
+ "sectors": [
+  {
+   "code": "BK1305",
+   "name": "燃料电池",
+   "price": 258.37,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK0728",
+   "name": "环保",
+   "price": 550.6,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1016",
+   "name": "汽车服务",
+   "price": 968.93,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK0735",
+   "name": "计算机设备",
+   "price": 1567.96,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1572",
+   "name": "油气及炼化工程",
+   "price": 1851.23,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1463",
+   "name": "水泥制品",
+   "price": 2102.32,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1315",
+   "name": "光伏电池组件",
+   "price": 2183.26,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1577",
+   "name": "啤酒",
+   "price": 2366.83,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1377",
+   "name": "火力发电",
+   "price": 2439.55,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1506",
+   "name": "农业综合Ⅲ",
+   "price": 2457.26,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1257",
+   "name": "农业综合Ⅱ",
+   "price": 2457.26,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1210",
+   "name": "交通运输",
+   "price": 2517.84,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1412",
+   "name": "氨纶",
+   "price": 2667.6,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1588",
+   "name": "通信工程及服务",
+   "price": 2792.1,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1431",
+   "name": "有机硅",
+   "price": 3301.09,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1384",
+   "name": "航空装备Ⅲ",
+   "price": 4322.16,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1231",
+   "name": "航空装备Ⅱ",
+   "price": 4322.16,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1502",
+   "name": "林业Ⅲ",
+   "price": 5015.47,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1255",
+   "name": "林业Ⅱ",
+   "price": 5015.47,
+   "chg": 0.01,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1624",
+   "name": "其他小金属",
+   "price": 5148.61,
+   "chg": 0.01,
+   "pct": 0.0
+  }
+ ],
+ "concepts": [
+  {
+   "code": "BK1753",
+   "name": "光刻胶",
+   "price": 1059.83,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1752",
+   "name": "2026中报预减",
+   "price": 1062.89,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1751",
+   "name": "2026中报首亏",
+   "price": 1061.98,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1750",
+   "name": "2026中报扭亏",
+   "price": 975.95,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1749",
+   "name": "2026中报预增",
+   "price": 1044.0,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1743",
+   "name": "券商金股",
+   "price": 960.36,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1723",
+   "name": "低市净率",
+   "price": 1072.25,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1722",
+   "name": "高市净率",
+   "price": 1100.04,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1721",
+   "name": "高成长股",
+   "price": 1108.45,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1717",
+   "name": "题材股",
+   "price": 1404.07,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1716",
+   "name": "反转股",
+   "price": 593.22,
+   "chg": 0.0,
+   "pct": 0.0
+  },
+  {
+   "code": "BK1715",
+   "name": "趋势股",
+   "price": 785.98,
+   "chg": 0.0,
+   "pct": 0.0
+  }
+ ],
+ "movers": [
+  {
+   "code": "920992",
+   "name": "中科美菱",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  {
+   "code": "920985",
+   "name": "海泰新能",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  {
+   "code": "920982",
+   "name": "锦波生物",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  {
+   "code": "920981",
+   "name": "晶赛科技",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  {
+   "code": "920978",
+   "name": "开特股份",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  {
+   "code": "920976",
+   "name": "视声智能",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  {
+   "code": "920974",
+   "name": "凯大催化",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  {
+   "code": "920971",
+   "name": "天马新材",
+   "price": null,
+   "chg": null,
+   "pct": null
+  }
+ ],
+ "quotes": {
+  "920992": {
+   "code": "920992",
+   "name": "中科美菱",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  "920985": {
+   "code": "920985",
+   "name": "海泰新能",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  "920982": {
+   "code": "920982",
+   "name": "锦波生物",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  "920981": {
+   "code": "920981",
+   "name": "晶赛科技",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  "920978": {
+   "code": "920978",
+   "name": "开特股份",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  "920976": {
+   "code": "920976",
+   "name": "视声智能",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  "920974": {
+   "code": "920974",
+   "name": "凯大催化",
+   "price": null,
+   "chg": null,
+   "pct": null
+  },
+  "920971": {
+   "code": "920971",
+   "name": "天马新材",
+   "price": null,
+   "chg": null,
+   "pct": null
+  }
+ },
  "funds": [
   {
    "code": "161725",
