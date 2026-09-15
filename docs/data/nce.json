@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-14",
- "lastAdded": "2026-09-08",
+ "updated": "2026-09-15",
+ "lastAdded": "2026-09-15",
  "lessons": [
   {
    "id": "nce-001",
@@ -459,6 +459,56 @@
     }
    ],
    "id": "nce-20260908"
+  },
+  {
+   "title": "Lesson: Exercise Day by Day",
+   "en": [
+    "Tom gets up early and looks out of the window. The fresh morning air makes Tom smile.",
+    "Every day, Tom follows the same simple rule: exercise for one hour every day.",
+    "The advice was simple but powerful: \"stay curious and kind\"",
+    "From that day on, Tom started to cook a simple meal every morning.",
+    "At the end of the month, Tom looked back with a quiet sense of pride."
+   ],
+   "cn": [
+    "Tom早早起床，望向窗外。清新的空气让Tom露出了微笑。",
+    "每天，Tom都遵循同一条简单的准则：先完成最重要的任务。",
+    "那条建议简单却有力：“健康永远第一”。",
+    "从那天起，Tom每天早上开始散步十分钟。",
+    "月末，Tom带着一份平静的自豪回顾这个月。"
+   ],
+   "words": [
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "achieve",
+     "p": "/əˈtʃiːv/",
+     "m": "v. 达成"
+    },
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    },
+    {
+     "w": "curiosity",
+     "p": "/ˌkjʊəriˈɒsəti/",
+     "m": "n. 好奇心"
+    },
+    {
+     "w": "mind",
+     "p": "/maɪnd/",
+     "m": "n. 头脑；心灵"
+    }
+   ],
+   "id": "nce-20260915"
   }
  ]
 }
