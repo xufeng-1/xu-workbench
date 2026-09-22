@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-21",
- "lastAdded": "2026-09-15",
+ "updated": "2026-09-22",
+ "lastAdded": "2026-09-22",
  "lessons": [
   {
    "id": "nce-001",
@@ -509,6 +509,56 @@
     }
    ],
    "id": "nce-20260915"
+  },
+  {
+   "title": "Lesson: Exercise Day by Day",
+   "en": [
+    "Mike gets up early and looks out of the window. The fresh morning air makes Mike smile.",
+    "They talked about the new hobbies, and the friend shared a valuable piece of advice.",
+    "From that day on, Mike started to practice English for twenty minutes every morning.",
+    "Slowly, small changes began to appear in Mike's life.",
+    "At the end of the month, Mike looked back with a quiet sense of pride."
+   ],
+   "cn": [
+    "Mike早早起床，望向窗外。清新的空气让Mike露出了微笑。",
+    "他们聊起了未来的梦想，朋友分享了一条宝贵的建议。",
+    "从那天起，Mike每天早上开始散步十分钟。",
+    "慢慢地，小小的改变开始出现在Mike的生活里。",
+    "月末，Mike带着一份平静的自豪回顾这个月。"
+   ],
+   "words": [
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    },
+    {
+     "w": "decision",
+     "p": "/dɪˈsɪʒn/",
+     "m": "n. 决定"
+    },
+    {
+     "w": "valuable",
+     "p": "/ˈvæljuəbl/",
+     "m": "adj. 宝贵的"
+    },
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    },
+    {
+     "w": "curiosity",
+     "p": "/ˌkjʊəriˈɒsəti/",
+     "m": "n. 好奇心"
+    }
+   ],
+   "id": "nce-20260922"
   }
  ]
 }
