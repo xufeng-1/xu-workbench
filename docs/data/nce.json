@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-28",
- "lastAdded": "2026-09-22",
+ "updated": "2026-09-29",
+ "lastAdded": "2026-09-29",
  "lessons": [
   {
    "id": "nce-001",
@@ -559,6 +559,56 @@
     }
    ],
    "id": "nce-20260922"
+  },
+  {
+   "title": "Lesson: Finish Day by Day",
+   "en": [
+    "Anna gets up early and looks out of the window. The warm spring rain makes Anna smile.",
+    "Every day, Anna follows the same simple rule: finish the most important task first.",
+    "One afternoon, Anna met an old friend at the old bookstore.",
+    "They talked about the study plan, and the friend shared a valuable piece of advice.",
+    "From that day on, Anna started to cook a simple meal every morning."
+   ],
+   "cn": [
+    "Anna早早起床，望向窗外。清新的空气让Anna露出了微笑。",
+    "每天，Anna都遵循同一条简单的准则：每天运动一小时。",
+    "一天下午，Anna在社区公园遇到了一位老朋友。",
+    "他们聊起了工作与生活的平衡，朋友分享了一条宝贵的建议。",
+    "从那天起，Anna每天早上开始做一顿简单的饭。"
+   ],
+   "words": [
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "achieve",
+     "p": "/əˈtʃiːv/",
+     "m": "v. 达成"
+    },
+    {
+     "w": "journey",
+     "p": "/ˈdʒɜːni/",
+     "m": "n. 旅程"
+    },
+    {
+     "w": "patience",
+     "p": "/ˈpeɪʃns/",
+     "m": "n. 耐心"
+    },
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    },
+    {
+     "w": "valuable",
+     "p": "/ˈvæljuəbl/",
+     "m": "adj. 宝贵的"
+    }
+   ],
+   "id": "nce-20260929"
   }
  ]
 }
