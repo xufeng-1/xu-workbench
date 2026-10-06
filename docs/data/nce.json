@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-05",
- "lastAdded": "2026-09-29",
+ "updated": "2026-10-06",
+ "lastAdded": "2026-10-06",
  "lessons": [
   {
    "id": "nce-001",
@@ -609,6 +609,56 @@
     }
    ],
    "id": "nce-20260929"
+  },
+  {
+   "title": "Lesson: Finish Day by Day",
+   "en": [
+    "One afternoon, Lily met an old friend at the city library.",
+    "The advice was simple but powerful: \"health always comes first\"",
+    "It was not easy at first, but Lily never gave up.",
+    "At the end of the month, Lily looked back with a quiet sense of pride.",
+    "This is the power of small steps. Day by day, we become better versions of ourselves."
+   ],
+   "cn": [
+    "一天下午，Lily在旧书店遇到了一位老朋友。",
+    "那条建议简单却有力：“永远不要停止学习新事物”。",
+    "起初并不容易，但Lily从不放弃。",
+    "月末，Lily带着一份平静的自豪回顾这个月。",
+    "这就是小步前进的力量。日复一日，我们成为更好的自己。"
+   ],
+   "words": [
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "decision",
+     "p": "/dɪˈsɪʒn/",
+     "m": "n. 决定"
+    },
+    {
+     "w": "curiosity",
+     "p": "/ˌkjʊəriˈɒsəti/",
+     "m": "n. 好奇心"
+    },
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    },
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    }
+   ],
+   "id": "nce-20261006"
   }
  ]
 }
