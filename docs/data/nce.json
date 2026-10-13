@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-12",
- "lastAdded": "2026-10-06",
+ "updated": "2026-10-13",
+ "lastAdded": "2026-10-13",
  "lessons": [
   {
    "id": "nce-001",
@@ -659,6 +659,56 @@
     }
    ],
    "id": "nce-20261006"
+  },
+  {
+   "title": "Lesson: Exercise Day by Day",
+   "en": [
+    "One afternoon, Anna met an old friend at the city library.",
+    "They talked about the new hobbies, and the friend shared a valuable piece of advice.",
+    "From that day on, Anna started to take a ten-minute walk every morning.",
+    "It was not easy at first, but Anna never gave up.",
+    "At the end of the month, Anna looked back with a quiet sense of pride."
+   ],
+   "cn": [
+    "一天下午，Anna在社区公园遇到了一位老朋友。",
+    "他们聊起了未来的梦想，朋友分享了一条宝贵的建议。",
+    "从那天起，Anna每天早上开始练习英语二十分钟。",
+    "起初并不容易，但Anna从不放弃。",
+    "月末，Anna带着一份平静的自豪回顾这个月。"
+   ],
+   "words": [
+    {
+     "w": "journey",
+     "p": "/ˈdʒɜːni/",
+     "m": "n. 旅程"
+    },
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    },
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "patience",
+     "p": "/ˈpeɪʃns/",
+     "m": "n. 耐心"
+    },
+    {
+     "w": "valuable",
+     "p": "/ˈvæljuəbl/",
+     "m": "adj. 宝贵的"
+    }
+   ],
+   "id": "nce-20261013"
   }
  ]
 }
