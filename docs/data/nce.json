@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-19",
- "lastAdded": "2026-10-13",
+ "updated": "2026-10-20",
+ "lastAdded": "2026-10-20",
  "lessons": [
   {
    "id": "nce-001",
@@ -709,6 +709,56 @@
     }
    ],
    "id": "nce-20261013"
+  },
+  {
+   "title": "Lesson: Read Day by Day",
+   "en": [
+    "Anna gets up early and looks out of the window. The cool autumn wind makes Anna smile.",
+    "Every day, Anna follows the same simple rule: read for thirty minutes before bed.",
+    "They talked about the future dreams, and the friend shared a valuable piece of advice.",
+    "The advice was simple but powerful: \"never stop learning new things\"",
+    "It was not easy at first, but Anna never gave up."
+   ],
+   "cn": [
+    "Anna早早起床，望向窗外。柔和的阳光让Anna露出了微笑。",
+    "每天，Anna都遵循同一条简单的准则：写下三件值得感恩的事。",
+    "他们聊起了学习计划，朋友分享了一条宝贵的建议。",
+    "那条建议简单却有力：“慢下来，享受过程”。",
+    "起初并不容易，但Anna从不放弃。"
+   ],
+   "words": [
+    {
+     "w": "patience",
+     "p": "/ˈpeɪʃns/",
+     "m": "n. 耐心"
+    },
+    {
+     "w": "curiosity",
+     "p": "/ˌkjʊəriˈɒsəti/",
+     "m": "n. 好奇心"
+    },
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    },
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "habit",
+     "p": "/ˈhæbɪt/",
+     "m": "n. 习惯"
+    },
+    {
+     "w": "achieve",
+     "p": "/əˈtʃiːv/",
+     "m": "v. 达成"
+    }
+   ],
+   "id": "nce-20261020"
   }
  ]
 }
