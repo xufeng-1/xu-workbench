@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-26",
- "lastAdded": "2026-10-20",
+ "updated": "2026-10-27",
+ "lastAdded": "2026-10-27",
  "lessons": [
   {
    "id": "nce-001",
@@ -759,6 +759,56 @@
     }
    ],
    "id": "nce-20261020"
+  },
+  {
+   "title": "Lesson: Read Day by Day",
+   "en": [
+    "One afternoon, Xu met an old friend at the city library.",
+    "From that day on, Xu started to take a ten-minute walk every morning.",
+    "It was not easy at first, but Xu never gave up.",
+    "Slowly, small changes began to appear in Xu's life.",
+    "This is the power of small steps. Day by day, we become better versions of ourselves."
+   ],
+   "cn": [
+    "一天下午，Xu在小咖啡馆遇到了一位老朋友。",
+    "从那天起，Xu每天早上开始练习英语二十分钟。",
+    "起初并不容易，但Xu从不放弃。",
+    "慢慢地，小小的改变开始出现在Xu的生活里。",
+    "这就是小步前进的力量。日复一日，我们成为更好的自己。"
+   ],
+   "words": [
+    {
+     "w": "decision",
+     "p": "/dɪˈsɪʒn/",
+     "m": "n. 决定"
+    },
+    {
+     "w": "curiosity",
+     "p": "/ˌkjʊəriˈɒsəti/",
+     "m": "n. 好奇心"
+    },
+    {
+     "w": "valuable",
+     "p": "/ˈvæljuəbl/",
+     "m": "adj. 宝贵的"
+    },
+    {
+     "w": "journey",
+     "p": "/ˈdʒɜːni/",
+     "m": "n. 旅程"
+    },
+    {
+     "w": "patience",
+     "p": "/ˈpeɪʃns/",
+     "m": "n. 耐心"
+    },
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    }
+   ],
+   "id": "nce-20261027"
   }
  ]
 }
