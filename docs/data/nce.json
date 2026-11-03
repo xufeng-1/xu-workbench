@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-02",
- "lastAdded": "2026-10-27",
+ "updated": "2026-11-03",
+ "lastAdded": "2026-11-03",
  "lessons": [
   {
    "id": "nce-001",
@@ -809,6 +809,56 @@
     }
    ],
    "id": "nce-20261027"
+  },
+  {
+   "title": "Lesson: Write Day by Day",
+   "en": [
+    "They talked about the future dreams, and the friend shared a valuable piece of advice.",
+    "The advice was simple but powerful: \"stay curious and kind\"",
+    "From that day on, Xu started to write in a journal every morning.",
+    "Slowly, small changes began to appear in Xu's life.",
+    "This is the power of small steps. Day by day, we become better versions of ourselves."
+   ],
+   "cn": [
+    "他们聊起了学习计划，朋友分享了一条宝贵的建议。",
+    "那条建议简单却有力：“健康永远第一”。",
+    "从那天起，Xu每天早上开始写日记。",
+    "慢慢地，小小的改变开始出现在Xu的生活里。",
+    "这就是小步前进的力量。日复一日，我们成为更好的自己。"
+   ],
+   "words": [
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "achieve",
+     "p": "/əˈtʃiːv/",
+     "m": "v. 达成"
+    },
+    {
+     "w": "journey",
+     "p": "/ˈdʒɜːni/",
+     "m": "n. 旅程"
+    },
+    {
+     "w": "patience",
+     "p": "/ˈpeɪʃns/",
+     "m": "n. 耐心"
+    },
+    {
+     "w": "curiosity",
+     "p": "/ˌkjʊəriˈɒsəti/",
+     "m": "n. 好奇心"
+    },
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    }
+   ],
+   "id": "nce-20261103"
   }
  ]
 }
