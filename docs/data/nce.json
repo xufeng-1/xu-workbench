@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-09",
- "lastAdded": "2026-11-03",
+ "updated": "2026-11-10",
+ "lastAdded": "2026-11-10",
  "lessons": [
   {
    "id": "nce-001",
@@ -859,6 +859,56 @@
     }
    ],
    "id": "nce-20261103"
+  },
+  {
+   "title": "Lesson: Write Day by Day",
+   "en": [
+    "Every day, Anna follows the same simple rule: write down three things to be thankful for.",
+    "They talked about the work-life balance, and the friend shared a valuable piece of advice.",
+    "The advice was simple but powerful: \"slow down and enjoy the journey\"",
+    "Slowly, small changes began to appear in Anna's life.",
+    "At the end of the month, Anna looked back with a quiet sense of pride."
+   ],
+   "cn": [
+    "每天，Anna都遵循同一条简单的准则：睡前阅读三十分钟。",
+    "他们聊起了学习计划，朋友分享了一条宝贵的建议。",
+    "那条建议简单却有力：“慢下来，享受过程”。",
+    "慢慢地，小小的改变开始出现在Anna的生活里。",
+    "月末，Anna带着一份平静的自豪回顾这个月。"
+   ],
+   "words": [
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "mind",
+     "p": "/maɪnd/",
+     "m": "n. 头脑；心灵"
+    },
+    {
+     "w": "decision",
+     "p": "/dɪˈsɪʒn/",
+     "m": "n. 决定"
+    },
+    {
+     "w": "curiosity",
+     "p": "/ˌkjʊəriˈɒsəti/",
+     "m": "n. 好奇心"
+    },
+    {
+     "w": "journey",
+     "p": "/ˈdʒɜːni/",
+     "m": "n. 旅程"
+    }
+   ],
+   "id": "nce-20261110"
   }
  ]
 }
