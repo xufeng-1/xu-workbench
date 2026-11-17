@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-16",
- "lastAdded": "2026-11-10",
+ "updated": "2026-11-17",
+ "lastAdded": "2026-11-17",
  "lessons": [
   {
    "id": "nce-001",
@@ -909,6 +909,56 @@
     }
    ],
    "id": "nce-20261110"
+  },
+  {
+   "title": "Lesson: Exercise Day by Day",
+   "en": [
+    "One afternoon, Tom met an old friend at the community park.",
+    "They talked about the study plan, and the friend shared a valuable piece of advice.",
+    "From that day on, Tom started to take a ten-minute walk every morning.",
+    "It was not easy at first, but Tom never gave up.",
+    "This is the power of small steps. Day by day, we become better versions of ourselves."
+   ],
+   "cn": [
+    "一天下午，Tom在社区公园遇到了一位老朋友。",
+    "他们聊起了学习计划，朋友分享了一条宝贵的建议。",
+    "从那天起，Tom每天早上开始做一顿简单的饭。",
+    "起初并不容易，但Tom从不放弃。",
+    "这就是小步前进的力量。日复一日，我们成为更好的自己。"
+   ],
+   "words": [
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    },
+    {
+     "w": "patience",
+     "p": "/ˈpeɪʃns/",
+     "m": "n. 耐心"
+    },
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    },
+    {
+     "w": "journey",
+     "p": "/ˈdʒɜːni/",
+     "m": "n. 旅程"
+    },
+    {
+     "w": "habit",
+     "p": "/ˈhæbɪt/",
+     "m": "n. 习惯"
+    }
+   ],
+   "id": "nce-20261117"
   }
  ]
 }
