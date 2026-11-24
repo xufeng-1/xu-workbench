@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-23",
- "lastAdded": "2026-11-17",
+ "updated": "2026-11-24",
+ "lastAdded": "2026-11-24",
  "lessons": [
   {
    "id": "nce-001",
@@ -959,6 +959,56 @@
     }
    ],
    "id": "nce-20261117"
+  },
+  {
+   "title": "Lesson: Read Day by Day",
+   "en": [
+    "Xu gets up early and looks out of the window. The warm spring rain makes Xu smile.",
+    "One afternoon, Xu met an old friend at the little café.",
+    "The advice was simple but powerful: \"slow down and enjoy the journey\"",
+    "It was not easy at first, but Xu never gave up.",
+    "Slowly, small changes began to appear in Xu's life."
+   ],
+   "cn": [
+    "Xu早早起床，望向窗外。清新的空气让Xu露出了微笑。",
+    "一天下午，Xu在小咖啡馆遇到了一位老朋友。",
+    "那条建议简单却有力：“慢下来，享受过程”。",
+    "起初并不容易，但Xu从不放弃。",
+    "慢慢地，小小的改变开始出现在Xu的生活里。"
+   ],
+   "words": [
+    {
+     "w": "achieve",
+     "p": "/əˈtʃiːv/",
+     "m": "v. 达成"
+    },
+    {
+     "w": "advice",
+     "p": "/ədˈvaɪs/",
+     "m": "n. 建议"
+    },
+    {
+     "w": "mind",
+     "p": "/maɪnd/",
+     "m": "n. 头脑；心灵"
+    },
+    {
+     "w": "improve",
+     "p": "/ɪmˈpruːv/",
+     "m": "v. 改善"
+    },
+    {
+     "w": "strength",
+     "p": "/streŋθ/",
+     "m": "n. 力量"
+    },
+    {
+     "w": "balance",
+     "p": "/ˈbæləns/",
+     "m": "n. 平衡"
+    }
+   ],
+   "id": "nce-20261124"
   }
  ]
 }
